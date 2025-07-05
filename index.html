@@ -13,20 +13,28 @@
 <div id="map"></div>
 <script>
 var travelers = {
+  'Fam': {color: 'white', page: 'galleries/fam.html'},
   'Jeff & Beth': {color: 'black', page: 'galleries/jeff-and-beth.html'},
   'Tako & Dani': {color: 'green', page: 'galleries/tako-and-dani.html'},
   'Mel & Carlos': {color: 'red', page: 'galleries/mel-and-carlos.html'},
-  'Zack & Brit': {color: 'blue', page: 'galleries/zack-and-brit.html'}
+  'Zack & Brit': {color: 'blue', page: 'galleries/zack-and-brit.html'},
+  'Nenee & Joe': {color: 'orange', page: 'galleries/nenee-and-joe.html'},
 };
 var map = L.map('map').setView([20,0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
 }).addTo(map);
 var markers = [
-  {coords: [48.8566, 2.3522], traveler: 'Jeff & Beth'},
+  {coords: [64.9631, -19.0208], traveler: 'Fam'},
+  {coords: [-17.7134, 178.0650], traveler: 'Jeff & Beth'},
+  {coords: [21.3099, -157.8581], traveler: 'Tako & Dani'},
+  {coords: [29.9509, -90.0758], traveler: 'Tako & Dani'},
+  {coords: [24.5551, -81.7800], traveler: 'Tako & Dani'},
+  {coords: [32.7157, -117.1611], traveler: 'Tako & Dani'},
   {coords: [40.7128, -74.0060], traveler: 'Tako & Dani'},
-  {coords: [35.6895, 139.6917], traveler: 'Mel & Carlos'},
-  {coords: [38.6895, 120.6917], traveler: 'Zack & Brit'}
+  {coords: [52.271256, 4.546365], traveler: 'Mel & Carlos'},
+  {coords: [36.1627, -86.7816], traveler: 'Zack & Brit'},
+  {coords: [25.0836602, -77.3074779], traveler: 'Nenee & Joe'},
 ];
 markers.forEach(function(m){
   var info = travelers[m.traveler];
