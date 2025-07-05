@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>World Travelers Map</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+<h1>Mutnik Adventures</h1>
+<div id="map"></div>
+<script>
+var travelers = {
+  'Jeff & Beth': {color: 'black', page: 'galleries/jeff-and-beth.html'},
+  'Tako & Dani': {color: 'green', page: 'galleries/tako-and-dani.html'},
+  'Mel & Carlos': {color: 'red', page: 'galleries/mel-and-carlos.html'},
+  'Zack & Brit': {color: 'blue', page: 'galleries/zack-and-brit.html'}
+};
+var map = L.map('map').setView([20,0], 2);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors'
+}).addTo(map);
+var markers = [
+  {coords: [48.8566, 2.3522], traveler: 'Jeff & Beth'},
+  {coords: [40.7128, -74.0060], traveler: 'Tako & Dani'},
+  {coords: [35.6895, 139.6917], traveler: 'Mel & Carlos'},
+  {coords: [38.6895, 120.6917], traveler: 'Zack & Brit'}
+];
+markers.forEach(function(m){
+  var info = travelers[m.traveler];
+  var icon = L.circleMarker(m.coords, {color: info.color, radius: 10}).addTo(map);
+  icon.on('click', function(){
+    window.location.href = info.page;
+  });
+});
+var legend = L.control({position: 'bottomright'});
+legend.onAdd = function(){
+  var div = L.DomUtil.create('div','legend');
+  for (var t in travelers){
+    div.innerHTML += '<span style="color:'+travelers[t].color+'">&#9679;</span> '+t+'<br>';
+  }
+  return div;
+};
+legend.addTo(map);
+</script>
+</body>
+</html>
