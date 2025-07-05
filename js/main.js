@@ -11,12 +11,13 @@ var travelers = {
         color: 'red',
         locations: [
             { name: 'Paris', coords: [48.8566, 2.3522], url: 'galleries/jeff-and-beth/paris/index.html' },
-            { name: 'Tokyo', coords: [35.6895, 139.6917], url: 'galleries/jeff-and-beth/tokyo/index.html' },
+            { name: 'Italian Trulli', coords: [42.3730, -73.3677], url: 'galleries/jeff-and-beth/italian-trulli/index.html' },
         ]
     },
     'Tako & Dani': {
         color: 'teal',
         locations: [
+            // { name: 'New York', coords: [40.7128, -74.0060], url: 'galleries/tako-and-dani/new_york/index.html' },
             { name: 'New York', coords: [40.7128, -74.0060], url: 'galleries/tako-and-dani/new_york/index.html' },
             { name: 'NOLA', coords: [29.9509, -90.0758], url: 'galleries/tako-and-dani/nola/index.html' },
             { name: 'San Diego', coords: [32.7157, -117.1611], url: 'galleries/tako-and-dani/san-diego/index.html' },
