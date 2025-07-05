@@ -10,16 +10,12 @@ scene.add(light);
 var geometry = new THREE.SphereGeometry(5, 64, 64);
 var globe;
 
-fetch('images/earth_base64.txt')
-    .then(function(response) { return response.text(); })
-    .then(function(data) {
-        var cleaned = data.replace(/\s+/g, '');
-        var texture = new THREE.TextureLoader().load('data:image/jpeg;base64,' + cleaned);
-        var material = new THREE.MeshPhongMaterial({ map: texture });
-        globe = new THREE.Mesh(geometry, material);
-        scene.add(globe);
-        animate();
-    });
+// `earthBase64` is provided by js/earth_base64.js
+var texture = new THREE.TextureLoader().load('data:image/jpeg;base64,' + earthBase64);
+var material = new THREE.MeshPhongMaterial({ map: texture });
+globe = new THREE.Mesh(geometry, material);
+scene.add(globe);
+animate();
 
 camera.position.z = 10;
 
