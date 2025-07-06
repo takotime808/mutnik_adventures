@@ -3,22 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutnik Adventures Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+    <title>Mutnik Adventures 3D Globe</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <h1>Mutnik Adventures</h1>
-    <div id="map"></div>
-    <div id="legend">
-        <h2>Travelers</h2>
-        <ul>
-            <li><span class="legend-color" style="background:red"></span> Jeff & Beth</li>
-            <li><span class="legend-color" style="background:teal"></span> Tako & Dani</li>
-        </ul>
-    </div>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-    <script src="js/main.js"></script>
+    <div id="globe-container"></div>
+    <script src="js/three.min.js"></script>
+    <script src="js/earth_base64.js"></script>
+    <script src="js/globe.js"></script>
 </body>
 </html>
