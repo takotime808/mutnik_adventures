@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutnik Adventures Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <title>3D Globe with Pins & Country Overlay</title>
+  <style>
+    body { margin: 0; }
+    #globeViz { width: 100vw; height: 100vh; }
+  </style>
 </head>
 <body>
-    <h1>Mutnik Adventures</h1>
-    <div id="map"></div>
-    <div id="legend">
-        <h2>Travelers</h2>
-        <ul>
-            <li><span class="legend-color" style="background:red"></span> Jeff & Beth</li>
-            <li><span class="legend-color" style="background:teal"></span> Tako & Dani</li>
-        </ul>
-    </div>
+  <div id="globeViz"></div>
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+  <script>
+    // Pins data
+    const markers = [
+      {
+        lat: 40.7128,
+        lng: -74.0060,
+        label: "New York",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/NYC_Montage_2014_4_-_Jleon.jpg/250px-NYC_Montage_2014_4_-_Jleon.jpg"
+      },
+      {
+        lat: 51.5074,
+        lng: -0.1278,
+        label: "London",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/London_Eye_Twilight_April_2006.jpg/250px-London_Eye_Twilight_April_2006.jpg"
+      }
+    ];
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-    <script src="js/main.js"></script>
+    // Create Globe instance
+    const world = Globe()
+      (document.getElementById('globeViz'))
+    //   .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-dark.jpg')
+      .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+    //   .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-day.jpg')
+      .pointOfView({ lat: 20, lng: 0, altitude: 2 });
+
+    // Add pins
+    world
+      .pointsData(markers)
+      .pointLat('lat')
+      .pointLng('lng')
+      .pointAltitude(0.06)
+      .pointColor(() => '#ff5722')
+      .pointRadius(0.25)
+      .pointLabel('label')
+      .onPointClick(point => {
+        // Remove previous popup
+        let oldPopup = document.getElementById('img-popup');
+        if (oldPopup) oldPopup.remove();
+        // Show image popup
+        if (point.imageUrl) {
+          const img = document.createElement('img');
+          img.src = point.imageUrl;
+          img.id = 'img-popup';
+          img.style.position = 'fixed';
+          img.style.top = '20px';
+          img.style.right = '20px';
+          img.style.maxWidth = '200px';
+          img.style.borderRadius = '10px';
+          img.style.background = '#fff';
+          img.style.padding = '8px';
+          img.style.boxShadow = '0 0 20px #0008';
+          img.style.zIndex = 1000;
+          img.style.cursor = 'pointer';
+          img.title = 'Click to close';
+          img.onclick = () => img.remove();
+          document.body.appendChild(img);
+        }
+      });
+
+    // Add country polygons (map overlay)
+    fetch('https://unpkg.com/geojson-world-map@1.0.4/geojson/world.geo.json')
+      .then(res => res.json())
+      .then(countriesGeoJson => {
+        world
+          .polygonsData(countriesGeoJson.features)
+          .polygonCapColor(() => "rgba(80,140,200,0.15)")
+          .polygonStrokeColor(() => "#557")
+          .polygonAltitude(0.01)
+          .polygonSideColor(() => "rgba(0,100,200,0.01)")
+          .polygonLabel(feat => feat.properties.ADMIN || "");
+      });
+  </script>
 </body>
 </html>
