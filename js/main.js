@@ -1,47 +1,49 @@
-// Initialize the map
-var map = L.map('map').setView([20, 0], 2);
+// js/main.js (no exports/require)
+const markers = [
+  { lat: 40.7, lng: -74.0, label: "Jeff & Beth", color: "red", imageUrl: "https://raw.githubusercontent.com/takotime808/world_map/develop/Beth_Jeff_Adventures/photos/IMG_0195.JPG" },
+  { lat: 34.0, lng: -118.2, label: "Tako & Dani", color: "teal", imageUrl: "https://example.com/2.jpg" },
+    {
+    lat: 21.4389,
+    lng: -157.9633,
+    label: "Oʻahu - Tako Gallery",
+    color: "gold",
+    url: "galleries/tako/hawaii/index.html" // relative path
+  },
+];
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+const globe = window.Globe()(document.getElementById('globeViz'))
+  .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+  .pointOfView({ lat: 20, lng: 0, altitude: 2 });
 
-// Traveler data with markers
-var travelers = {
-    'Jeff & Beth': {
-        color: 'red',
-        locations: [
-            { name: 'Paris', coords: [48.8566, 2.3522], url: 'galleries/jeff-and-beth/paris/index.html' },
-            { name: 'Italian Trulli', coords: [42.3730, -73.3677], url: 'galleries/jeff-and-beth/italian-trulli/index.html' },
-        ]
-    },
-    'Tako & Dani': {
-        color: 'teal',
-        locations: [
-            // { name: 'New York', coords: [40.7128, -74.0060], url: 'galleries/tako-and-dani/new_york/index.html' },
-            { name: 'New York', coords: [40.7128, -74.0060], url: 'galleries/tako-and-dani/new_york/index.html' },
-            { name: 'NOLA', coords: [29.9509, -90.0758], url: 'galleries/tako-and-dani/nola/index.html' },
-            { name: 'San Diego', coords: [32.7157, -117.1611], url: 'galleries/tako-and-dani/san-diego/index.html' },
-            { name: 'Oahu, HI', coords: [21.4389, -158.0001], url: 'galleries/tako-and-dani/hawaii-dani2025/index.html' },
-            { name: 'Key West', coords: [24.5551, -81.7800], url: 'galleries/tako-and-dani/key-west/index.html' },
-        ]
-    },
-    'Tako': {
-        color: 'green',
-        locations: [
-            { name: 'Hawaii', coords: [19.5429, -155.6659], url: 'galleries/tako/hawaii/index.html' },
-        ]
-    },
-};
+globe
+  .pointsData(markers)
+  .pointLat('lat')
+  .pointLng('lng')
+  .pointColor(d => d.color)
+  .pointAltitude(0.05)
+  .pointRadius(0.2)
+  .pointLabel('label')
+  .onPointClick(d => {
+    document.getElementById('img-popup')?.remove();
 
-// Add markers and legend items
-Object.keys(travelers).forEach(function(name) {
-    var traveler = travelers[name];
-    traveler.locations.forEach(function(loc) {
-        var marker = L.circleMarker(loc.coords, {
-            color: traveler.color,
-            radius: 8,
-            fillOpacity: 0.8
-        }).addTo(map);
-        marker.bindPopup('<b>' + name + '</b><br>' + loc.name + '<br><a href="' + loc.url + '">View Photos</a>');
-    });
-});
+    // If the pin has a URL, redirect instead of showing an image
+    if (d.url) {
+      window.location.href = d.url;
+      return;
+    }
+
+    if (d.imageUrl) {
+      const img = document.createElement('img');
+      img.id = 'img-popup';
+      img.src = d.imageUrl;
+      img.style.cssText = `
+        position:fixed; top:20px; right:20px;
+        max-width:200px; border-radius:8px;
+        background:#fff; padding:6px;
+        box-shadow:0 0 16px #0008;
+        cursor:pointer; z-index:1000;
+      `;
+      img.onclick = () => img.remove();
+      document.body.appendChild(img);
+    }
+  });
