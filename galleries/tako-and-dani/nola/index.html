@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tako & Dani in NOLA</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <style>
-    .gallery img { width: 100%; max-width: 300px; margin: 0.5rem; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
-    </style>
+    <title>Tako & Dani in New Orleans</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-    <h1>Tako & Dani in NOLA</h1>
-    <div class="gallery">
-        <img src="../../../images/nola/nola1.webp" alt="NOLA">
-        <img src="../../../images/nola/nola2.webp" alt="NOLA">
-        <img src="../../../images/nola/nola3.webp" alt="NOLA">
-        <img src="../../../images/nola/nola4.webp" alt="NOLA">
-        <img src="../../../images/nola/nola5.webp" alt="NOLA">
-        <img src="../../../images/nola/nola6.webp" alt="NOLA">
-        <img src="../../../images/nola/nola7.webp" alt="NOLA">
-    </div>
-    <p><a href="../../../index.html">Back to map</a></p>
+    <div id="map" style="width:100%; height:100vh;"></div>
+    <script>
+        const map = L.map('map').setView([29.9511, -90.0715], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        const photos = [
+            { coords: [29.9511, -90.0715], img: '../../../images/nola/nola1.webp' }
+        ];
+        photos.forEach(p => {
+            L.marker(p.coords).addTo(map)
+                .bindPopup(`<img src="${p.img}" style="max-width:200px;">`);
+        });
+    </script>
+    <p><a href="../../../index.html">Back to globe</a></p>
 </body>
 </html>

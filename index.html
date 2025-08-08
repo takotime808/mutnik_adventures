@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mutnik Adventures Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mutnik Adventures Globe</title>
+
+  <!-- Globe.gl dependencies -->
+  <script src="https://unpkg.com/three"></script>
+  <script src="https://unpkg.com/globe.gl"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <h1>Mutnik Adventures</h1>
-    <div id="map"></div>
-    <div id="legend">
-        <h2>Travelers</h2>
-        <ul>
-            <li><span class="legend-color" style="background:red"></span> Jeff & Beth</li>
-            <li><span class="legend-color" style="background:teal"></span> Tako & Dani</li>
-        </ul>
-    </div>
+  <h1>Mutnik Adventures</h1>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-    <script src="js/main.js"></script>
+  <!-- Globe container -->
+  <div id="globeViz" style="width:100vw; height:80vh;"></div>
+
+  <!-- Legend remains unchanged -->
+  <div id="legend">
+    <h2>Travelers</h2>
+    <ul>
+      <li><span class="legend-color" style="background:red"></span> Jeff & Beth</li>
+      <li><span class="legend-color" style="background:teal"></span> Tako & Dani</li>
+    </ul>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeff & Beth in Paris</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <style>
-    .gallery img { width: 100%; max-width: 300px; margin: 0.5rem; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-    <h1>Jeff & Beth in Paris</h1>
-    <div class="gallery">
-        <img src="../../../images/paris1.png" alt="Paris">
-        <img src="../../../images/paris2.png" alt="Paris">
-    </div>
-    <p><a href="../../../index.html">Back to map</a></p>
+    <div id="map" style="width:100%; height:100vh;"></div>
+    <script>
+        const map = L.map('map').setView([48.8566, 2.3522], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        const photos = [
+            { coords: [48.8584, 2.2945], img: 'https://placehold.co/200x150?text=Eiffel' },
+            { coords: [48.8606, 2.3376], img: 'https://placehold.co/200x150?text=Louvre' }
+        ];
+
+        photos.forEach(p => {
+            L.marker(p.coords).addTo(map)
+                .bindPopup(`<img src="${p.img}" style="max-width:200px;">`);
+        });
+    </script>
+    <p><a href="../../../index.html">Back to globe</a></p>
 </body>
 </html>

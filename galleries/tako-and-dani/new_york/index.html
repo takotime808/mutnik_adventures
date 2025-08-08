@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tako & Dani in New York</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <style>
-    .gallery img { width: 100%; max-width: 300px; margin: 0.5rem; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
 <body>
-    <h1>Tako & Dani in New York</h1>
-    <div class="gallery">
-        <img src="../../../images/ny1.png" alt="New York">
-        <img src="../../../images/ny2.png" alt="New York">
-    </div>
-    <p><a href="../../../index.html">Back to map</a></p>
+    <div id="map" style="width:100%; height:100vh;"></div>
+    <script>
+        const map = L.map('map').setView([40.7128, -74.0060], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        const photos = [
+            { coords: [40.7580, -73.9855], img: 'https://placehold.co/200x150?text=Times+Sq' },
+            { coords: [40.7060, -74.0087], img: 'https://placehold.co/200x150?text=Wall+St' },
+            { coords: [40.6826, -73.9755], img: 'https://placehold.co/200x150?text=Barclays' }
+        ];
+
+        photos.forEach(p => {
+            L.marker(p.coords).addTo(map)
+                .bindPopup(`<img src="${p.img}" style="max-width:200px;">`);
+        });
+    </script>
+    <p><a href="../../../index.html">Back to globe</a></p>
 </body>
 </html>

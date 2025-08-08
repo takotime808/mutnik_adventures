@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Naples, FL</title>
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />
+    <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+</head>
+<body>
+    <div id='map' style='width:100%; height:100vh;'></div>
+    <script>
+        const map = L.map('map').setView([26.142, -81.7948], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        const photos = [
+            { coords: [26.142, -81.7948], img: 'https://placehold.co/200x150?text=naples_fl' }
+        ];
+        photos.forEach(p => {
+            L.marker(p.coords).addTo(map)
+                .bindPopup(`<img src="${p.img}" style="max-width:200px;">`);
+        });
+    </script>
+    <p><a href='../../../index.html'>Back to globe</a></p>
+</body>
+</html>
