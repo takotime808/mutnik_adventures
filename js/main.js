@@ -1,3 +1,4 @@
+// Copyright (c) 2025 takotime808
 const markers = [
   {
     lat: 48.8566,

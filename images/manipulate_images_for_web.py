@@ -1,4 +1,5 @@
 #!/bin/python
+# Copyright (c) 2025 takotime808
 """Script for resizing and formatting images, to better display on web.
     Example use case:
         ```py

@@ -1,17 +1,22 @@
-# Mutnik Adventures
+<!-- Copyright (c) 2025 takotime808 -->
+# Mutnik Adventures #
+
+[![Demo](https://img.shields.io/badge/demo-live-blue)](https://takotime808.github.io/mutnik_adventures/)
 
 This is a simple website showing a world map with travel pins. Clicking on a pin opens a small gallery for that location.
 
-## Requirements
+<!-- ## Requirements
 
 ```python
 pip install pillow
-```
+``` -->
 
-## Development
+## Development ##
+
+### Deployed to GitHub Pages ###
+
+[https://takotime808.github.io/mutnik_adventures/](https://takotime808.github.io/mutnik_adventures/)
+
+### Local Deployments ###
 Open `index.html` in your browser. The map is powered by [Leaflet](https://leafletjs.com/) and uses local placeholder images so it works offline.
 
-## Deploying to GitHub Pages
-1. Commit the files to the `main` branch of your repository.
-2. In the repository settings, enable GitHub Pages and select the `main` branch as the source.
-3. Visit the provided GitHub Pages URL to see the site online.
