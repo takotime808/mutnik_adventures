@@ -16,7 +16,9 @@ h1 {
 }
 
 #legend {
-    margin: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 .legend-color {
@@ -24,4 +26,42 @@ h1 {
     width: 12px;
     height: 12px;
     margin-right: 6px;
+}
+
+#legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legend-item.red {
+    color: red;
+}
+
+.legend-item.red .legend-color {
+    background: red;
+}
+
+.legend-item.teal {
+    color: teal;
+}
+
+.legend-item.teal .legend-color {
+    background: teal;
+}
+
+.legend-item.gold {
+    color: gold;
+}
+
+.legend-item.gold .legend-color {
+    background: gold;
+}
+
+.legend-item.blue {
+    color: blue;
+}
+
+.legend-item.blue .legend-color {
+    background: blue;
 }
