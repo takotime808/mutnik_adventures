@@ -120,13 +120,6 @@ const markers = [
     url: "galleries/tako/arenal_volcano/index.html"
   },
   {
-    lat: 58.3019,
-    lng: -134.4197,
-    label: "Juneau, Alaska",
-    color: "red",
-    url: "galleries/og-mutniks/juneau/index.html"
-  },
-  {
     lat: 45.677,
     lng: -111.0429,
     label: "Bozeman, Montana",
@@ -218,6 +211,13 @@ const markers = [
     url: "galleries/jeff-and-beth/boulder/index.html"
   },
   {
+    lat: 58.3019,
+    lng: -134.4197,
+    label: "Jeff & Beth - Juneau",
+    color: "red",
+    url: "galleries/jeff-and-beth/juneau/index.html"
+  },
+  {
     lat: 13.4125,
     lng: 103.866,
     label: "Jeff & Beth - Ankor Wat",
@@ -249,6 +249,13 @@ const markers = [
   { lat: 41.8719, lng: 12.5674, label: "Italy", color: "red", url: "images/dukes/IMG_4349.jpg" },
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", url: "images/dukes/2013-07-22_00-35-56_198.jpeg" },
   { lat: 49.4099, lng: -1.3182, label: "Sainte-Mere-Ellies", color: "red", url: "images/dukes/IMG_2426.JPG" },
+  // {
+  //   lat: 58.3019,
+  //   lng: -134.4197,
+  //   label: "Juneau, Alaska",
+  //   color: "red",
+  //   url: "galleries/og-mutniks/juneau/index.html"
+  // },
 ];
 
 const popup = document.getElementById('image-popup');
