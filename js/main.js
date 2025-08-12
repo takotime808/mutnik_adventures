@@ -232,6 +232,13 @@ const markers = [
     url: "images/dukes/Jamaica.jpg"
   },
   {
+    lat: 59.5775,
+    lng: -136.1317,
+    label: "Jeff & Beth - Mosquito Lake",
+    color: "red",
+    url: "galleries/jeff-and-beth/mosquito-lake/index.html"
+  },
+  {
     lat: -16.9203,
     lng: 145.7710,
     label: "Jeff & Beth - Cairn Australia",
