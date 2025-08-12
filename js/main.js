@@ -213,9 +213,16 @@ const markers = [
   {
     lat: 13.4125,
     lng: 103.866,
-    label: "Dukes - Ankor Wat",
+    label: "Jeff & Beth - Ankor Wat",
     color: "red",
     url: "images/dukes/Ankor_Wat.jpg"
+  },
+  {
+    lat: 18.1096,
+    lng: -77.2975,
+    label: "Jeff & Beth - Jamaica",
+    color: "red",
+    url: "images/dukes/Jamaica.jpg"
   }
 ];
 
@@ -242,7 +249,7 @@ globe
   .pointLabel('label')
   .onPointClick(d => {
     if (d.url) {
-      if (/\.(png|jpe?g|gif)$/i.test(d.url)) {
+      if (/\.(png|jpe?g|gif|JPE?G)$/i.test(d.url)) {
         popupImage.src = d.url;
         popup.classList.remove('hidden');
       } else {
