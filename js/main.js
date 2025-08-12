@@ -63,7 +63,8 @@ const markers = [
     lng: -117.2653,
     label: "Del Mar, CA",
     color: "teal",
-    url: "galleries/tako-and-dani/san-diego/index.html"
+    // url: "galleries/tako-and-dani/san-diego/index.html"
+    url: "images/tako-and-dani/sandiego1.webp"
   },
   {
     lat: 15.87,
@@ -272,7 +273,7 @@ const markers = [
   { lat: 43.7230, lng: 10.3966, label: "Jeff & Beth - Italy", color: "red", url: "images/dukes/IMG_7189.JPG" },
   { lat: 42.373, lng: -73.3677, label: "Jeff & Beth", color: "red", url: "images/dukes/IMG_0195.webp" },
   { lat: 32.7157, lng: -117.1611, label: "San Diego", color: "red", url: "images/dukes/San Diego/IMG_8043.webp" },
-  { lat: 32.7157, lng: -117.5611, label: "San Diego", color: "red", url: "images/dukes/San Diego/san_diego.webp" },
+  { lat: 32.7157, lng: -118.0611, label: "San Diego", color: "red", url: "images/dukes/San Diego/san_diego.webp" },
   // {"lat":21.3996,"lng":-157.7974,"label":"Kaneohe","color":"red","url":"images/dukes/DB9A6455.JPG"},
   // {"lat":21.4,"lng":-157.8,"label":"Haleiwa Joes","color":"red","url":"images/dukes/DB9A6467.JPG"},
   // {"lat":41.9028,"lng":12.4964,"label":"Rome","color":"red","url":"images/dukes/26a0c921-74b3-4433-8c76-12d677742031.JPG"},
