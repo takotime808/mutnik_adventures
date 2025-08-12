@@ -1,11 +1,19 @@
 // Copyright (c) 2025 takotime808
 const markers = [
+  // {
+  //   lat: 40.7128,
+  //   lng: -74.006,
+  //   label: "Tako & Dani - New York",
+  //   color: "teal",
+  //   url: "galleries/tako-and-dani/new_york/index.html"
+  // },
   {
-    lat: 40.7128,
-    lng: -74.006,
-    label: "Tako & Dani - New York",
+    lat: 40.6826,
+    lng: -73.9755,
+    label: "Barclays Center - Brooklyn",
     color: "teal",
-    url: "galleries/tako-and-dani/new_york/index.html"
+    // url: "galleries/tako-and-dani/new_york/index.html"
+    url: "https://cmutnik.github.io/takophotos/gallery/gallery12/"
   },
   {
     lat: 21.4389,
@@ -23,24 +31,18 @@ const markers = [
   },
   {
     lat: 29.9511,
-    lng: -90.0715,
+    lng: -90.3715,
     label: "Tako & Dani - New Orleans",
     color: "teal",
     url: "galleries/tako-and-dani/nola/index.html"
-  },
-  {
-    lat: 40.6826,
-    lng: -73.9755,
-    label: "Barclays Center - Brooklyn",
-    color: "teal",
-    url: "galleries/tako-and-dani/new_york/index.html"
   },
   {
     lat: 27.7731,
     lng: -82.64,
     label: "St. Petersburg, FL",
     color: "teal",
-    url: "galleries/tako-and-dani/st_petersburg_fl/index.html"
+    // url: "galleries/tako-and-dani/st_petersburg_fl/index.html"
+    url: "images/tako-and-dani/st-pete.jpeg"
   },
   {
     lat: 24.5551,
@@ -54,7 +56,7 @@ const markers = [
     lng: -81.7948,
     label: "Naples, FL",
     color: "teal",
-    url: "galleries/tako-and-dani/naples_fl/index.html"
+    // url: "galleries/tako-and-dani/naples_fl/index.html"
   },
   {
     lat: 32.9595,
@@ -103,16 +105,16 @@ const markers = [
     lat: 19.1326,
     lng: -99.5332,
     label: "Mexico City",
-    color: "teal",
+    color: "gold",
     // url: "galleries/tako/mexico_city/index.html"
   },
-  {
-    lat: 19.4326,
-    lng: -99.1332,
-    label: "Mexico City",
-    color: "gold",
-    url: "galleries/jeff-and-beth/mexico_city/index.html"
-  },
+  // {
+  //   lat: 19.4326,
+  //   lng: -99.1332,
+  //   label: "Mexico City",
+  //   color: "gold",
+  //   url: "galleries/jeff-and-beth/mexico_city/index.html"
+  // },
   {
     lat: 10.4632,
     lng: -84.7033,
@@ -146,21 +148,21 @@ const markers = [
     lng: -76.2859,
     label: "Norfolk, Virginia",
     color: "blue",
-    url: "galleries/zack/norfolk/index.html"
+    // url: "galleries/zack/norfolk/index.html"
   },
   {
     lat: 34.7026,
     lng: -83.7288,
     label: "Helen, Georgia",
     color: "gold",
-    url: "galleries/tako/helen/index.html"
+    // url: "galleries/tako/helen/index.html"
   },
   {
     lat: 39.7392,
     lng: -104.9903,
     label: "Denver, Colorado",
     color: "gold",
-    url: "galleries/tako/denver/index.html"
+    // url: "galleries/tako/denver/index.html"
   },
   {
     lat: 41.9028,
@@ -174,14 +176,14 @@ const markers = [
     lng: 7.427,
     label: "Monaco",
     color: "red",
-    url: "galleries/og-mutniks/monaco/index.html"
+    // url: "galleries/og-mutniks/monaco/index.html"
   },
   {
     lat: 43.7102,
     lng: 7.262,
     label: "Nice, France",
     color: "red",
-    url: "galleries/og-mutniks/nice/index.html"
+    // url: "galleries/og-mutniks/nice/index.html"
   },
   {
     lat: 37.9838,
@@ -261,12 +263,16 @@ const markers = [
     color: "red",
     url: "galleries/jeff-and-beth/mexico_city/index.html"
   },
+  { lat:29.0384, lng:-81.3789, label:"Orlando", color:"gold", url:"images/tako/DB9A8933.webp" },
+  // { lat: 21.5207, lng: -157.8373, label: "Kualoa Ranch", color: "red", url: "images/dukes/44e22af4-5c32-4d96-ba3d-48abf198a002.webp" }, // added to oahu pcc map
+  { lat:21.6396, lng:-158.6246, label:"Jeff & Beth - Hawaii", color:"red", url:"galleries/jeff-and-beth/oahu_polynesian_cultural_center/index.html" },
+  // {"lat":29.9511,"lng":-90.0715,"label":"New Orleans","color":"red","url":"images/dukes/New Orleans/ab27f212-5ae0-4f8a-9ba6-9c30a8ea1f73.webp"},
+  { lat:29.9511, lng:-90.0715, label:"Jeff & Beth - New Orleans", color:"red", url:"galleries/jeff-and-beth/new_orleans/index.html" },
   // { lat: 43.8429, lng: 10.5027, label: "Pisa", color: "red", url: "images/dukes/IMG_7204.JPG" },
   { lat: 43.7230, lng: 10.3966, label: "Jeff & Beth - Italy", color: "red", url: "images/dukes/IMG_7189.JPG" },
   { lat: 42.373, lng: -73.3677, label: "Jeff & Beth", color: "red", url: "images/dukes/IMG_0195.webp" },
   { lat: 32.7157, lng: -117.1611, label: "San Diego", color: "red", url: "images/dukes/San Diego/IMG_8043.webp" },
   { lat: 32.7157, lng: -117.5611, label: "San Diego", color: "red", url: "images/dukes/San Diego/san_diego.webp" },
-  { lat: 21.5207, lng: -157.8373, label: "Kualoa Ranch", color: "red", url: "images/dukes/44e22af4-5c32-4d96-ba3d-48abf198a002.webp" },
   // {"lat":21.3996,"lng":-157.7974,"label":"Kaneohe","color":"red","url":"images/dukes/DB9A6455.JPG"},
   // {"lat":21.4,"lng":-157.8,"label":"Haleiwa Joes","color":"red","url":"images/dukes/DB9A6467.JPG"},
   // {"lat":41.9028,"lng":12.4964,"label":"Rome","color":"red","url":"images/dukes/26a0c921-74b3-4433-8c76-12d677742031.JPG"},
@@ -292,8 +298,7 @@ const markers = [
   // {"lat":41.9484,"lng":-87.6553,"label":"Wrigley Field","color":"red","url":"images/dukes/IMG_5151.JPG"},
   // {"lat":28.3597,"lng":-81.5913,"label":"Addison Gender Reveal (Animal Kingdom)","color":"red","url":"images/dukes/IMG_3442.jpg"},
   // {"lat":44.9778,"lng":-93.265,"label":"Minneapolis","color":"red","url":"images/dukes/IMG_3225.JPG"},
-  {"lat":39.0968,"lng":-120.0324,"label":"Lake Tahoe","color":"red","url":"images/dukes/Lake Tahoe.png"},
-  {"lat":29.9511,"lng":-90.0715,"label":"New Orleans","color":"red","url":"images/dukes/New Orleans/ab27f212-5ae0-4f8a-9ba6-9c30a8ea1f73.webp"},
+  {"lat":39.0968,"lng":-120.0324,"label":"Lake Tahoe","color":"red","url":"images/dukes/Lake Tahoe.webp"},
   // {"lat":37.2116,"lng":-76.7752,"label":"Jamestown VA","color":"red","url":"images/dukes/IMG_2193.jpg"},
   {"lat":42.3124,"lng":-87.8414,"label":"Zacks Bootcamp Graduation (Great Lakes IL)","color":"red","url":"images/dukes/IMG_1099.webp"},
   // {"lat":47.6062,"lng":-122.3321,"label":"Seattle","color":"red","url":"images/dukes/IMG_3426.JPG"},
@@ -331,13 +336,16 @@ const globe = window.Globe()(document.getElementById('globeViz'))
   .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
   .pointOfView({ lat: 20, lng: 0, altitude: 2 });
 
+// Detect touch devices to improve pin usability on mobile
+const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
 globe
   .pointsData(markers)
   .pointLat('lat')
   .pointLng('lng')
   .pointColor(d => d.color)
-  .pointAltitude(0.05)
-  .pointRadius(0.2)
+  .pointAltitude(isTouch ? 0.08 : 0.05)
+  .pointRadius(isTouch ? 0.6 : 0.2)
   .pointLabel('label')
   .onPointClick(d => {
     if (d.url) {
