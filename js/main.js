@@ -22,6 +22,13 @@ const markers = [
     url: "galleries/tako/hawaii/index.html"
   },
   {
+    lat: 21.4389,
+    lng: -158.9633,
+    label: "Tako & Dani - Oʻahu",
+    color: "teal",
+    url: "galleries/tako-and-dani/hawaii-dani2025/index.html"
+  },
+  {
     lat: 29.9511,
     lng: -90.0715,
     label: "Tako & Dani - New Orleans",
