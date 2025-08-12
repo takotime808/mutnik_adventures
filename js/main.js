@@ -229,7 +229,7 @@ const markers = [
     lng: 145.7710,
     label: "Jeff & Beth - Cairn Australia",
     color: "red",
-    url: "images/dukes/Cairn Australia.jpg"
+    url: "images/dukes/Cairn Australia.webp"
   },
   { lat: 43.7230, lng: 10.3966, label: "Jeff & Beth - Italy", color: "red", url: "images/dukes/IMG_7189.JPG" },
   { lat: 42.373, lng: -73.3677, label: "Jeff & Beth", color: "red", url: "images/dukes/IMG_0195.webp" },
