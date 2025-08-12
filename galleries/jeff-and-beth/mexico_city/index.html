@@ -7,89 +7,252 @@
     <title>Mexico City</title>
     <link rel="stylesheet" href="../../../css/style.css">
     <style>
-    .selected-container {
+    /*-- -------------------------- -->
+    <---          Gallery           -->
+    <--- -------------------------- -*/
+
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+      #gallery-1897 {
+        padding: var(--sectionPadding);
+        background-color: #f6eddf;
+        /* stops the cs-graphics from causing an overflow */
+        overflow: hidden;
+        position: relative;
+      }
+      #gallery-1897 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+      }
+      #gallery-1897 .cs-content {
         text-align: center;
-        margin-bottom: 1rem;
-    }
-    #selected-image {
-        max-width: 25%;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    .carousel {
+        width: 100%;
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    .carousel button {
-        background: none;
+        gap: 1.5rem;
+        z-index: 1;
+      }
+      #gallery-1897 .cs-title {
+        max-width: 25ch;
+        margin: 0;
+      }
+      #gallery-1897 .cs-button-solid {
+        font-size: 1rem;
+        font-weight: 700;
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-align: center;
+        text-decoration: none;
+        min-width: 9.375rem;
+        margin: 0;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        padding: 0 1.5rem;
+        background-color: var(--secondary);
+        overflow: hidden;
+        color: #fff;
         border: none;
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    .thumbnails {
-        display: flex;
-        gap: 0.5rem;
-    }
-    .thumbnails img {
-        width: 80px;
-        height: auto;
-        cursor: pointer;
-        opacity: 0.6;
-        border-radius: 4px;
-        transition: opacity 0.3s, transform 0.3s, border 0.3s;
-        border: 2px solid transparent;
-    }
-    .thumbnails img:hover {
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        transition: color 0.3s;
+      }
+      #gallery-1897 .cs-button-solid:before {
+        content: "";
+        width: 0;
+        height: 100%;
+        background: #000;
         opacity: 1;
-        transform: scale(1.05);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+      }
+      #gallery-1897 .cs-button-solid:hover {
+        color: #fff;
+      }
+      #gallery-1897 .cs-button-solid:hover:before {
+        width: 100%;
+      }
+      #gallery-1897 .cs-gallery {
+        width: 100%;
+        display: grid;
+        grid-auto-flow: row;
+        /* 16px - 20px */
+        gap: clamp(1rem, 2vw, 1.25rem);
+        z-index: 1;
+      }
+      #gallery-1897 .cs-item {
+        width: 100%;
+        /* 16px - 32px */
+        padding: clamp(1rem, 4vw, 2rem);
+        background-color: #faf6f2;
+        /* 16px - 32px */
+        border-radius: 1rem;
+        display: grid;
+        /* 8px - 16px */
+        column-gap: clamp(0.5rem, 2vw, 1rem);
+        row-gap: 1rem;
+      }
+      #gallery-1897 .cs-item-text {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.2em;
+        margin: 0;
+        color: var(--headerColor);
+        grid-column: span 2;
+      }
+      #gallery-1897 .cs-picture-group {
+        /* 160px - 320px */
+        min-height: clamp(10rem, 23vw, 20rem);
+        overflow: hidden;
+        border-radius: 1rem;
+        grid-column: span 1;
+        position: relative;
+      }
+      #gallery-1897 .cs-picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      #gallery-1897 .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      #gallery-1897 .cs-tag {
+        font-size: 0.875rem;
+        line-height: 1.5em;
+        padding: 0.25rem 0.75rem;
+        background: rgba(0, 0, 0, 0.24);
+        color: var(--bodyTextColorWhite);
+        border: 1px solid var(--bodyTextColorWhite);
+        border-radius: 1.875rem;
+        position: absolute;
+        /* 8px - 16px */
+        bottom: clamp(0.5rem, 2vw, 1rem);
+        left: clamp(0.5rem, 2vw, 1rem);
+        backdrop-filter: blur(8px);
+      }
+      #gallery-1897 .cs-graphic {
+        /* 500px - 835px */
+        width: clamp(31.25rem, 60vw, 52.1875rem);
+        /* 453px - 757px */
+        height: clamp(28.3125rem, 55vw, 47.3125rem);
+        object-fit: cover;
+        position: absolute;
+        z-index: 0;
+      }
+      #gallery-1897 .cs-graphic-top {
+        top: 0;
+        right: -8.875rem;
+      }
+      #gallery-1897 .cs-graphic-bottom {
+        bottom: 0;
+        left: 0;
+      }
     }
-    .thumbnails img.active {
-        opacity: 1;
-        border-color: #333;
+    /* Tablet - 600px */
+    @media only screen and (min-width: 37.5rem) {
+      #gallery-1897 .cs-content {
+        text-align: left;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      #gallery-1897 .cs-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      #gallery-1897 .cs-graphic-top {
+        right: -8.375rem;
+        transform: initial;
+      }
+      #gallery-1897 .cs-graphic-bottom {
+        left: -7.5rem;
+        transform: initial;
+      }
+    }
+    /* Desktop - 1600px */
+    @media only screen and (min-width: 100rem) {
+      #gallery-1897 .cs-graphic-top {
+        margin-left: 15rem;
+        left: 50%;
+      }
+      #gallery-1897 .cs-graphic-bottom {
+        margin-right: 16.25rem;
+        right: 50%;
+        left: initial;
+      }
+    }
+    /* Dark Mode */
+    @media only screen and (min-width: 0rem) {
+      body.dark-mode #gallery-1897 {
+        background-color: var(--dark);
+      }
+      body.dark-mode #gallery-1897 .cs-title,
+      body.dark-mode #gallery-1897 .cs-item-text {
+        color: var(--bodyTextColorWhite);
+      }
+      body.dark-mode #gallery-1897 .cs-item {
+        background-color: var(--medium);
+      }
+      body.dark-mode #gallery-1897 .cs-graphic {
+        opacity: 0.05;
+      }
     }
     </style>
 </head>
 <body>
-    <h1>Mexico City</h1>
-    <div class="selected-container">
-        <img id="selected-image" src="../../../images/dukes/Mexico City/MEXICO City 1.webp" alt="Mexico City photo 1">
-    </div>
-    <div class="carousel">
-        <button class="prev" aria-label="Previous image">&#10094;</button>
-        <div class="thumbnails">
-            <img src="../../../images/dukes/Mexico City/MEXICO City 1.webp" alt="Mexico City photo 1" class="active">
-            <img src="../../../images/dukes/Mexico City/MEXICO City 2.webp" alt="Mexico City photo 2">
-            <img src="../../../images/dukes/Mexico City/Mexico City 3.webp" alt="Mexico City photo 3">
+    <section id="gallery-1897">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Jeff &amp; Beth</span>
+                <h2 class="cs-title">Mexico City</h2>
+                <a class="cs-button-solid" href="../../../index.html">Back to map</a>
+            </div>
+            <ul class="cs-gallery">
+                <li class="cs-item">
+                    <p class="cs-item-text">Photo 1</p>
+                    <div class="cs-picture-group">
+                        <picture class="cs-picture">
+                            <img src="../../../images/dukes/Mexico City/MEXICO City 1.webp" alt="Mexico City photo 1">
+                        </picture>
+                        <span class="cs-tag">Mexico City</span>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <p class="cs-item-text">Photo 2</p>
+                    <div class="cs-picture-group">
+                        <picture class="cs-picture">
+                            <img src="../../../images/dukes/Mexico City/MEXICO City 2.webp" alt="Mexico City photo 2">
+                        </picture>
+                        <span class="cs-tag">Mexico City</span>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <p class="cs-item-text">Photo 3</p>
+                    <div class="cs-picture-group">
+                        <picture class="cs-picture">
+                            <img src="../../../images/dukes/Mexico City/Mexico City 3.webp" alt="Mexico City photo 3">
+                        </picture>
+                        <span class="cs-tag">Mexico City</span>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <button class="next" aria-label="Next image">&#10095;</button>
-    </div>
-    <p><a href="../../../index.html">Back to map</a></p>
-    <script>
-    const thumbnails = document.querySelectorAll('.thumbnails img');
-    const selectedImage = document.getElementById('selected-image');
-    let currentIndex = 0;
-
-    function showImage(index) {
-        thumbnails[currentIndex].classList.remove('active');
-        currentIndex = index;
-        selectedImage.src = thumbnails[index].src;
-        selectedImage.alt = thumbnails[index].alt;
-        thumbnails[index].classList.add('active');
-    }
-
-    thumbnails.forEach((thumb, index) => {
-        thumb.addEventListener('click', () => showImage(index));
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        showImage((currentIndex - 1 + thumbnails.length) % thumbnails.length);
-    });
-
-    document.querySelector('.next').addEventListener('click', () => {
-        showImage((currentIndex + 1) % thumbnails.length);
-    });
-    </script>
+    </section>
 </body>
 </html>
