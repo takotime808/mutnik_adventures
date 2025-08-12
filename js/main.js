@@ -202,6 +202,13 @@ const markers = [
     label: "Plattsburgh, New York",
     color: "gold",
     url: "galleries/tako/plattsburgh/index.html"
+  },
+  {
+    lat: 40.01499,
+    lng: -105.27055,
+    label: "Jeff & Beth - Boulder",
+    color: "red",
+    url: "galleries/jeff-and-beth/boulder/index.html"
   }
 ];
 
