@@ -222,3 +222,26 @@ globe
       window.location.href = d.url;
     }
   });
+
+
+const activeColors = new Set(markers.map(m => m.color));
+
+function updateMarkers() {
+  globe.pointsData(markers.filter(m => activeColors.has(m.color)));
+}
+
+updateMarkers();
+
+document.querySelectorAll('.legend-item').forEach(item => {
+  const color = item.dataset.color;
+  item.addEventListener('click', () => {
+    if (activeColors.has(color)) {
+      activeColors.delete(color);
+      item.classList.add('disabled');
+    } else {
+      activeColors.add(color);
+      item.classList.remove('disabled');
+    }
+    updateMarkers();
+  });
+});
