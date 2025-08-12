@@ -73,3 +73,35 @@ h1 {
 .legend-item.blue .legend-color {
     background: blue;
 }
+
+
+.hidden {
+    display: none;
+}
+
+#image-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-popup.hidden {
+    display: none;
+}
+
+#image-popup .popup-content {
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+#image-popup img {
+    max-width: 300px;
+    max-height: 200px;
+}

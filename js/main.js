@@ -209,8 +209,24 @@ const markers = [
     label: "Jeff & Beth - Boulder",
     color: "red",
     url: "galleries/jeff-and-beth/boulder/index.html"
+  },
+  {
+    lat: 13.4125,
+    lng: 103.866,
+    label: "Dukes - Ankor Wat",
+    color: "red",
+    url: "images/dukes/Ankor_Wat.jpg"
   }
 ];
+
+const popup = document.getElementById('image-popup');
+const popupImage = document.getElementById('popup-image');
+
+popup.addEventListener('click', (event) => {
+  event.stopPropagation();
+  popup.classList.add('hidden');
+  popupImage.src = '';
+});
 
 const globe = window.Globe()(document.getElementById('globeViz'))
   .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
@@ -226,7 +242,12 @@ globe
   .pointLabel('label')
   .onPointClick(d => {
     if (d.url) {
-      window.location.href = d.url;
+      if (/\.(png|jpe?g|gif)$/i.test(d.url)) {
+        popupImage.src = d.url;
+        popup.classList.remove('hidden');
+      } else {
+        window.location.href = d.url;
+      }
     }
   });
 
