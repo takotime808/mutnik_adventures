@@ -7,6 +7,13 @@ const markers = [
     color: "purple",
     url: "galleries/mel-and-carl/london/index.html",
   },
+  {
+    lat: 36.8508,
+    lng: -76.2859,
+    label: "Norfolk, Virginia",
+    color: "orange",
+    // url: "galleries/zack/norfolk/index.html"
+  },
   // {
   //   lat: 40.7128,
   //   lng: -74.006,
@@ -128,14 +135,14 @@ const markers = [
     lng: -84.7033,
     label: "Arenal Volcano, Costa Rica",
     color: "gold",
-    url: "galleries/tako/arenal_volcano/index.html"
+    // url: "galleries/tako/arenal_volcano/index.html"
   },
   {
     lat: 45.677,
     lng: -111.0429,
     label: "Bozeman, Montana",
     color: "gold",
-    url: "galleries/tako/bozeman/index.html"
+    // url: "galleries/tako/bozeman/index.html"
   },
   {
     lat: 36.2168,
@@ -153,15 +160,111 @@ const markers = [
     url: "images/tako/DB9A4765.webp"
   },
   {
-    lat: 36.8508,
-    lng: -76.2859,
-    label: "Norfolk, Virginia",
-    color: "orange",
-    // url: "galleries/zack/norfolk/index.html"
+    lat: 35.7647,
+    lng: -82.2653,
+    label: "Blue Ridge Mountains",
+    color: "gold",
+    // url: "galleries/tako/outer_banks/index.html"
   },
   {
-    lat: 34.7026,
-    lng: -83.7288,
+    lat: 36.8516,
+    lng: -75.9792,
+    label: "Virginia Beach",
+    color: "gold",
+  },
+  {
+    lat: 36.1716,
+    lng: -115.1391,
+    label: "Las Vegas",
+    color: "gold",
+  },
+  {
+    lat: 36.3008,
+    lng: -119.7829,
+    label: "Lemoore",
+    color: "gold",
+  },
+  {
+    lat: 40.7787,
+    lng: -113.8352,
+    label: "Salt Flats",
+    color: "gold",
+  },
+  {
+    lat: 30.2747,
+    lng: -97.7404,
+    label: "Texas",
+    color: "gold",
+  },
+  {
+    lat: 47.7511,
+    lng: -120.7401,
+    label: "Washington",
+    color: "gold",
+  },
+  {
+    lat: 43.0760,
+    lng: -107.2903,
+    label: "Wyoming",
+    color: "gold",
+  },
+  {
+    lat: 33.4230,
+    lng: -111.9278,
+    label: "Arizona",
+    color: "gold",
+  },
+  {
+    lat: 41.7180,
+    lng: -87.6094,
+    label: "Chicago",
+    color: "gold",
+  },
+  {
+    lat: 32.3547,
+    lng: -89.3985,
+    label: "Mississippi",
+    color: "gold",
+  },
+  {
+    lat: 32.3182,
+    lng: -86.9023,
+    label: "Alabama",
+    color: "gold",
+  },
+  {
+    lat: 38.9848,
+    lng: -77.0943,
+    label: "Bethesda",
+    color: "gold",
+  },
+  {
+    lat: 33.7501,
+    lng: -84.3885,
+    label: "Atlanta",
+    color: "gold",
+  },
+  {
+    lat: 38.9108,
+    lng: -75.5277,
+    label: "Delaware",
+    color: "gold",
+  },
+  {
+    lat: 38.9072,
+    lng: -77.0369,
+    label: "DC",
+    color: "gold",
+  },
+  {
+    lat: 34.9727,
+    lng: -105.0324,
+    label: "New Mexico",
+    color: "gold",
+  },
+  {
+    lat: 34.6568,
+    lng: -83.7199,
     label: "Helen, Georgia",
     color: "gold",
     // url: "galleries/tako/helen/index.html"
