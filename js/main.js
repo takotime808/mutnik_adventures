@@ -178,7 +178,7 @@ const markers = [
     lat: 43.7396,
     lng: 7.427,
     label: "Monaco",
-    color: "red",
+    color: "gold",
     // url: "galleries/og-mutniks/monaco/index.html"
   },
   {
