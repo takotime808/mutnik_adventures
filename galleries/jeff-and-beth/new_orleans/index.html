@@ -6,51 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Orleans</title>
     <link rel="stylesheet" href="../../../css/style.css">
-    <style>
-    .selected-container {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    #selected-image {
-        max-width: 25%;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    }
-    .carousel {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    .carousel button {
-        background: none;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    .thumbnails {
-        display: flex;
-        gap: 0.5rem;
-    }
-    .thumbnails img {
-        width: 80px;
-        height: auto;
-        cursor: pointer;
-        opacity: 0.6;
-        border-radius: 4px;
-        transition: opacity 0.3s, transform 0.3s, border 0.3s;
-        border: 2px solid transparent;
-    }
-    .thumbnails img:hover {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    .thumbnails img.active {
-        opacity: 1;
-        border-color: #333;
-    }
-    </style>
-</head>
+    <link rel="stylesheet" href="../../../css/gallery.css">
+    </head>
 <body>
 <a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Map</a>
     <h1>New Orleans</h1>
@@ -66,30 +23,7 @@
         <button class="next" aria-label="Next image">&#10095;</button>
     </div>
     <p><a href="../../../index.html">Back to map</a></p>
-    <script>
-    const thumbnails = document.querySelectorAll('.thumbnails img');
-    const selectedImage = document.getElementById('selected-image');
-    let currentIndex = 0;
-
-    function showImage(index) {
-        thumbnails[currentIndex].classList.remove('active');
-        currentIndex = index;
-        selectedImage.src = thumbnails[index].src;
-        selectedImage.alt = thumbnails[index].alt;
-        thumbnails[index].classList.add('active');
-    }
-
-    thumbnails.forEach((thumb, index) => {
-        thumb.addEventListener('click', () => showImage(index));
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        showImage((currentIndex - 1 + thumbnails.length) % thumbnails.length);
-    });
-
-    document.querySelector('.next').addEventListener('click', () => {
-        showImage((currentIndex + 1) % thumbnails.length);
-    });
-    </script>
+    
+    <script src="../../../js/gallery.js"></script>
 </body>
 </html>
