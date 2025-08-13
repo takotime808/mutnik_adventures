@@ -156,7 +156,7 @@ const markers = [
     lat: 36.8508,
     lng: -76.2859,
     label: "Norfolk, Virginia",
-    color: "blue",
+    color: "orange",
     // url: "galleries/zack/norfolk/index.html"
   },
   {

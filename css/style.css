@@ -123,12 +123,12 @@ h1 {
     background: gold;
 }
 
-.legend-item.blue {
-    color: blue;
+.legend-item.orange {
+    color: orange;
 }
 
-.legend-item.blue .legend-color {
-    background: blue;
+.legend-item.orange .legend-color {
+    background: orange;
 }
 
 .legend-item.purple {
