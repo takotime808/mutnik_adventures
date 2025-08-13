@@ -1,5 +1,12 @@
 // Copyright (c) 2025 takotime808
 const markers = [
+  {
+    lat: 51.5074,
+    lng: -0.1278,
+    label: "Mel & Carl - London",
+    color: "purple",
+    url: "galleries/mel-and-carl/london/index.html",
+  },
   // {
   //   lat: 40.7128,
   //   lng: -74.006,

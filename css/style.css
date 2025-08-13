@@ -131,6 +131,13 @@ h1 {
     background: blue;
 }
 
+.legend-item.purple {
+    color: purple;
+}
+
+.legend-item.purple .legend-color {
+    background: purple;
+}
 
 .hidden {
     display: none;
