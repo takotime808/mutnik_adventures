@@ -396,7 +396,28 @@ const markers = [
     lng: -71.0589,
     label: "Boston, Massachusetts",
     color: "gold",
-    url: "galleries/tako/boston/index.html"
+    // url: "galleries/tako/boston/index.html"
+  },
+  {
+    lat: 19.3222,
+    lng: -81.2409,
+    label: "Grand Cayman",
+    color: "gold",
+    url: "images/tako/cayman-shell.jpeg"
+  },
+  {
+    lat: 49.2827,
+    lng: -123.1207,
+    label: "Vancouver",
+    color: "gold",
+    url: "images/tako/boat-vancouver.jpeg"
+  },
+  {
+    lat: 40.7607,
+    lng: -111.8939,
+    label: "Utah",
+    color: "gold",
+    url: "images/tako/utah-tree.jpeg"
   },
   {
     lat: 36.9066,
