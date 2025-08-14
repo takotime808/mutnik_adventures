@@ -389,7 +389,7 @@ const markers = [
     lng: 23.7275,
     label: "Greece Coastline",
     color: "red",
-    url: "galleries/og-mutniks/greece/index.html"
+    // url: "galleries/og-mutniks/greece/index.html"
   },
   {
     lat: 42.3601,
@@ -397,6 +397,13 @@ const markers = [
     label: "Boston, Massachusetts",
     color: "gold",
     url: "galleries/tako/boston/index.html"
+  },
+  {
+    lat: 36.9066,
+    lng: -76.0217,
+    label: "First Landing, VA",
+    color: "gold",
+    url: "images/tako/first-landing-snake.jpeg"
   },
   {
     lat: 44.6995,
