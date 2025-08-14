@@ -175,6 +175,13 @@ const markers = [
     url: "https://cmutnik.github.io/takophotos/gallery/gallery02/"
   },
   {
+    lat: 14.87,
+    lng: 100.9925,
+    label: "Mathilde",
+    color: "gold",
+    url:  "images/tako/thai-steps.jpeg"
+  },
+  {
     lat: 45.1,
     lng: 15.2,
     label: "Croatia",
@@ -492,9 +499,7 @@ const markers = [
   },
   { lat: 31.5590, lng: 35.4732, label:"Israel", color:"gold", url:"images/tako/DB9A7362.webp" },
   { lat: 29.0384, lng: -81.3789, label:"Orlando", color:"gold", url:"images/tako/DB9A8933.webp" },
-  { lat: 43.2136, lng: -123.3413, label:"Oregon", color:"gold", 
-    // url:"images/tako/.webp" 
-  },
+  { lat: 43.2136, lng: -123.3413, label:"Oregon", color:"gold", url:"images/tako/oregon.jpeg" },
   // { lat: 21.5207, lng: -157.8373, label: "Kualoa Ranch", color: "red", url: "images/dukes/44e22af4-5c32-4d96-ba3d-48abf198a002.webp" }, // added to oahu pcc map
   { lat: 21.6396, lng: -158.6246, label:"Jeff & Beth - Hawaii", color:"red", url:"galleries/jeff-and-beth/oahu_polynesian_cultural_center/index.html" },
   // { "lat": 29.9511, "lng": -90.0715, "label" : "New Orleans", "color" : "red", "url" : "images/dukes/New Orleans/ab27f212-5ae0-4f8a-9ba6-9c30a8ea1f73.webp" },
