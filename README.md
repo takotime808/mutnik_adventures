@@ -20,3 +20,16 @@ pip install pillow
 ### Local Deployments ###
 Open `index.html` in your browser. The map is powered by [Leaflet](https://leafletjs.com/) and uses local placeholder images so it works offline.
 
+## Install as a Progressive Web App
+
+### Android
+1. Serve the project locally (for example, run `npx serve` and open the provided URL).
+2. Open the site in Chrome and wait for it to finish loading.
+3. Use the browser menu and choose **Add to Home screen**.
+4. Launch the installed app from your home screen.
+
+### iOS
+1. Open the site in Safari.
+2. Tap the **Share** button and select **Add to Home Screen**.
+3. The app icon will appear on your home screen and run full-screen when opened.
+
