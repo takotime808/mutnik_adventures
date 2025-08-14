@@ -1,5 +1,14 @@
 // Copyright (c) 2025 takotime808
 const markers = [
+  // Zack and Brit
+  {
+    lat: 36.8508,
+    lng: -76.2859,
+    label: "Norfolk, Virginia",
+    color: "orange",
+    // url: "galleries/zack/norfolk/index.html"
+  },
+  // Mel and Carl
   {
     lat: 51.5074,
     lng: -0.1278,
@@ -8,11 +17,46 @@ const markers = [
     url: "galleries/mel-and-carl/london/index.html",
   },
   {
-    lat: 36.8508,
-    lng: -76.2859,
-    label: "Norfolk, Virginia",
-    color: "orange",
-    // url: "galleries/zack/norfolk/index.html"
+    lat: 52.3676,
+    lng: 4.9041,
+    label: "Mel & Carl - Amsterdam",
+    color: "purple",
+    url: "galleries/mel-and-carl/amsterdam/index.html",
+  },
+  {
+    lat: 51.2093,
+    lng: 3.2247,
+    label: "Mel & Carl - Bruges, Belgium",
+    color: "purple",
+    url: "galleries/mel-and-carl/bruges_belgium/index.html",
+  },
+  {
+    lat: 41.8781,
+    lng: -87.6298,
+    label: "Mel & Carl - Chicago",
+    color: "purple",
+    url: "galleries/mel-and-carl/chicago/index.html",
+  },
+  {
+    lat: 36.1699,
+    lng: -115.1398,
+    label: "Mel & Carl - Las Vegas",
+    color: "purple",
+    url: "galleries/mel-and-carl/vegas/index.html",
+  },
+  {
+    lat: 53.5511,
+    lng: 9.9937,
+    label: "Mel & Carl - Hamburg, Germany",
+    color: "purple",
+    url: "galleries/mel-and-carl/hamburg_germany/index.html",
+  },
+  {
+    lat: 21.4389,
+    lng: -157.9633,
+    label: "Mel & Carl - Oʻahu",
+    color: "purple",
+    url: "galleries/mel-and-carl/oahu/index.html",
   },
   // {
   //   lat: 40.7128,

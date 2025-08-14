@@ -1,0 +1,61 @@
+<!-- Copyright (c) 2025 takotime808 -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Chicago, Illinois</title>
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />
+    <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+    <style>
+        #back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #fff;
+            padding: 6px 10px;
+            border-radius: 4px;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <a id='back-button' href='../../../index.html'>Back to globe</a>
+    <div id='map' style='width:100%; height:100vh;'></div>
+    <script>
+        const baseLat = 41.8781;
+        const baseLng = -87.6298;
+        const map = L.map('map').setView([baseLat, baseLng], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        const purpleIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+        const imgBase = '../../../images/mel-and-carl/Chicago/';
+        const photos = [
+            '20180118_181009.webp',
+            '20180118_182342_1516322850288.webp',
+            '20180119_133331.webp',
+            '20180120_104943.webp',
+            'Resized_20180120_172901_501.webp',
+            'Resized_20180120_191340_3058.webp',
+            '20180121_130026.webp'
+        ];
+        photos.forEach((file, i) => {
+            const lat = baseLat + i * 0.001;
+            const lng = baseLng + i * 0.001;
+            L.marker([lat, lng], { icon: purpleIcon }).addTo(map)
+                .bindPopup(`<img src="${imgBase}${file}" style="max-width:200px;">`);
+        });
+    </script>
+</body>
+</html>

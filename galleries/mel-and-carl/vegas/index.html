@@ -1,0 +1,60 @@
+<!-- Copyright (c) 2025 takotime808 -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Las Vegas, Nevada</title>
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />
+    <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+    <style>
+        #back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #fff;
+            padding: 6px 10px;
+            border-radius: 4px;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <a id='back-button' href='../../../index.html'>Back to globe</a>
+    <div id='map' style='width:100%; height:100vh;'></div>
+    <script>
+        const baseLat = 36.1699;
+        const baseLng = -115.1398;
+        const map = L.map('map').setView([baseLat, baseLng], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        const purpleIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+        const imgBase = '../../../images/mel-and-carl/vegas/';
+        const photos = [
+            '20180527_152936.webp',
+            '20200214_125822.webp',
+            '20200214_230341.png',
+            '20200214_235649.png',
+            '20200214_235947.png',
+            '20200215_130437.png'
+        ];
+        photos.forEach((file, i) => {
+            const lat = baseLat + i * 0.001;
+            const lng = baseLng + i * 0.001;
+            L.marker([lat, lng], { icon: purpleIcon }).addTo(map)
+                .bindPopup(`<img src="${imgBase}${file}" style="max-width:200px;">`);
+        });
+    </script>
+</body>
+</html>

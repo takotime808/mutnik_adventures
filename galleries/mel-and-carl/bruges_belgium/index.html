@@ -1,0 +1,58 @@
+<!-- Copyright (c) 2025 takotime808 -->
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Bruges, Belgium</title>
+    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />
+    <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+    <style>
+        #back-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #fff;
+            padding: 6px 10px;
+            border-radius: 4px;
+            color: #333;
+            text-decoration: none;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <a id='back-button' href='../../../index.html'>Back to globe</a>
+    <div id='map' style='width:100%; height:100vh;'></div>
+    <script>
+        const baseLat = 51.2093;
+        const baseLng = 3.2247;
+        const map = L.map('map').setView([baseLat, baseLng], 12);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        const purpleIcon = L.icon({
+            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        });
+        const imgBase = '../../../images/mel-and-carl/Bruges_Belgium/';
+        const photos = [
+            '20240214_135240.webp',
+            '20240214_135248.webp',
+            '20240214_154254.png',
+            '20240214_154423.webp'
+        ];
+        photos.forEach((file, i) => {
+            const lat = baseLat + i * 0.001;
+            const lng = baseLng + i * 0.001;
+            L.marker([lat, lng], { icon: purpleIcon }).addTo(map)
+                .bindPopup(`<img src="${imgBase}${file}" style="max-width:200px;">`);
+        });
+    </script>
+</body>
+</html>
