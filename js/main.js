@@ -479,7 +479,7 @@ const markers = [
   // { "lat": 21.3996, "lng": -157.7974, "label" : "Kaneohe", "color" : "red", "url" : "images/dukes/DB9A6455.JPG" },
   // { "lat": 21.4, "lng": -157.8, "label" : "Haleiwa Joes", "color" : "red", "url" : "images/dukes/DB9A6467.JPG" },
   // { "lat": 41.9028, "lng": 12.4964, "label" : "Rome", "color" : "red", "url" : "images/dukes/26a0c921-74b3-4433-8c76-12d677742031.JPG" },
-  // { "lat": 41.8719, "lng": 12.5674, "label" : "Italy", "color" : "red", "url" : "images/dukes/IMG_4349.jpg" },
+  { "lat": 41.8719, "lng": 12.5674, "label" : "Italy", "color" : "red", "url" : "images/dukes/IMG_4349.jpg" },
   // { "lat": 20.7909697, "lng": -156.3269338, "label" : "Kula Volcano Maui", "color" : "red", "url" : "images/dukes/2013-07-22_00-35-56_198.jpeg" },
   // { "lat": 49.4099, "lng": -1.3182, "label" : "Sainte-Mere-Ellies", "color" : "red", "url" : "images/dukes/IMG_2426.JPG" },
   // { "lat": 26.264442, "lng": -80.223888, "label" : "Colon Wedding (Carolina golf club)", "color" : "red", "url" : "images/dukes/IMG_1285.JPG" },
