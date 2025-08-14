@@ -182,6 +182,13 @@ const markers = [
     url:  "images/tako/thai-steps.jpeg"
   },
   {
+    lat: 57.6733,
+    lng: -136.8209,
+    label: "Orange Baby Orca",
+    color: "gold",
+    url:  "images/tako/ak-orca.jpeg"
+  },
+  {
     lat: 45.1,
     lng: 15.2,
     label: "Croatia",
