@@ -64,7 +64,7 @@
       '../../../images/mel-and-carl/NY/20230917_124010.webp',
       '../../../images/mel-and-carl/NY/20230917_125721.webp',
       '../../../images/mel-and-carl/NY/20230917_181226.webp'
-    ].map((img, idx) => ({ coords: [base[0] + idx * 0.01, base[1]], img }));
+    ].map((img, idx) => ({ coords: [base[0] + idx * 0.0125, base[1] + idx * 0.005], img }));
 
     photos.forEach(p => {
       L.marker(p.coords, { icon: purpleIcon }).addTo(map)

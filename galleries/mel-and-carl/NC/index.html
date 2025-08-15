@@ -20,16 +20,29 @@
       border: 1px solid #ccc;
       z-index: 1000;
     }
+    /* Popup images: layout + fade behavior */
+    .leaflet-popup-content img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      opacity: 1;       /* visible by default */
+      transition: none; /* fade-out remains fast/normal */
+    }
+    /* Initial hidden state without transition; JS will enable slow fade-in */
+    .leaflet-popup-content img.start-hidden { opacity: 0; }
+    /* Slow fade-in only when ready */
+    .leaflet-popup-content img.fade-in { transition: opacity 1.2s ease; }
   </style>
 </head>
 <body>
   <a id='back-button' href='../../../index.html'>Back to globe</a>
   <div id='map' style='width:100%; height:100vh;'></div>
   <script>
-    const map = L.map('map').setView([35.7596, -79.0193], 8);
+    const map = L.map('map').setView([35.7596, -79.0193], 9.5);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
+
     const purpleIcon = L.icon({
       iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
       shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
@@ -38,6 +51,7 @@
       popupAnchor: [1, -34],
       shadowSize: [41, 41]
     });
+
     const base = [35.7596, -79.0193];
     const photos = [
       '../../../images/mel-and-carl/NC/20200827_105911.webp',
@@ -51,9 +65,57 @@
       '../../../images/mel-and-carl/NC/20200905_142329.webp',
       '../../../images/mel-and-carl/NC/20200906_161753.webp'
     ].map((img, idx) => ({ coords: [base[0] + idx * 0.01, base[1]], img }));
+
     photos.forEach(p => {
       L.marker(p.coords, { icon: purpleIcon }).addTo(map)
-        .bindPopup(`<img src="${p.img}" style="max-width:200px;">`);
+        .bindPopup(`<img src="${p.img}" alt="North Carolina photo" style="max-width:200px;">`);
+    });
+
+    // Slow fade-in on first open + correct border sizing, with robust fallbacks
+    map.on('popupopen', (e) => {
+      const el = e.popup.getElement();
+      if (!el) return;
+
+      const imgs = el.querySelectorAll('img');
+      imgs.forEach((img) => {
+        const update = () => e.popup.update();
+
+        const startFade = () => {
+          // Start hidden without transition, then enable slow fade-in
+          img.classList.add('start-hidden');
+          requestAnimationFrame(() => {
+            img.classList.add('fade-in');
+            img.classList.remove('start-hidden'); // triggers the slow fade-in
+          });
+          requestAnimationFrame(update); // recalc popup size after layout
+        };
+
+        const showNoTransition = () => {
+          // Fallback: show immediately if load doesn't fire soon
+          img.classList.remove('start-hidden', 'fade-in');
+          update();
+        };
+
+        const onError = () => {
+          // Hide broken image to prevent odd borders
+          img.style.display = 'none';
+          update();
+        };
+
+        if (img.complete) {
+          if (img.naturalWidth > 0) {
+            startFade();
+          } else {
+            onError(); // decoded to zero width → treat as error
+          }
+        } else {
+          // Prepare hidden while loading; ensure it won't stay hidden forever
+          img.classList.add('start-hidden');
+          const t = setTimeout(showNoTransition, 2500);
+          img.addEventListener('load', () => { clearTimeout(t); startFade(); }, { once: true });
+          img.addEventListener('error', () => { clearTimeout(t); onError(); }, { once: true });
+        }
+      });
     });
   </script>
 </body>
