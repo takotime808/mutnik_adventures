@@ -9,34 +9,18 @@
   <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
   <style>
     #back-button {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: #fff;
-      padding: 6px 10px;
-      border-radius: 4px;
-      color: #333;
-      text-decoration: none;
-      border: 1px solid #ccc;
-      z-index: 1000;
+      position: absolute; top: 10px; left: 10px; background: #fff; padding: 6px 10px;
+      border-radius: 4px; color: #333; text-decoration: none; border: 1px solid #ccc; z-index: 1000;
     }
-
-    /* Popup image layout (no default hiding) */
     .leaflet-popup-content img {
       display: block;
       max-width: 100%;
       height: auto;
-      opacity: 1; /* always visible by default */
+      opacity: 1;       /* visible by default */
+      transition: none; /* fade-out stays fast/normal */
     }
-
-    /* Apply fade-in only when JS marks image as loaded */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-    .leaflet-popup-content img.fade-in-loaded {
-      animation: fadeIn 0.4s ease forwards;
-    }
+    .leaflet-popup-content img.start-hidden { opacity: 0; }         /* initial no-transition hide */
+    .leaflet-popup-content img.fade-in { transition: opacity 1.2s ease; } /* slow fade-in */
   </style>
 </head>
 <body>
@@ -71,38 +55,40 @@
         .bindPopup(`<img src="${p.img}" alt="Paris photo" style="max-width:200px;">`);
     });
 
-    // Robust: ensure correct border sizing on first open + safe fade-in
+    // Slow fade-in + correct first-open sizing, with cache/error fallback
     map.on('popupopen', (e) => {
       const el = e.popup.getElement();
       if (!el) return;
-
       const imgs = el.querySelectorAll('img');
       imgs.forEach((img) => {
-        const reveal = () => {
-          // Add fade-in animation class; keep image visible by default
-          img.classList.add('fade-in-loaded');
-          // Update popup size to match final image dimensions
-          // Use rAF to ensure layout is ready before updating
-          requestAnimationFrame(() => e.popup.update());
+        const update = () => e.popup.update();
+
+        const startFade = () => {
+          img.classList.add('start-hidden');
+          requestAnimationFrame(() => {
+            img.classList.add('fade-in');
+            img.classList.remove('start-hidden');
+          });
+          requestAnimationFrame(update);
+        };
+
+        const showNoTransition = () => {
+          img.classList.remove('start-hidden', 'fade-in');
+          update();
         };
 
         const onError = () => {
-          // Hide broken image to avoid odd borders, but keep popup sane
           img.style.display = 'none';
-          e.popup.update();
+          update();
         };
 
-        if (img.complete) {
-          // If already loaded (cache), confirm it decoded before revealing
-          if (img.naturalWidth > 0) {
-            reveal();
-          } else {
-            // Edge case: 'complete' but zero size (failed decode) -> treat as error
-            onError();
-          }
+        if (img.complete && img.naturalWidth > 0) {
+          startFade();
         } else {
-          img.addEventListener('load', reveal, { once: true });
-          img.addEventListener('error', onError, { once: true });
+          img.classList.add('start-hidden');
+          const t = setTimeout(showNoTransition, 2500);
+          img.addEventListener('load', () => { clearTimeout(t); startFade(); }, { once: true });
+          img.addEventListener('error', () => { clearTimeout(t); onError(); }, { once: true });
         }
       });
     });
