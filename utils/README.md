@@ -2,27 +2,34 @@
 
 This script resizes, rotates, reformats, strips metadata, and adds copyright info to images — with an optional **size guard** so adding metadata never increases file size.
 
+
+To update this README automatically with changes to the argparse CLI, run:
+```bash
+python manipulate_images_for_web.py --generate_readme > README.md
+```
+
+
 ## 🚀 Quick Start
 
 ### 1. Resize & Convert to WebP
 ```bash
-python manipulate_images_with_metadata.py -i "photo.jpg" -o "outdir" -sf 0.5 -oe webp
+python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -sf 0.5 -oe webp
 ```
 
 ### 2. Remove Metadata, Then Add Copyright
 ```bash
-python manipulate_images_with_metadata.py -i "photo.jpg" -o "outdir" -m -c
+python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -m -c
 ```
 
 ### 3. Convert a Folder of PNGs to JPEG
 ```bash
-python manipulate_images_with_metadata.py -i "images/*.png" -o "outdir" -oe jpg
+python manipulate_images_for_web.py -i "images/*.png" -o "outdir" -oe jpg
 ```
 
 
 ## 📋 Command-line Usage
 ```bash
-python manipulate_images_with_metadata.py [options]
+python manipulate_images_for_web.py [options]
 ```
 
 
@@ -42,58 +49,58 @@ python manipulate_images_with_metadata.py [options]
 | `--copyright_text` | str | `copyright (c) 2025 takotime808` | Copyright text to embed. (default: 'copyright (c) 2025 takotime808') |
 | `--admin_mode` | flag | `False` | Verbose logging. |
 | `--allow_png_quantize` | flag | `False` | If needed, quantize PNG to ≤256 colors to keep size non-increasing. |
-| `--png_quantize_colors` | int | `256` | Palette size for PNG quantization when enabled. (default: 256) |
+| `--png_quantize_colors` | int | `256` | Palette size for PNG quantization (if enabled). (default: 256) |
 | `--generate_readme` | flag | `False` | Generate README.md section for CLI usage. |
 
 ## 💡 Examples
 
 ### Resize a single image
 ```bash
-python manipulate_images_with_metadata.py -i "input.jpg" -o "outdir" -sf 0.5 -oe webp
+python manipulate_images_for_web.py -i "input.jpg" -o "outdir" -sf 0.5 -oe webp
 ```
 
 ### Resize all images in a directory
 ```bash
-python manipulate_images_with_metadata.py -i "images/*.png" -o "outdir" -sf 0.25 -oe jpg
+python manipulate_images_for_web.py -i "images/*.png" -o "outdir" -sf 0.25 -oe jpg
 ```
 
 ### Rotate an image
 ```bash
-python manipulate_images_with_metadata.py -i "photo.jpg" -o "outdir" -r -90
+python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -r -90
 ```
 
 ### Remove all metadata (EXIF)
 ```bash
-python manipulate_images_with_metadata.py -i "photo.jpg" -o "outdir" -m
+python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -m
 ```
 
 ### Add copyright metadata
 ```bash
-python manipulate_images_with_metadata.py -i "photo.jpg" -o "outdir" -c --copyright_text "© 2025 MyName"
+python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -c --copyright_text "© 2025 MyName"
 ```
 
 ### Remove metadata, then add copyright
 ```bash
-python manipulate_images_with_metadata.py -i "photo.jpg" -o "outdir" -m -c
+python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -m -c
 ```
 
 ### Change format without resizing
 ```bash
-python manipulate_images_with_metadata.py -i "image.png" -o "outdir" -oe jpg
+python manipulate_images_for_web.py -i "image.png" -o "outdir" -oe jpg
 ```
 
 ### Process multiple patterns at once
 ```bash
-python manipulate_images_with_metadata.py -i "dir1/*.jpg,dir2/*.png" -o "outdir" -sf 0.8
+python manipulate_images_for_web.py -i "dir1/*.jpg,dir2/*.png" -o "outdir" -sf 0.8
 ```
 
 ### PNG-only size-safe mode with quantization
 ```bash
-python manipulate_images_with_metadata.py -i "photo.png" -o "outdir" -c --allow_png_quantize --png_quantize_colors 256
+python manipulate_images_for_web.py -i "photo.png" -o "outdir" -c --allow_png_quantize --png_quantize_colors 256
 ```
 
 ### Verbose mode (admin)
 ```bash
-python manipulate_images_with_metadata.py -i "photo.jpg" -o "outdir" -sf 0.5 -c --admin_mode
+python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -sf 0.5 -c --admin_mode
 ```
 
