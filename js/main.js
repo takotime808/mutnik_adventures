@@ -17,6 +17,13 @@ const markers = [
   },
   // Mel and Carl
   {
+    lat: 30.4463,
+    lng: -140.9758,
+    label: "HI <-- CA",
+    color: "purple",
+    url: "images/mel-and-carl/20180527_152936.webp",
+  },
+  {
     lat: 51.5074,
     lng: -0.1278,
     label: "Mel & Carl - London",
