@@ -139,6 +139,14 @@ h1 {
     background: purple;
 }
 
+.legend-item.lightpink {
+    color: lightpink;
+}
+
+.legend-item.lightpink .legend-color {
+    background: lightpink;
+}
+
 .hidden {
     display: none;
 }

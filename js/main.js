@@ -1,5 +1,13 @@
 // Copyright (c) 2025 takotime808
 const markers = [
+  // Fam
+  {
+    lat: 26.1276,
+    lng: -80.2331,
+    label: "Fam - OG Mutniks",
+    color: "lightpink",
+    url: "galleries/og-mutniks/index.html",
+  },
   // Zack and Brit
   {
     lat: 36.8508,
