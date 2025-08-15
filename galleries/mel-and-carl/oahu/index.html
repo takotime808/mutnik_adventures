@@ -7,23 +7,9 @@
     <title>Oʻahu, Hawaii</title>
     <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />
     <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
-    <style>
-        #back-button {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: #fff;
-            padding: 6px 10px;
-            border-radius: 4px;
-            color: #333;
-            text-decoration: none;
-            border: 1px solid #ccc;
-            z-index: 1000;
-        }
-    </style>
 </head>
 <body>
-    <a id='back-button' href='../../../index.html'>Back to globe</a>
+<a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Map</a>
     <div id='map' style='width:100%; height:100vh;'></div>
     <script>
         const baseLat = 21.4389;
@@ -41,23 +27,23 @@
             shadowSize: [41, 41]
         });
         const imgBase = '../../../images/mel-and-carl/Oahu/';
-        const photos = [
-            '20180529_111843.webp',
-            '20180530_102607.webp',
-            '20180530_122238.webp',
-            '20180530_122816.webp',
-            '20180531_125331.webp',
-            '20180531_125438.webp',
-            '20180531_140214.webp',
-            '20180601_150328.webp',
-            '20180601_150847.webp',
-            'FB_IMG_1459031478255.webp'
+        const points = [
+            ['20180529_111843.webp', 21.2716, -157.8185, 'Keiki Zoo'],
+            ['20180530_102607.webp', 21.3094020, -157.6566983, "Makapu`u Lookout"],
+            ['20180530_122238.webp', 21.3092274, -157.6507334, "Makapu`u Lighthouse"],
+            ['20180530_122816.webp', 21.3092492, -157.6571371, 'Handstanding at the Top'],
+            ['20180531_125331.webp', 21.3368865, -158.1246392, 'Aulani, Disney'],
+            ['20180531_125438.webp', 21.3354166, -158.1239489, 'Honu Lagoon'],
+            ['20180531_140214.webp', 21.3383090, -158.1253279, 'The Fam'],
+            ['20180601_150328.webp', 21.325230, -157.845758, 'Kapena Falls'],
+            ['20180601_150847.webp', 21.3503818, -157.7725999, 'Maunawili'],
+            // ['FB_IMG_1459031478255.webp', 21.2690, -157.6938, 'Hanauma Bay'],
+            ['FB_IMG_1459031478255.webp', 21.6404, -157.9211, 'H&#257;: Breath of Life'],
+            // ['FB_IMG_1459031478255.webp', 21.6404, -157.9211, 'Hā: Breath of Life'],
         ];
-        photos.forEach((file, i) => {
-            const lat = baseLat + i * 0.001;
-            const lng = baseLng + i * 0.001;
-            L.marker([lat, lng], { icon: purpleIcon }).addTo(map)
-                .bindPopup(`<img src="${imgBase}${file}" style="max-width:200px;">`);
+        points.forEach(([file, lat, lon, desc]) => {
+            L.marker([lat, lon], { icon: purpleIcon }).addTo(map)
+                .bindPopup(`<strong>${desc}</strong><br><img src="${imgBase}${file}" style="max-width:200px;">`);
         });
     </script>
 </body>
