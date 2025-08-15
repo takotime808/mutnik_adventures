@@ -8,25 +8,26 @@
     <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />
     <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
     <style>
-        /* Ensure popup images don’t cause inline sizing issues */
         .leaflet-popup-content img {
             display: block;
             max-width: 100%;
             height: auto;
+            opacity: 1;           /* visible by default */
+            transition: none;     /* fade-out is instant/normal */
         }
+        /* Start of fade-in (no transition yet) */
+        .leaflet-popup-content img.start-hidden { opacity: 0; }
+        /* Apply slow fade-in only when ready */
+        .leaflet-popup-content img.fade-in { transition: opacity 1.2s ease; }
     </style>
 </head>
 <body>
-    <a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">
-        Back to Map
-    </a>
+<a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Map</a>
     <div id='map' style='width:100%; height:100vh;'></div>
-
     <script>
         const baseLat = 21.4389;
         const baseLng = -157.9633;
         const map = L.map('map').setView([baseLat, baseLng], 11);
-
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
@@ -55,24 +56,47 @@
             ['FB_IMG_1459031478255.webp', 21.6404, -157.9211, 'H&#257;: Breath of Life'],
             // // ['FB_IMG_1459031478255.webp', 21.6404, -157.9211, 'Hā: Breath of Life'],
         ];
-
         points.forEach(([file, lat, lon, desc]) => {
             L.marker([lat, lon], { icon: purpleIcon }).addTo(map)
-                .bindPopup(`<strong>${desc}</strong><br><img src="${imgBase}${file}" style="max-width:200px;">`);
+                .bindPopup(`<strong>${desc}</strong><br><img src="${imgBase}${file}" alt="${desc}" style="max-width:200px;">`);
         });
 
-        // Ensure popup resizes after image load (fixes first-click sizing issue)
+        // Slow fade-in + correct first-open sizing with safe fallbacks
         map.on('popupopen', (e) => {
             const el = e.popup.getElement();
             if (!el) return;
             const imgs = el.querySelectorAll('img');
             imgs.forEach((img) => {
                 const update = () => e.popup.update();
-                if (img.complete) {
+
+                const startFade = () => {
+                    // ensure starting from opacity 0, then fade in slowly
+                    img.classList.add('start-hidden');
+                    requestAnimationFrame(() => {
+                        img.classList.add('fade-in');
+                        img.classList.remove('start-hidden');
+                    });
+                    requestAnimationFrame(update);
+                };
+
+                const showNoTransition = () => {
+                    img.classList.remove('start-hidden', 'fade-in');
                     update();
+                };
+
+                const onError = () => {
+                    img.style.display = 'none';
+                    update();
+                };
+
+                if (img.complete && img.naturalWidth > 0) {
+                    startFade();
                 } else {
-                    img.addEventListener('load', update, { once: true });
-                    img.addEventListener('error', update, { once: true });
+                    // hide while loading, but unhide after fallback timeout
+                    img.classList.add('start-hidden');
+                    const t = setTimeout(showNoTransition, 2500);
+                    img.addEventListener('load', () => { clearTimeout(t); startFade(); }, { once: true });
+                    img.addEventListener('error', () => { clearTimeout(t); onError(); }, { once: true });
                 }
             });
         });
