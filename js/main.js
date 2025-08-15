@@ -107,6 +107,13 @@ const markers = [
     color: "purple",
     url: "galleries/mel-and-carl/oahu/index.html",
   },
+  {
+    lat: 44.2562,
+    lng: -73.7921,
+    label: "Tyler & Sr. Bob's Wedding (NY)",
+    color: "purple",
+    url: "galleries/mel-and-carl/ny-tyler-sr-bobs/index.html",
+  },
   // {
   //   lat: 40.7128,
   //   lng: -74.006,
