@@ -56,6 +56,8 @@ parser.add_argument("-i", "--img_path", type=str, default=r"./*", metavar="str",
                     help="Glob path(s) to images. (default: ./*)")
 parser.add_argument("-o", "--output_dir", type=str, default=r"./", metavar="str",
                     help="Dir to save results. (default: ./)")
+parser.add_argument("-s", "--out_suffix", type=str, default=r"_resized", metavar="str",
+                    help="Suffix used to distinguish input and output images. (default: _resized)")
 parser.add_argument("-sf", "--scale_factor", type=float, default=1.0, metavar="float",
                     help="Scale factor for width/height. (default: 1.0)")
 parser.add_argument("-oe", "--output_extension", type=str, default=None, metavar="str",
@@ -76,7 +78,7 @@ parser.add_argument("--allow_png_quantize", action="store_true",
                     help="If needed, quantize PNG to ≤256 colors to keep size non-increasing.")
 parser.add_argument("--png_quantize_colors", type=int, default=256,
                     help="Palette size for PNG quantization (if enabled). (default: 256)")
-parser.add_argument("--generate_readme", action="store_true",
+parser.add_argument("-gr", "--generate_readme", action="store_true",
                     help="Generate README.md section for CLI usage.")
 args = parser.parse_args()
 
@@ -159,11 +161,11 @@ def resize_image(image: Image.Image, scale_factor: float) -> Image.Image:
 def rotate_image(image: Image.Image, degrees: int) -> Image.Image:
     return image.rotate(degrees, resample=Image.Resampling.BICUBIC, expand=True)
 
-def get_final_output_name(infile: str, output_dir: str, output_extension: Optional[str]) -> str:
+def get_final_output_name(infile: str, output_dir: str, output_extension: Optional[str], out_suffix: Optional[str]) -> str:
     output_dir = output_dir if output_dir.endswith("/") else output_dir + "/"
     basename = os.path.splitext(os.path.basename(infile))[0]
     out_ext = (output_extension or os.path.splitext(infile)[1][1:]).lower()
-    return f"{output_dir}{basename}_resized.{out_ext}"
+    return f"{output_dir}{basename}{out_suffix}.{out_ext}"
 
 def strip_all_metadata(img: Image.Image) -> Image.Image:
     img = ImageOps.exif_transpose(img)
@@ -284,7 +286,11 @@ def process_one_file(infile: str):
     make_output_dir_if_it_dne(args.output_dir)
     out_ext = (args.output_extension or os.path.splitext(infile)[1][1:]).lower()
     out_fmt = get_format_from_ext(out_ext)
-    outfile = get_final_output_name(infile, args.output_dir, out_ext)
+    outfile = get_final_output_name(
+        infile=infile, 
+        output_dir=args.output_dir,
+        output_extension=out_ext,
+        out_suffix=args.out_suffix)
     orig_size = os.path.getsize(infile)
     img = Image.open(infile); img.load()
     changed = False

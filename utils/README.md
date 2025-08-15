@@ -40,6 +40,7 @@ python manipulate_images_for_web.py [options]
 | `-h, --help` | str | `` | show this help message and exit |
 | `-i, --img_path` | str | `./*` | Glob path(s) to images. (default: ./*) |
 | `-o, --output_dir` | str | `./` | Dir to save results. (default: ./) |
+| `-s, --out_suffix` | str | `_resized` | Suffix used to distinguish input and output images. (default: _resized) |
 | `-sf, --scale_factor` | float | `1.0` | Scale factor for width/height. (default: 1.0) |
 | `-oe, --output_extension` | str | `None` | Output extension (e.g., webp, jpg, png). Default keeps original. |
 | `-ee, --excluded_extensions` | str | `['py']` | List of extensions to ignore (repeatable). |
@@ -50,7 +51,7 @@ python manipulate_images_for_web.py [options]
 | `--admin_mode` | flag | `False` | Verbose logging. |
 | `--allow_png_quantize` | flag | `False` | If needed, quantize PNG to ≤256 colors to keep size non-increasing. |
 | `--png_quantize_colors` | int | `256` | Palette size for PNG quantization (if enabled). (default: 256) |
-| `--generate_readme` | flag | `False` | Generate README.md section for CLI usage. |
+| `-gr, --generate_readme` | flag | `False` | Generate README.md section for CLI usage. |
 
 ## 💡 Examples
 
