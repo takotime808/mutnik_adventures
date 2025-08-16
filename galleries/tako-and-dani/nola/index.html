@@ -2,33 +2,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOLA</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/gallery.css">
-    </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOLA</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/gallery.css" />
+  <link rel="stylesheet" href="../../../css/honeycomb-pro.css" />
+  <style>
+    /* floating back button (kept) */
+    #back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1000;
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      color: #000;
+      box-shadow: 0 1px 3px rgba(0,0,0,.3);
+    }
+  </style>
+</head>
 <body>
-<a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Map</a>
-    <h1>NOLA</h1>
-    <div class="selected-container">
-        <img id="selected-image" src="../../../images/tako-and-dani/nola/nola1.webp" alt="NOLA 1">
+  <a id="back-button" href="../../../index.html">Back to Map</a>
+
+  <h1 style="margin:72px 0 12px; text-align:center;">NOLA</h1>
+
+  <!-- Honeycomb gallery -->
+  <section class="hc-pro-wrap">
+    <div class="gallery gallery--honeycomb hc-pro">
+      <img src="../../../images/tako-and-dani/nola/nola1.webp" alt="NOLA 1">
+      <img src="../../../images/tako-and-dani/nola/nola2.webp" alt="NOLA 2">
+      <img src="../../../images/tako-and-dani/nola/nola3.webp" alt="NOLA 3">
+      <img src="../../../images/tako-and-dani/nola/nola4.webp" alt="NOLA 4">
+      <img src="../../../images/tako-and-dani/nola/nola5.webp" alt="NOLA 5">
+      <img src="../../../images/tako-and-dani/nola/nola6.webp" alt="NOLA 6">
+      <img src="../../../images/tako-and-dani/nola/nola7.webp" alt="NOLA 7">
     </div>
-    <div class="carousel">
-        <button class="prev" aria-label="Previous image">&#10094;</button>
-        <div class="thumbnails">
-            <img src="../../../images/tako-and-dani/nola/nola1.webp" alt="NOLA 1" class="active">
-            <img src="../../../images/tako-and-dani/nola/nola2.webp" alt="NOLA 2">
-            <img src="../../../images/tako-and-dani/nola/nola3.webp" alt="NOLA 3">
-            <img src="../../../images/tako-and-dani/nola/nola4.webp" alt="NOLA 4">
-            <img src="../../../images/tako-and-dani/nola/nola5.webp" alt="NOLA 5">
-            <img src="../../../images/tako-and-dani/nola/nola6.webp" alt="NOLA 6">
-            <img src="../../../images/tako-and-dani/nola/nola7.webp" alt="NOLA 7">
-        </div>
-        <button class="next" aria-label="Next image">&#10095;</button>
-    </div>
-    <p><a href="../../../index.html">Back to map</a></p>
-    
-    <script src="../../../js/gallery.js"></script>
+  </section>
+
+  <!-- Back button on bottom -->
+  <!-- <p class="backlink"><a href="../../../index.html">Back to map</a></p> -->
+  <p class="backlink" style="text-align:center; margin:12px 0 48px;">
+    <a href="../../../index.html">Back to Globe</a>
+  </p>
+
 </body>
 </html>
