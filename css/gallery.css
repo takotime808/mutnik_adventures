@@ -1,4 +1,11 @@
 /* Copyright (c) 2025 takotime808 */
+
+/* Optional: lighter background behind the comb (remove if your site has one) */
+body {
+  /* This Color matches the honeycomb ones found in `css/honeycomb-pro.css` */
+  background: #aabbfb;
+}
+
 .selected-container {
     text-align: center;
     margin-bottom: 1rem;

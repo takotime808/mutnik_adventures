@@ -1,124 +1,87 @@
 <!-- Copyright (c) 2025 takotime808 -->
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>North Carolina</title>
-  <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />
-  <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
-  <style>
-    #back-button {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: #fff;
-      padding: 6px 10px;
-      border-radius: 4px;
-      color: #333;
-      text-decoration: none;
-      border: 1px solid #ccc;
-      z-index: 1000;
-    }
-    /* Popup images: layout + fade behavior */
-    .leaflet-popup-content img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      opacity: 1;       /* visible by default */
-      transition: none; /* fade-out remains fast/normal */
-    }
-    /* Initial hidden state without transition; JS will enable slow fade-in */
-    .leaflet-popup-content img.start-hidden { opacity: 0; }
-    /* Slow fade-in only when ready */
-    .leaflet-popup-content img.fade-in { transition: opacity 1.2s ease; }
-  </style>
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/gallery.css" />
 </head>
 <body>
-  <a id='back-button' href='../../../index.html'>Back to globe</a>
-  <div id='map' style='width:100%; height:100vh;'></div>
-  <script>
-    const map = L.map('map').setView([35.7596, -79.0193], 9.5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+  <!-- Floating back button (kept) -->
+  <a href="../../../index.html"
+     style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">
+     Back to Globe
+  </a>
 
-    const purpleIcon = L.icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41]
-    });
+  <h1 style="margin-top:60px">North Carolina</h1>
 
-    const base = [35.7596, -79.0193];
-    const photos = [
-      '../../../images/mel-and-carl/NC/waterfallbaby1.webp',
-      '../../../images/mel-and-carl/NC/20200827_105911.webp',
-      '../../../images/mel-and-carl/NC/20200827_110803.webp',
-      '../../../images/mel-and-carl/NC/20200829_152244.webp',
-      '../../../images/mel-and-carl/NC/20200829_171835.webp',
-      '../../../images/mel-and-carl/NC/20200829_184628.webp',
-      '../../../images/mel-and-carl/NC/20200830_144125.webp',
-      '../../../images/mel-and-carl/NC/20200904_182112.webp',
-      '../../../images/mel-and-carl/NC/20200904_182516.webp',
-      '../../../images/mel-and-carl/NC/20200905_142329.webp',
-      '../../../images/mel-and-carl/NC/20200906_161753.webp',
-      '../../../images/mel-and-carl/NC/waterfallbaby1.webp'
-    ].map((img, idx) => ({ coords: [base[0] + idx * 0.01, base[1]], img }));
+  <!-- Hover-expanding results strip (same as Juneau) -->
+  <ul class="results">
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/waterfallbaby1.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/waterfallbaby1.webp" width="500" height="500" alt="North Carolina photo 1">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200827_105911.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200827_105911.webp" width="500" height="500" alt="North Carolina photo 2">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200827_110803.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200827_110803.webp" width="500" height="500" alt="North Carolina photo 3">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200829_152244.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200829_152244.webp" width="500" height="500" alt="North Carolina photo 4">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200829_171835.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200829_171835.webp" width="500" height="500" alt="North Carolina photo 5">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200829_184628.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200829_184628.webp" width="500" height="500" alt="North Carolina photo 6">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200830_144125.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200830_144125.webp" width="500" height="500" alt="North Carolina photo 7">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200904_182112.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200904_182112.webp" width="500" height="500" alt="North Carolina photo 8">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200904_182516.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200904_182516.webp" width="500" height="500" alt="North Carolina photo 9">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200905_142329.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200905_142329.webp" width="500" height="500" alt="North Carolina photo 10">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/20200906_161753.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/20200906_161753.webp" width="500" height="500" alt="North Carolina photo 11">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/mel-and-carl/NC/waterfallbaby1.webp" target="_blank" rel="noopener">
+        <img src="../../../images/mel-and-carl/NC/waterfallbaby1.webp" width="500" height="500" alt="North Carolina photo 12">
+      </a>
+    </li>
+  </ul>
 
-    photos.forEach(p => {
-      L.marker(p.coords, { icon: purpleIcon }).addTo(map)
-        .bindPopup(`<img src="${p.img}" alt="North Carolina photo" style="max-width:200px;">`);
-    });
-
-    // Slow fade-in on first open + correct border sizing, with robust fallbacks
-    map.on('popupopen', (e) => {
-      const el = e.popup.getElement();
-      if (!el) return;
-
-      const imgs = el.querySelectorAll('img');
-      imgs.forEach((img) => {
-        const update = () => e.popup.update();
-
-        const startFade = () => {
-          // Start hidden without transition, then enable slow fade-in
-          img.classList.add('start-hidden');
-          requestAnimationFrame(() => {
-            img.classList.add('fade-in');
-            img.classList.remove('start-hidden'); // triggers the slow fade-in
-          });
-          requestAnimationFrame(update); // recalc popup size after layout
-        };
-
-        const showNoTransition = () => {
-          // Fallback: show immediately if load doesn't fire soon
-          img.classList.remove('start-hidden', 'fade-in');
-          update();
-        };
-
-        const onError = () => {
-          // Hide broken image to prevent odd borders
-          img.style.display = 'none';
-          update();
-        };
-
-        if (img.complete) {
-          if (img.naturalWidth > 0) {
-            startFade();
-          } else {
-            onError(); // decoded to zero width → treat as error
-          }
-        } else {
-          // Prepare hidden while loading; ensure it won't stay hidden forever
-          img.classList.add('start-hidden');
-          const t = setTimeout(showNoTransition, 2500);
-          img.addEventListener('load', () => { clearTimeout(t); startFade(); }, { once: true });
-          img.addEventListener('error', () => { clearTimeout(t); onError(); }, { once: true });
-        }
-      });
-    });
-  </script>
+  <p class="backlink"><a href="../../../index.html">Back to Globe</a></p>
 </body>
 </html>
