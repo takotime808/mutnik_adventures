@@ -1,20 +1,5 @@
 // Copyright (c) 2025 takotime808
 const markers = [
-  // Fam
-  {
-    lat: 26.1276,
-    lng: -80.2331,
-    label: "Fam - OG Mutniks",
-    color: "lightpink",
-    url: "galleries/og-mutniks/index.html",
-  },
-  {
-    lat: 21.6415,
-    lng: -158.0671,
-    label: "Fam - Dino Feeding",
-    color: "lightpink",
-    url: "images/fam/44e22af4-5c32-4d96-ba3d-48abf198a002.webp",
-  },
   // Zack and Brit
   {
     lat: 36.8508,
@@ -593,6 +578,45 @@ const markers = [
   { "lat": 34.2856, "lng": -118.8820, "label" : "Moorpark, CA", "color" : "red", "url" : "images/dukes/Moorpark CA.webp" },
   { "lat": 40.4387, "lng": -79.9972, "label" : "Pittsburgh", "color" : "red", "url" : "images/dukes/Pittsburgh.webp" },
   { "lat": 10.8992, "lng": -80.3467, "label" : "Captain Kate", "color" : "red", "url" : "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
+  // Fam
+  {
+    lat: 26.1276,
+    lng: -80.2331,
+    label: "Fam - OG Mutniks",
+    color: "lightpink",
+    url: "galleries/og-mutniks/index.html",
+  },
+  {
+    lat: 21.6415,
+    lng: -158.0671,
+    label: "Fam - Dino Feeding",
+    color: "lightpink",
+    url: "images/fam/44e22af4-5c32-4d96-ba3d-48abf198a002.webp",
+  },
+  // ** Chicago is duplicate from mel and carl (same photos) **
+  {
+    lat: 41.8781,
+    lng: -87.6298,
+    label: "Fam - Chicago",
+    color: "lightpink",
+    url: "galleries/og-mutniks/chicago/index.html",
+  },
+  // ** NC is duplicate from mel and carl **
+  {
+    lat: 35.7596,
+    lng: -79.0193,
+    label: "Fam - North Carolina",
+    color: "lightpink",
+    url: "galleries/og-mutniks/NC/index.html",
+  },
+  // ** NY (sr.bobs) is duplicate from mel and carl **
+  {
+    lat: 44.2562,
+    lng: -73.7921,
+    label: "Tyler & Sr. Bob's Wedding (NY)",
+    color: "lightpink",
+    url: "galleries/og-mutniks/ny-tyler-sr-bobs/index.html",
+  },
 ];
 
 const popup = document.getElementById('image-popup');
