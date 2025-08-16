@@ -2,30 +2,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polynesian Cultural Center</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/gallery.css">
-    </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Polynesian Cultural Center</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/gallery.css" />
+</head>
 <body>
+  <!-- floating back button -->
+  <a href="../../../index.html"
+     style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">
+     Back to Map
+  </a>
+  <header class="gallery-header">
     <h1>Polynesian Cultural Center</h1>
-    <div class="selected-container">
-        <img id="selected-image" src="../../../images/dukes/oahu_polynesian_cultural_center/oahu.webp" alt="Polynesian Cultural Center photo 1">
-    </div>
-    <div class="carousel">
-        <button class="prev" aria-label="Previous image">&#10094;</button>
-        <div class="thumbnails">
-            <img src="../../../images/dukes/44e22af4-5c32-4d96-ba3d-48abf198a002.webp" alt="Kualoa Ranch">
-            <img src="../../../images/dukes/oahu_polynesian_cultural_center/oahu.webp" alt="Polynesian Cultural Center photo 1" class="active">
-            <img src="../../../images/dukes/oahu_polynesian_cultural_center/pcc1.webp" alt="Polynesian Cultural Center photo 2">
-            <img src="../../../images/dukes/oahu_polynesian_cultural_center/pcc2.webp" alt="Polynesian Cultural Center photo 3">
-            <img src="../../../images/dukes/oahu_polynesian_cultural_center/pcc3.webp" alt="Polynesian Cultural Center photo 4">
-        </div>
-        <button class="next" aria-label="Next image">&#10095;</button>
-    </div>
-    <p><a href="../../../index.html">Back to map</a></p>
-    
-    <script src="../../../js/gallery.js"></script>
+  </header>
+
+  <!-- Honeycomb gallery -->
+  <div class="gallery gallery--honeycomb">
+    <img src="../../../images/dukes/44e22af4-5c32-4d96-ba3d-48abf198a002.webp" alt="Kualoa Ranch">
+    <img src="../../../images/dukes/oahu_polynesian_cultural_center/oahu.webp" alt="Polynesian Cultural Center photo 1">
+    <img src="../../../images/dukes/oahu_polynesian_cultural_center/pcc1.webp" alt="Polynesian Cultural Center photo 2">
+    <img src="../../../images/dukes/oahu_polynesian_cultural_center/pcc2.webp" alt="Polynesian Cultural Center photo 3">
+    <img src="../../../images/dukes/oahu_polynesian_cultural_center/pcc3.webp" alt="Polynesian Cultural Center photo 4">
+    <!-- add more <img> as needed; layout repeats every 6–7 items -->
+  </div>
+
+  <p class="backlink"><a href="../../../index.html">Back to map</a></p>
 </body>
 </html>
