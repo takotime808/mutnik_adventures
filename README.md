@@ -2,6 +2,7 @@
 # Mutnik Adventures #
 
 [![Demo](https://img.shields.io/badge/demo-live-blue)](https://takotime808.github.io/mutnik_adventures/)
+[![Demo](https://img.shields.io/badge/Website-live-green)](https://takotime808.github.io/mutnik_adventures/)
 
 This is a simple website showing a world map with travel pins. Clicking on a pin opens a small gallery for that location.
 
