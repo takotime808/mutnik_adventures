@@ -234,13 +234,7 @@ const markers = [
     // url: "galleries/tako-and-dani/san-diego/index.html"
     url: "images/tako-and-dani/sandiego1.webp"
   },
-  {
-    lat: 14.87,
-    lng: 100.9925,
-    label: "Mathilde",
-    color: "gold",
-    url:  "images/tako/thai-steps.jpeg"
-  },
+  // { lat: 14.87, lng: 100.9925, label: "Mathilde", color: "gold", url:  "images/tako/thai-steps.jpeg" },
   {
     lat: 15.87,
     lng: 100.9925,
