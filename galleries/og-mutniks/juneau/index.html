@@ -1,29 +1,72 @@
 <!-- Copyright (c) 2025 takotime808 -->
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Juneau, Alaska</title>
-    <link rel='stylesheet' href='https://unpkg.com/leaflet@1.7.1/dist/leaflet.css' />
-    <script src='https://unpkg.com/leaflet@1.7.1/dist/leaflet.js'></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Juneau</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/gallery.css" />
 </head>
 <body>
-<a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Map</a>
-    <div id='map' style='width:100%; height:100vh;'></div>
-    <script>
-        const map = L.map('map').setView([58.3019, -134.4197], 12);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
-        const photos = [
-            { coords: [58.3019, -134.4197], img: 'https://placehold.co/200x150?text=juneau' }
-        ];
-        photos.forEach(p => {
-            L.marker(p.coords).addTo(map)
-                .bindPopup(`<img src="${p.img}" style="max-width:200px;">`);
-        });
-    </script>
-    <p><a href='../../../index.html'>Back to globe</a></p>
+  <!-- Floating back button (kept) -->
+  <a href="../../../index.html"
+     style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">
+     Back to Globe
+  </a>
+
+  <h1 style="margin-top:60px">Juneau</h1>
+
+  <!-- Hover-expanding results strip -->
+  <ul class="results">
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3710.JPG" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3710.JPG" width="500" height="500" alt="Juneau photo 5">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3706.webp" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3706.webp" width="500" height="500" alt="Juneau photo 1">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3717.webp" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3717.webp" width="500" height="500" alt="Juneau photo 9">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3707.webp" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3707.webp" width="500" height="500" alt="Juneau photo 2">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3713.webp" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3713.webp" width="500" height="500" alt="Juneau photo 8">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3708.JPG" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3708.JPG" width="500" height="500" alt="Juneau photo 3">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3712.webp" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3712.webp" width="500" height="500" alt="Juneau photo 7">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3709.JPG" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3709.JPG" width="500" height="500" alt="Juneau photo 4">
+      </a>
+    </li>
+    <li class="result">
+      <a href="../../../images/dukes/Juneau/IMG_3711.webp" target="_blank" rel="noopener">
+        <img src="../../../images/dukes/Juneau/IMG_3711.webp" width="500" height="500" alt="Juneau photo 6">
+      </a>
+    </li>
+  </ul>
+
+  <p class="backlink"><a href="../../../index.html">Back to Globe</a></p>
 </body>
 </html>
