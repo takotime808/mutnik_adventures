@@ -247,7 +247,7 @@ const markers = [
     label: "Thailand",
     color: "gold",
     // url: "galleries/tako/thailand/index.html"
-    url: "https://cmutnik.github.io/takophotos/gallery/gallery02/"
+    url: "galleries/tako/thailand/index.html"
   },
   {
     lat: 18.9361,
