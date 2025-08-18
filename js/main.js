@@ -9,6 +9,13 @@ const markers = [
     url: "galleries/og-mutniks/index.html",
   },
   {
+    lat: -0.9538,
+    lng: -90.9656,
+    label: "Galapagos Islands",
+    color: "lightpink",
+    url: "galleries/og-mutniks/galapagos/index.html"
+  },
+  {
     lat: 21.6415,
     lng: -158.0671,
     label: "Fam - Dino Feeding",
@@ -228,6 +235,13 @@ const markers = [
     url: "images/tako-and-dani/sandiego1.webp"
   },
   {
+    lat: 14.87,
+    lng: 100.9925,
+    label: "Mathilde",
+    color: "gold",
+    url:  "images/tako/thai-steps.jpeg"
+  },
+  {
     lat: 15.87,
     lng: 100.9925,
     label: "Thailand",
@@ -236,11 +250,12 @@ const markers = [
     url: "https://cmutnik.github.io/takophotos/gallery/gallery02/"
   },
   {
-    lat: 14.87,
-    lng: 100.9925,
-    label: "Mathilde",
+    lat: 18.9361,
+    lng: -155.6465,
+    label: "BI",
     color: "gold",
-    url:  "images/tako/thai-steps.jpeg"
+    // url:  "https://cmutnik.github.io/takophotos/gallery/gallery01/"
+    url: "images/tako/IMG-20211209-WA0018.webp"
   },
   {
     lat: 57.6733,
@@ -254,14 +269,14 @@ const markers = [
     lng: 15.2,
     label: "Croatia",
     color: "gold",
-    url: "galleries/tako/croatia/index.html"
+    // url: "galleries/tako/croatia/index.html"
   },
   {
     lat: 53.5511,
     lng: 9.9937,
     label: "Hamburg, Germany",
     color: "gold",
-    url: "galleries/tako/hamburg/index.html"
+    // url: "galleries/tako/hamburg/index.html"
   },
   {
     lat: 41.2753,
@@ -274,7 +289,7 @@ const markers = [
     lat: -0.9538,
     lng: -90.9656,
     label: "Galapagos Islands",
-    color: "red",
+    color: "gold",
     url: "galleries/og-mutniks/galapagos/index.html"
   },
   {
