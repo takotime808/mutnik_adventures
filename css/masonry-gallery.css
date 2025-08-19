@@ -1,0 +1,73 @@
+/* Copyright (c) 2025 takotime808 */
+/* Minimal, reusable masonry gallery styles (repo-wide) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 { margin: 20px 0; }
+
+img {
+  display: block;
+  width: 100%;
+}
+
+#gallery {
+  /* Flex columns like the example */
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto 16px;
+  padding: 0 10px;
+}
+
+/* Each column */
+#gallery .mg-col {
+  flex: 1;
+  min-width: 0;          /* prevents overflow on narrow screens */
+}
+
+/* Thumbnails */
+#gallery .mg-item {
+  background: #f5f5f5;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* Add a tiny hover pop on larger screens */
+@media (hover:hover) and (pointer:fine) {
+  #gallery .mg-item img {
+    transition: transform .15s ease;
+  }
+  #gallery .mg-item:hover img {
+    transform: translateY(-1px);
+  }
+}
+
+/* Responsive column count (1 / 2 / 3 / 4) */
+@media (max-width: 599.98px) {
+  #gallery { gap: 8px; }
+  #gallery .mg-col { flex-basis: 100%; }
+  /* create 1 column by rendering with JS as 1 col */
+}
+@media (min-width: 600px) and (max-width: 899.98px) {
+  /* JS will render 2 or 3 cols; this ensures spacing looks nice */
+}
+@media (min-width: 900px) and (max-width: 1199.98px) {
+  /* JS will render 3 cols */
+}
+@media (min-width: 1200px) {
+  /* JS will render 4 cols */
+}
+
+/* Optional: subtle loading placeholder before images paint */
+.mg-item .ph {
+  width: 100%;
+  background: #eee;
+  display: block;
+  aspect-ratio: var(--ar, 4/3);
+}
