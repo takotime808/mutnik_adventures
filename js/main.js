@@ -524,9 +524,9 @@ const markers = [
   { lat: 48.8584, lng: 2.2945, label: "Paris", color: "red", url: "galleries/jeff-and-beth/Paris/index.html" },
   { lat: 55.9533, lng: -3.1883, label: "Edinburgh", color: "red", url: "galleries/jeff-and-beth/Edinburgh/index.html" },
   { lat: 56.3000, lng: -2.7000, label: "World of Scotch", color: "red", url: "images/dukes/Edinburgh_World_of_Scotch5.webp" },
-  { lat: 22.8905, lng: -109.9167, label: "Cabo Mexico", color: "red", url: "images/dukes/IMG_4104.webp" },
-  { lat: 20.2114, lng: -87.4654, label: "Tulum Mexico", color: "red", url: "images/dukes/IMG_2691.webp" },
+  { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "red", url: "galleries/jeff-and-beth/Tulum/index.html" },
   { lat: 10.8231, lng: 106.6297, label: "Ho Chi Minh", color: "red", url: "images/dukes/Hi_chi_minh.webp" },
+  { lat: 14.0583, lng: 108.2772, label: "Vietnam", color: "red", url: "galleries/jeff-and-beth/Vietnam/index.html" },
   { lat: 12.5657, lng: 104.991, label: "Cambodia", color: "red", url: "galleries/jeff-and-beth/Cambodia/index.html" },
   { lat: 45.5017, lng: -73.5673, label: "Montreal", color: "red", url: "galleries/jeff-and-beth/Montreal/index.html" },
   { lat: 36.8508, lng: -76.2859, label: "Norfolk", color: "red", url: "images/dukes/IMG_5802.png" },
@@ -557,6 +557,7 @@ const markers = [
   { lat: 28.8, lng: -81.0, label: "Universal Studios", color: "red", url: "images/dukes/universal_studios.webp" },
   { lat: 28.4097, lng: -81.4597, label: "Dukes Bday (Sea World Orlando)", color: "red", url: "images/dukes/da2e2103-ce6b-4273-8fd6-ac9d0d33d068.webp" },
   { lat: 38.1944, lng: -119.4383, label: "Red Rocks Nevada", color: "red", url: "images/dukes/red_rocks_nevada.webp" },
+  { lat: 22.8905, lng: -109.9167, label: "Cabo Mexico", color: "red", url: "images/dukes/IMG_4104.webp" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
     // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 
