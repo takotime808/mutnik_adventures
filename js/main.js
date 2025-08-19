@@ -554,6 +554,7 @@ const markers = [
   { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
   { lat: 49.2764, lng: -0.7031, label: "Normandy", color: "red", url: "galleries/jeff-and-beth/Normandy/index.html" },
   { lat: 55.3422, lng: -131.6461, label: "Ketchikan", color: "red", url: "galleries/jeff-and-beth/Ketchikan/index.html" },
+  { lat: 53.3498, lng: -6.2603, label: "Dublin", color: "red", url: "images/dukes/Dublin_Ireland.webp" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
     // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 
@@ -590,9 +591,6 @@ const markers = [
   },
   { lat: 37.2116, lng: -76.7752, label: "Jamestown VA", color: "red", 
     // url: "images/dukes/IMG_2193.jpg" 
-  },
-  { lat: 53.3498, lng: -6.2603, label: "Dublin", color: "red", 
-    // url: "images/dukes/IMG_1469.JPG" 
   },
   { lat: 52.4862, lng: -1.8904, label: "Birmingham", color: "red", 
     // url: "images/dukes/IMG_1483.JPG" 
