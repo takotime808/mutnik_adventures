@@ -527,7 +527,7 @@ const markers = [
   { lat: 20.2114, lng: -87.4654, label: "Tulum Mexico", color: "red", url: "images/dukes/IMG_2691.webp" },
   { lat: 10.8231, lng: 106.6297, label: "Ho Chi Minh", color: "red", url: "images/dukes/Hi_chi_minh.webp" },
   { lat: 12.5657, lng: 104.991, label: "Cambodia", color: "red", url: "galleries/jeff-and-beth/Cambodia/index.html" },
-  { lat: 45.5017, lng: -73.5673, label: "Montreal", color: "red", url: "images/dukes/IMG_1434.webp" },
+  { lat: 45.5017, lng: -73.5673, label: "Montreal", color: "red", url: "galleries/jeff-and-beth/Montreal/index.html" },
   { lat: 28.4097, lng: -81.4597, label: "Dukes Bday (Sea World Orlando)", color: "red", url: "images/dukes/da2e2103-ce6b-4273-8fd6-ac9d0d33d068.webp" },
   { lat: 36.8508, lng: -76.2859, label: "Norfolk", color: "red", url: "images/dukes/IMG_5802.png" },
   { lat: 32.6082, lng: -80.0848, label: "Kiswahili island", color: "red", url: "images/dukes/d81e01f7-16c4-4634-a1d1-dffe99f5c36d.webp" },
@@ -551,6 +551,8 @@ const markers = [
   { lat: 34.2856, lng: -118.8820, label: "Moorpark, CA", color: "red", url: "images/dukes/Moorpark CA.webp" },
   { lat: 40.4387, lng: -79.9972, label: "Pittsburgh", color: "red", url: "images/dukes/Pittsburgh.webp" },
   { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
+  { lat: 49.2764, lng: -0.7031, label: "Normandy", color: "red", url: "galleries/jeff-and-beth/Normandy/index.html" },
+  { lat: 55.3422, lng: -131.6461, label: "Ketchikan", color: "red", url: "galleries/jeff-and-beth/Ketchikan/index.html" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
     // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 

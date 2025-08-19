@@ -2,31 +2,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeff & Beth in Paris</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeff & Beth in Paris</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <style>
+    #back-button {
+      position: absolute; top: 10px; left: 10px; background: #fff; padding: 6px 10px;
+      border-radius: 4px; color: #333; text-decoration: none; border: 1px solid #ccc; z-index: 1000;
+    }
+    .leaflet-popup-content img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      opacity: 1;
+      transition: none;
+    }
+    .leaflet-popup-content img.start-hidden { opacity: 0; }
+    .leaflet-popup-content img.fade-in { transition: opacity 1.2s ease; }
+  </style>
 </head>
 <body>
-<a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Globe</a>
-    <div id="map" style="width:100%; height:100vh;"></div>
-    <script>
-        const map = L.map('map').setView([48.8566, 2.3522], 12);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(map);
+  <a id="back-button" href="../../../index.html">Back to Globe</a>
+  <div id="map" style="width:100%; height:100vh;"></div>
+  <script>
+    const map = L.map('map').setView([48.8738, 2.2950], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
 
-        const photos = [
-            { coords: [48.8584, 2.2945], img: 'https://placehold.co/200x150?text=Eiffel' },
-            { coords: [48.8606, 2.3376], img: 'https://placehold.co/200x150?text=Louvre' }
-        ];
+    const photos = [
+      { coords: [48.8584, 2.2945], img: '../../../images/dukes/Paris/Eiffle_Tower2.webp' },
+      { coords: [48.862230, 2.293077], img: '../../../images/dukes/Paris/Eiffle_Tower1.webp' },
+      { coords: [48.8738, 2.2950], img: '../../../images/dukes/Paris/Arc_de_Triomphe.webp' }
+    ];
 
-        photos.forEach(p => {
-            L.marker(p.coords).addTo(map)
-                .bindPopup(`<img src="${p.img}" style="max-width:200px;">`);
-        });
-    </script>
-    <p><a href="../../../index.html">Back to Globe</a></p>
+    photos.forEach(p => {
+      L.marker(p.coords).addTo(map)
+        .bindPopup(`<img src="${p.img}" alt="Paris photo" style="max-width:200px;">`);
+    });
+
+    // Fade-in images after popup opens
+    map.on('popupopen', (e) => {
+      const el = e.popup.getElement();
+      if (!el) return;
+      const imgs = el.querySelectorAll('img');
+      imgs.forEach((img) => {
+        const update = () => e.popup.update();
+
+        const startFade = () => {
+          img.classList.add('start-hidden');
+          requestAnimationFrame(() => {
+            img.classList.add('fade-in');
+            img.classList.remove('start-hidden');
+          });
+          requestAnimationFrame(update);
+        };
+
+        const showNoTransition = () => {
+          img.classList.remove('start-hidden', 'fade-in');
+          update();
+        };
+
+        const onError = () => {
+          img.style.display = 'none';
+          update();
+        };
+
+        if (img.complete && img.naturalWidth > 0) {
+          startFade();
+        } else {
+          img.classList.add('start-hidden');
+          const t = setTimeout(showNoTransition, 2500);
+          img.addEventListener('load', () => { clearTimeout(t); startFade(); }, { once: true });
+          img.addEventListener('error', () => { clearTimeout(t); onError(); }, { once: true });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
