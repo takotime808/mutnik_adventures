@@ -547,7 +547,7 @@ const markers = [
   { lat: 44.0682, lng: -114.7420, label: "Idaho", color: "red", url: "images/dukes/Idaho.webp" },
   { lat: 60.4720, lng: 8.4689, label: "Norway", color: "red", url: "images/dukes/IMG_0361.png" },
   { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
-  { lat: 40.7038, lng: -74.0070, label: "South Street Seaport, NYC", color: "red", url: "images/dukes/South Street Seaport NYC.webp" },
+  { lat: 40.7038, lng: -74.0070, label: "NYC", color: "red", url: "galleries/jeff-and-beth/NYC/index.html" },
   { lat: 32.6107, lng: -80.0511, label: "Kiawah Island, SC", color: "red", url: "images/dukes/Kiawah Island SC.webp" },
   { lat: 45.4685, lng: 9.1824, label: "Milan", color: "red", url: "images/dukes/Milan.webp" },
   { lat: 46.8797, lng: -110.3626, label: "Montana", color: "red", url: "images/dukes/Montana.webp" },
@@ -561,6 +561,8 @@ const markers = [
   { lat: 28.4097, lng: -81.4597, label: "Dukes Bday (Sea World Orlando)", color: "red", url: "images/dukes/da2e2103-ce6b-4273-8fd6-ac9d0d33d068.webp" },
   { lat: 38.1944, lng: -119.4383, label: "Red Rocks Nevada", color: "red", url: "images/dukes/red_rocks_nevada.webp" },
   { lat: 22.8905, lng: -109.9167, label: "Cabo Mexico", color: "red", url: "images/dukes/IMG_4104.webp" },
+  { lat: 47.9129, lng: -122.0982, label: "Snohomish", color: "red", url: "images/dukes/Snohomish.webp" },
+  { lat: 43.5444, lng: 11.7146, label: "Borro Vineyard, Tuscany", color: "red", url: "images/dukes/Borro_Vineyard_in_Tuscany_Italy.webp" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
     // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 
@@ -585,9 +587,6 @@ const markers = [
   },
   { lat: 59.91, lng: 10.6802, label: "Bygdoy Norway", color: "red", 
     // url: "images/dukes/IMG_0348.JPG" 
-  },
-  { lat: 43.7711, lng: 11.2486, label: "Tuscany", color: "red", 
-    // url: "images/dukes/IMG_7149.JPG" 
   },
   // { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "red", 
   //   // url: "images/dukes/IMG_3442.jpg" 
