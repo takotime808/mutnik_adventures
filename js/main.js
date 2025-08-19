@@ -2,6 +2,12 @@
 const markers = [
   // Fam
   {
+    lat: 42.6507,
+    lng: 18.0944,
+    label: "Dubrovnik",
+    color: "lightpink",
+  },
+  {
     lat: 37.9838,
     lng: 23.7275,
     label: "Greece Coastline",
@@ -32,7 +38,7 @@ const markers = [
   {
     lat: 21.6415,
     lng: -158.0671,
-    label: "Fam - Dino Feeding",
+    label: "Family Dino Feeding",
     color: "lightpink",
     url: "images/fam/44e22af4-5c32-4d96-ba3d-48abf198a002.webp",
   },
@@ -64,7 +70,7 @@ const markers = [
   {
     lat: 58.3019,
     lng: -134.4197,
-    label: "Mutnik - Juneau",
+    label: "Fam - Juneau",
     color: "lightpink",
     url: "galleries/og-mutniks/juneau/index.html"
   },
@@ -182,71 +188,13 @@ const markers = [
     color: "purple",
     url: "galleries/mel-and-carl/ny-tyler-sr-bobs/index.html",
   },
-  // {
-  //   lat: 40.7128,
-  //   lng: -74.006,
-  //   label: "Tako & Dani - New York",
-  //   color: "teal",
-  //   url: "galleries/tako-and-dani/new_york/index.html"
-  // },
-  {
-    lat: 40.6826,
-    lng: -73.9755,
-    label: "Barclays Center - Brooklyn",
-    color: "teal",
-    // url: "galleries/tako-and-dani/new_york/index.html"
-    url: "https://cmutnik.github.io/takophotos/gallery/gallery12/"
-  },
+  // Tako
   {
     lat: 21.4389,
     lng: -157.9633,
     label: "Oʻahu - Tako Gallery",
     color: "gold",
     url: "galleries/tako/hawaii/index.html"
-  },
-  {
-    lat: 21.4389,
-    lng: -158.9633,
-    label: "Tako & Dani - Oʻahu",
-    color: "teal",
-    url: "galleries/tako-and-dani/hawaii-dani2025/index.html"
-  },
-  {
-    lat: 29.9511,
-    lng: -90.3715,
-    label: "Tako & Dani - New Orleans",
-    color: "teal",
-    url: "galleries/tako-and-dani/nola/index.html"
-  },
-  {
-    lat: 27.7731,
-    lng: -82.64,
-    label: "St. Petersburg, FL",
-    color: "teal",
-    // url: "galleries/tako-and-dani/st_petersburg_fl/index.html"
-    url: "images/tako-and-dani/st-pete.jpeg"
-  },
-  {
-    lat: 24.5551,
-    lng: -81.78,
-    label: "Key West, FL",
-    color: "teal",
-    url: "galleries/tako-and-dani/key-west/index.html"
-  },
-  {
-    lat: 26.142,
-    lng: -81.7948,
-    label: "Naples, FL",
-    color: "teal",
-    // url: "galleries/tako-and-dani/naples_fl/index.html"
-  },
-  {
-    lat: 32.9595,
-    lng: -117.2653,
-    label: "Del Mar, CA",
-    color: "teal",
-    // url: "galleries/tako-and-dani/san-diego/index.html"
-    url: "images/tako-and-dani/sandiego1.webp"
   },
   // { lat: 14.87, lng: 100.9925, label: "Mathilde", color: "gold", url:  "images/tako/thai-steps.jpeg" },
   {
@@ -510,7 +458,14 @@ const markers = [
     color: "gold",
     url: "galleries/tako/plattsburgh/index.html"
   },
-  // { "lat": 40.015, "lng": -105.2705, "label" : "Boulder", "color" : "red", "url" : "images/dukes/IMG_2956.JPG" },
+  { lat: 31.5590, lng: 35.4732, label: "Israel", color: "gold", url: "images/tako/DB9A7362.webp" },
+  { lat: 29.0384, lng: -81.3789, label: "Orlando", color: "gold", url: "images/tako/DB9A8933.webp" },
+  { lat: 43.2136, lng: -123.3413, label: "Oregon", color: "gold", url: "images/tako/oregon.jpeg" },
+  // Jeff and Beth
+  // { lat: 40.015, lng: -105.2705, label: "Boulder", color: "red", url: "images/dukes/IMG_2956.JPG" },
+  // { lat: 21.3996, lng: -157.7974, label: "Kaneohe", color: "red", url: "images/dukes/DB9A6455.JPG" },
+  // { lat: 21.4, lng: -157.8, label: "Haleiwa Joes", color: "red", url: "images/dukes/DB9A6467.JPG" },
+  { lat: 21.6396, lng: -158.6246, label: "Jeff & Beth - Hawaii", color: "red", url: "galleries/jeff-and-beth/oahu/index.html" },
   {
     lat: 40.01499,
     lng: -105.27055,
@@ -560,94 +515,148 @@ const markers = [
     color: "red",
     url: "galleries/jeff-and-beth/mexico_city/index.html"
   },
-  { lat: 31.5590, lng: 35.4732, label:"Israel", color:"gold", url:"images/tako/DB9A7362.webp" },
-  { lat: 29.0384, lng: -81.3789, label:"Orlando", color:"gold", url:"images/tako/DB9A8933.webp" },
-  { lat: 43.2136, lng: -123.3413, label:"Oregon", color:"gold", url:"images/tako/oregon.jpeg" },
-  { lat: 29.9511, lng: -90.0715, label:"Jeff & Beth - New Orleans", color:"red", url:"galleries/jeff-and-beth/new_orleans/index.html" },
+  { lat: 29.9511, lng: -90.0715, label: "Jeff & Beth - New Orleans", color: "red", url: "galleries/jeff-and-beth/new_orleans/index.html" },
   { lat: 43.7230, lng: 10.3966, label: "Pisa", color: "red", url: "images/dukes/IMG_7189.JPG" },
   { lat: 42.373, lng: -73.3677, label: "Jeff & Beth", color: "red", url: "images/dukes/IMG_0195.webp" },
   { lat: 32.7157, lng: -117.1611, label: "San Diego", color: "red", url: "images/dukes/San Diego/IMG_8043.webp" },
   { lat: 32.7157, lng: -118.0611, label: "San Diego", color: "red", url: "images/dukes/San Diego/san_diego.webp" },
-  { "lat": 41.8719, "lng": 12.5674, "label" : "Italy", "color" : "red", "url" : "images/dukes/IMG_4349.jpg" },
-  { "lat": 48.8584, "lng": 2.2945, "label" : "Paris", "color" : "red", "url" : "galleries/jeff-and-beth/Paris/index.html" },
-  { "lat": 55.9533, "lng": -3.1883, "label" : "Edinburgh", "color" : "red", "url" : "galleries/jeff-and-beth/Edinburgh/index.html" },
-  { "lat": 22.8905, "lng": -109.9167, "label" : "Cabo Mexico", "color" : "red", "url" : "images/dukes/IMG_4104.webp" },
-  { "lat": 20.2114, "lng": -87.4654, "label" : "Tulum Mexico", "color" : "red", "url" : "images/dukes/IMG_2691.webp" },
-  { "lat": 10.8231, "lng": 106.6297, "label" : "Ho Chi Minh", "color" : "red", "url" : "images/dukes/Hi_chi_minh.webp" },
-  { "lat": 12.5657, "lng": 104.991, "label" : "Cambodia", "color" : "red", "url" : "galleries/jeff-and-beth/Cambodia/index.html" },
-  { "lat": 45.5017, "lng": -73.5673, "label" : "Montreal", "color" : "red", "url" : "images/dukes/IMG_1434.webp" },
-  { "lat": 28.4097, "lng": -81.4597, "label" : "Dukes Bday (Sea World Orlando)", "color" : "red", "url" : "images/dukes/da2e2103-ce6b-4273-8fd6-ac9d0d33d068.webp" },
-  { "lat": 36.8508, "lng": -76.2859, "label" : "Norfolk", "color" : "red", "url" : "images/dukes/IMG_5802.png" },
-  { "lat": 32.6082, "lng": -80.0848, "label" : "Kiswahili island", "color" : "red", "url" : "images/dukes/d81e01f7-16c4-4634-a1d1-dffe99f5c36d.webp" },
-  { "lat": 39.0968, "lng": -120.0324, "label" : "Lake Tahoe", "color" : "red", "url" : "images/dukes/Lake Tahoe.webp" },
-  { "lat": 42.0, "lng": -88.0, "label" : "Zacks Bootcamp Graduation (Great Lakes IL)", "color" : "red", "url" : "images/dukes/zack_bc.jpeg" },
-  { "lat": 47.6062, "lng": -122.3321, "label" : "Seattle", "color" : "red", "url" : "galleries/jeff-and-beth/Seattle/index.html" },
-  { "lat": 53.5511, "lng": 9.9937, "label" : "Hamburg", "color" : "red", "url" : "galleries/jeff-and-beth/Hamburg/index.html" },
-  { "lat": 25.7907, "lng": -80.13, "label" : "Miami Beach", "color" : "red", "url" : "images/dukes/IMG_2737.webp" },
-  { "lat": 53.1424, "lng": -7.6921, "label" : "Ireland", "color" : "red", "url" : "images/dukes/IMG_1471.webp" },
-  { "lat": 13.7563, "lng": 100.5018, "label" : "Bangkok", "color" : "red", "url" : "images/dukes/Bangkok.webp" },
-  { "lat": 49.2764, "lng": -0.7031, "label" : "Bayeux France", "color" : "red", "url" : "images/dukes/Bayeux France.webp" },
-  { "lat": 21.4691, "lng": -78.6569, "label" : "Caribbean Cruise", "color" : "red", "url" : "images/dukes/Caribbean cruise.webp" },
-  { "lat": -17.7134, "lng": 178.0650, "label" : "Fiji", "color" : "red", "url" : "images/dukes/fiji.webp" },
-  { "lat": 44.0682, "lng": -114.7420, "label" : "Idaho", "color" : "red", "url" : "images/dukes/Idaho.webp" },
-  { "lat": 60.4720, "lng": 8.4689, "label" : "Norway", "color" : "red", "url" : "images/dukes/IMG_0361.png" },
-  { "lat": 9.11983, "lng": -79.738606, "label" : "Panama Canal", "color" : "red", "url" : "images/dukes/IMG_2904_Panama_Canal.png" },
-  { "lat": 40.7038, "lng": -74.0070, "label" : "South Street Seaport, NYC", "color" : "red", "url" : "images/dukes/South Street Seaport NYC.webp" },
-  { "lat": 32.6107, "lng": -80.0511, "label" : "Kiawah Island, SC", "color" : "red", "url" : "images/dukes/Kiawah Island SC.webp" },
-  { "lat": 45.4685, "lng": 9.1824, "label" : "Milan", "color" : "red", "url" : "images/dukes/Milan.webp" },
-  { "lat": 46.8797, "lng": -110.3626, "label" : "Montana", "color" : "red", "url" : "images/dukes/Montana.webp" },
-  { "lat": 34.2856, "lng": -118.8820, "label" : "Moorpark, CA", "color" : "red", "url" : "images/dukes/Moorpark CA.webp" },
-  { "lat": 40.4387, "lng": -79.9972, "label" : "Pittsburgh", "color" : "red", "url" : "images/dukes/Pittsburgh.webp" },
-  { "lat": 10.8992, "lng": -80.3467, "label" : "Captain Kate", "color" : "red", "url" : "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
-  // { "lat": 21.3996, "lng": -157.7974, "label" : "Kaneohe", "color" : "red", "url" : "images/dukes/DB9A6455.JPG" },
-  // { "lat": 21.4, "lng": -157.8, "label" : "Haleiwa Joes", "color" : "red", "url" : "images/dukes/DB9A6467.JPG" },
-  { lat: 21.6396, lng: -158.6246, label:"Jeff & Beth - Hawaii", color:"red", url:"galleries/jeff-and-beth/oahu/index.html" },
+  { lat: 41.8719, lng: 12.5674, label: "Italy", color: "red", url: "images/dukes/IMG_4349.jpg" },
+  { lat: 48.8584, lng: 2.2945, label: "Paris", color: "red", url: "galleries/jeff-and-beth/Paris/index.html" },
+  { lat: 55.9533, lng: -3.1883, label: "Edinburgh", color: "red", url: "galleries/jeff-and-beth/Edinburgh/index.html" },
+  { lat: 22.8905, lng: -109.9167, label: "Cabo Mexico", color: "red", url: "images/dukes/IMG_4104.webp" },
+  { lat: 20.2114, lng: -87.4654, label: "Tulum Mexico", color: "red", url: "images/dukes/IMG_2691.webp" },
+  { lat: 10.8231, lng: 106.6297, label: "Ho Chi Minh", color: "red", url: "images/dukes/Hi_chi_minh.webp" },
+  { lat: 12.5657, lng: 104.991, label: "Cambodia", color: "red", url: "galleries/jeff-and-beth/Cambodia/index.html" },
+  { lat: 45.5017, lng: -73.5673, label: "Montreal", color: "red", url: "images/dukes/IMG_1434.webp" },
+  { lat: 28.4097, lng: -81.4597, label: "Dukes Bday (Sea World Orlando)", color: "red", url: "images/dukes/da2e2103-ce6b-4273-8fd6-ac9d0d33d068.webp" },
+  { lat: 36.8508, lng: -76.2859, label: "Norfolk", color: "red", url: "images/dukes/IMG_5802.png" },
+  { lat: 32.6082, lng: -80.0848, label: "Kiswahili island", color: "red", url: "images/dukes/d81e01f7-16c4-4634-a1d1-dffe99f5c36d.webp" },
+  { lat: 39.0968, lng: -120.0324, label: "Lake Tahoe", color: "red", url: "images/dukes/Lake Tahoe.webp" },
+  { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation (Great Lakes IL)", color: "red", url: "images/dukes/zack_bc.jpeg" },
+  { lat: 47.6062, lng: -122.3321, label: "Seattle", color: "red", url: "galleries/jeff-and-beth/Seattle/index.html" },
+  { lat: 53.5511, lng: 9.9937, label: "Hamburg", color: "red", url: "galleries/jeff-and-beth/Hamburg/index.html" },
+  { lat: 25.7907, lng: -80.13, label: "Miami Beach", color: "red", url: "images/dukes/IMG_2737.webp" },
+  { lat: 53.1424, lng: -7.6921, label: "Ireland", color: "red", url: "images/dukes/IMG_1471.webp" },
+  { lat: 13.7563, lng: 100.5018, label: "Bangkok", color: "red", url: "images/dukes/Bangkok.webp" },
+  { lat: 49.2764, lng: -0.7031, label: "Bayeux France", color: "red", url: "images/dukes/Bayeux France.webp" },
+  { lat: 21.4691, lng: -78.6569, label: "Caribbean Cruise", color: "red", url: "images/dukes/Caribbean cruise.webp" },
+  { lat: -17.7134, lng: 178.0650, label: "Fiji", color: "red", url: "images/dukes/fiji.webp" },
+  { lat: 44.0682, lng: -114.7420, label: "Idaho", color: "red", url: "images/dukes/Idaho.webp" },
+  { lat: 60.4720, lng: 8.4689, label: "Norway", color: "red", url: "images/dukes/IMG_0361.png" },
+  { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
+  { lat: 40.7038, lng: -74.0070, label: "South Street Seaport, NYC", color: "red", url: "images/dukes/South Street Seaport NYC.webp" },
+  { lat: 32.6107, lng: -80.0511, label: "Kiawah Island, SC", color: "red", url: "images/dukes/Kiawah Island SC.webp" },
+  { lat: 45.4685, lng: 9.1824, label: "Milan", color: "red", url: "images/dukes/Milan.webp" },
+  { lat: 46.8797, lng: -110.3626, label: "Montana", color: "red", url: "images/dukes/Montana.webp" },
+  { lat: 34.2856, lng: -118.8820, label: "Moorpark, CA", color: "red", url: "images/dukes/Moorpark CA.webp" },
+  { lat: 40.4387, lng: -79.9972, label: "Pittsburgh", color: "red", url: "images/dukes/Pittsburgh.webp" },
+  { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
-  { "lat": 20.7909697, "lng": -156.3269338, "label" : "Kula Volcano Maui", "color" : "red", 
-    // "url" : "images/dukes/2013-07-22_00-35-56_198.jpeg" 
+  { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
+    // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 
   },
-  { "lat": 49.4099, "lng": -1.3182, "label" : "Sainte-Mere-Ellis", "color" : "red", 
-    // "url" : "images/dukes/IMG_2426.JPG" 
+  { lat: 49.4099, lng: -1.3182, label: "Sainte-Mere-Ellis", color: "red", 
+    // url: "images/dukes/IMG_2426.JPG" 
   },
-  { "lat": 26.264442, "lng": -80.223888, "label" : "Colon Wedding (Carolina golf club)", "color" : "red", 
-    // "url" : "images/dukes/IMG_1285.JPG" 
+  { lat: 26.264442, lng: -80.223888, label: "Colon Wedding (Carolina golf club)", color: "red", 
+    // url: "images/dukes/IMG_1285.JPG" 
   },
-  { "lat": 34.1613, "lng": -118.1676, "label" : "Rose bowl", "color" : "red", 
-    // "url" : "images/dukes/IMG_0323.JPG" 
+  { lat: 34.1613, lng: -118.1676, label: "Rose bowl", color: "red", 
+    // url: "images/dukes/IMG_0323.JPG" 
   },
-  { "lat": 35.5951, "lng": -82.5515, "label" : "Asheville", "color" : "red", 
-    // "url" : "images/dukes/IMG_2892.JPG" 
+  { lat: 35.5951, lng: -82.5515, label: "Asheville", color: "red", 
+    // url: "images/dukes/IMG_2892.JPG" 
   },
-  { "lat": 42.0987, "lng": -75.918, "label" : "Binghamton", "color" : "red", 
-    // "url" : "images/dukes/IMG_2889.JPG" 
+  { lat: 42.0987, lng: -75.918, label: "Binghamton", color: "red", 
+    // url: "images/dukes/IMG_2889.JPG" 
   },
-  { "lat": 41.9484, "lng": -87.6553, "label" : "Wrigley Field", "color" : "red", 
-    // "url" : "images/dukes/IMG_5151.JPG" 
+  { lat: 41.9484, lng: -87.6553, label: "Wrigley Field", color: "red", 
+    // url: "images/dukes/IMG_5151.JPG" 
   },
-  { "lat": 59.91, "lng": 10.6802, "label" : "Bygdoy Norway", "color" : "red", 
-    // "url" : "images/dukes/IMG_0348.JPG" 
+  { lat: 59.91, lng: 10.6802, label: "Bygdoy Norway", color: "red", 
+    // url: "images/dukes/IMG_0348.JPG" 
   },
-  { "lat": 43.7711, "lng": 11.2486, "label" : "Tuscany", "color" : "red", 
-    // "url" : "images/dukes/IMG_7149.JPG" 
+  { lat: 43.7711, lng: 11.2486, label: "Tuscany", color: "red", 
+    // url: "images/dukes/IMG_7149.JPG" 
   },
-  { "lat": 28.3597, "lng": -81.5913, "label" : "Addison Gender Reveal (Animal Kingdom)", "color" : "red", 
-    // "url" : "images/dukes/IMG_3442.jpg" 
+  { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "red", 
+    // url: "images/dukes/IMG_3442.jpg" 
   },
-  { "lat": 44.9778, "lng": -93.265, "label" : "Minneapolis", "color" : "red", 
-    // "url" : "images/dukes/IMG_3225.JPG" 
+  { lat: 44.9778, lng: -93.265, label: "Minneapolis", color: "red", 
+    // url: "images/dukes/IMG_3225.JPG" 
   },
-  { "lat": 37.2116, "lng": -76.7752, "label" : "Jamestown VA", "color" : "red", 
-    // "url" : "images/dukes/IMG_2193.jpg" 
+  { lat: 37.2116, lng: -76.7752, label: "Jamestown VA", color: "red", 
+    // url: "images/dukes/IMG_2193.jpg" 
   },
-  { "lat": 53.3498, "lng": -6.2603, "label" : "Dublin", "color" : "red", 
-    // "url" : "images/dukes/IMG_1469.JPG" 
+  { lat: 53.3498, lng: -6.2603, label: "Dublin", color: "red", 
+    // url: "images/dukes/IMG_1469.JPG" 
   },
-  { "lat": 52.4862, "lng": -1.8904, "label" : "Birmingham", "color" : "red", 
-    // "url" : "images/dukes/IMG_1483.JPG" 
+  { lat: 52.4862, lng: -1.8904, label: "Birmingham", color: "red", 
+    // url: "images/dukes/IMG_1483.JPG" 
   },
-  { "lat": 43.6532, "lng": -79.3832, "label" : "Toronto 2012", "color" : "red", 
-    // "url" : "images/dukes/IMG_0399.JPG" 
+  { lat: 43.6532, lng: -79.3832, label: "Toronto 2012", color: "red", 
+    // url: "images/dukes/IMG_0399.JPG" 
   },
+  // Tako and Dani
+  {
+    lat: 21.4389,
+    lng: -158.9633,
+    label: "Tako & Dani - Oʻahu",
+    color: "teal",
+    url: "galleries/tako-and-dani/hawaii-dani2025/index.html"
+  },
+  {
+    lat: 29.9511,
+    lng: -90.3715,
+    label: "Tako & Dani - New Orleans",
+    color: "teal",
+    url: "galleries/tako-and-dani/nola/index.html"
+  },
+  {
+    lat: 27.7731,
+    lng: -82.64,
+    label: "St. Petersburg, FL",
+    color: "teal",
+    // url: "galleries/tako-and-dani/st_petersburg_fl/index.html"
+    url: "images/tako-and-dani/st-pete.jpeg"
+  },
+  {
+    lat: 24.5551,
+    lng: -81.78,
+    label: "Key West, FL",
+    color: "teal",
+    url: "galleries/tako-and-dani/key-west/index.html"
+  },
+  {
+    lat: 26.142,
+    lng: -81.7948,
+    label: "Naples, FL",
+    color: "teal",
+    // url: "galleries/tako-and-dani/naples_fl/index.html"
+  },
+  {
+    lat: 32.9595,
+    lng: -117.2653,
+    label: "Del Mar, CA",
+    color: "teal",
+    // url: "galleries/tako-and-dani/san-diego/index.html"
+    url: "images/tako-and-dani/sandiego1.webp"
+  },
+  {
+    lat: 40.6826,
+    lng: -73.9755,
+    label: "Barclays Center - Brooklyn",
+    color: "teal",
+    // url: "galleries/tako-and-dani/new_york/index.html"
+    url: "https://cmutnik.github.io/takophotos/gallery/gallery12/"
+  },
+  // {
+  //   lat: 40.7128,
+  //   lng: -74.006,
+  //   label: "Tako & Dani - New York",
+  //   color: "teal",
+  //   url: "galleries/tako-and-dani/new_york/index.html"
+  // },
 ];
 
 const popup = document.getElementById('image-popup');
