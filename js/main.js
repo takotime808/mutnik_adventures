@@ -2,6 +2,13 @@
 const markers = [
   // Fam
   {
+    lat: 43.7102,
+    lng: 7.262,
+    label: "Nice, France",
+    color: "lightpink",
+    url: "galleries/og-mutniks/nice/index.html"
+  },
+  {
     lat: 26.1276,
     lng: -80.2331,
     label: "Fam - OG Mutniks",
@@ -462,13 +469,6 @@ const markers = [
     // url: "galleries/og-mutniks/monaco/index.html"
   },
   {
-    lat: 43.7102,
-    lng: 7.262,
-    label: "Nice, France",
-    color: "red",
-    // url: "galleries/og-mutniks/nice/index.html"
-  },
-  {
     lat: 37.9838,
     lng: 23.7275,
     label: "Greece Coastline",
@@ -617,7 +617,7 @@ const markers = [
   // { "lat": 34.1613, "lng": -118.1676, "label" : "Rose bowl", "color" : "red", "url" : "images/dukes/IMG_0323.JPG" },
   // { "lat": 35.5951, "lng": -82.5515, "label" : "Asheville", "color" : "red", "url" : "images/dukes/IMG_2892.JPG" },
   // { "lat": 42.0987, "lng": -75.918, "label" : "Binghamton", "color" : "red", "url" : "images/dukes/IMG_2889.JPG" },
-  // { "lat": 53.5511, "lng": 9.9937, "label" : "Hamburg", "color" : "red", "url" : "images/dukes/IMG_2640.JPG" },
+  { "lat": 53.5511, "lng": 9.9937, "label" : "Hamburg", "color" : "red", "url" : "galleries/jeff-and-beth/Hamburg/index.html" },
   { "lat": 25.7907, "lng": -80.13, "label" : "Miami Beach", "color" : "red", "url" : "images/dukes/IMG_2737.webp" },
   { "lat": 53.1424, "lng": -7.6921, "label" : "Ireland", "color" : "red", "url" : "images/dukes/IMG_1471.webp" },
   { "lat": 13.7563, "lng": 100.5018, "label" : "Bangkok", "color" : "red", "url" : "images/dukes/Bangkok.webp" },
