@@ -2,11 +2,18 @@
 const markers = [
   // Fam
   {
+    lat: 37.9838,
+    lng: 23.7275,
+    label: "Greece Coastline",
+    color: "lightpink",
+    // url: "galleries/og-mutniks/greece/index.html"
+  },
+  {
     lat: 43.7102,
     lng: 7.262,
     label: "Nice, France",
     color: "lightpink",
-    url: "galleries/og-mutniks/nice/index.html"
+    // url: "galleries/og-mutniks/nice/index.html"
   },
   {
     lat: 26.1276,
@@ -300,13 +307,6 @@ const markers = [
     color: "gold",
     // url: "galleries/tako/mexico_city/index.html"
   },
-  // {
-  //   lat: 19.4326,
-  //   lng: -99.1332,
-  //   label: "Mexico City",
-  //   color: "gold",
-  //   url: "galleries/jeff-and-beth/mexico_city/index.html"
-  // },
   {
     lat: 10.4632,
     lng: -84.7033,
@@ -469,13 +469,6 @@ const markers = [
     // url: "galleries/og-mutniks/monaco/index.html"
   },
   {
-    lat: 37.9838,
-    lng: 23.7275,
-    label: "Greece Coastline",
-    color: "red",
-    // url: "galleries/og-mutniks/greece/index.html"
-  },
-  {
     lat: 42.3601,
     lng: -71.0589,
     label: "Boston, Massachusetts",
@@ -560,13 +553,6 @@ const markers = [
     color: "red",
     url: "images/dukes/Cairn Australia.webp"
   },
-  // {
-  //   lat: 48.8566,
-  //   lng: 2.3522,
-  //   label: "Jeff & Beth - Paris",
-  //   color: "red",
-  //   url: "galleries/jeff-and-beth/paris/index.html"
-  // },
   {
     lat: 19.4326,
     lng: -99.1332,
@@ -577,46 +563,25 @@ const markers = [
   { lat: 31.5590, lng: 35.4732, label:"Israel", color:"gold", url:"images/tako/DB9A7362.webp" },
   { lat: 29.0384, lng: -81.3789, label:"Orlando", color:"gold", url:"images/tako/DB9A8933.webp" },
   { lat: 43.2136, lng: -123.3413, label:"Oregon", color:"gold", url:"images/tako/oregon.jpeg" },
-  { lat: 21.6396, lng: -158.6246, label:"Jeff & Beth - Hawaii", color:"red", url:"galleries/jeff-and-beth/oahu/index.html" },
-  // { "lat": 29.9511, "lng": -90.0715, "label" : "New Orleans", "color" : "red", "url" : "images/dukes/New Orleans/ab27f212-5ae0-4f8a-9ba6-9c30a8ea1f73.webp" },
   { lat: 29.9511, lng: -90.0715, label:"Jeff & Beth - New Orleans", color:"red", url:"galleries/jeff-and-beth/new_orleans/index.html" },
-  // { lat: 43.8429, lng: 10.5027, label: "Pisa", color: "red", url: "images/dukes/IMG_7204.JPG" },
-  { lat: 43.7230, lng: 10.3966, label: "Jeff & Beth - Italy", color: "red", url: "images/dukes/IMG_7189.JPG" },
+  { lat: 43.7230, lng: 10.3966, label: "Pisa", color: "red", url: "images/dukes/IMG_7189.JPG" },
   { lat: 42.373, lng: -73.3677, label: "Jeff & Beth", color: "red", url: "images/dukes/IMG_0195.webp" },
   { lat: 32.7157, lng: -117.1611, label: "San Diego", color: "red", url: "images/dukes/San Diego/IMG_8043.webp" },
   { lat: 32.7157, lng: -118.0611, label: "San Diego", color: "red", url: "images/dukes/San Diego/san_diego.webp" },
-  // { "lat": 21.3996, "lng": -157.7974, "label" : "Kaneohe", "color" : "red", "url" : "images/dukes/DB9A6455.JPG" },
-  // { "lat": 21.4, "lng": -157.8, "label" : "Haleiwa Joes", "color" : "red", "url" : "images/dukes/DB9A6467.JPG" },
-  // { "lat": 41.9028, "lng": 12.4964, "label" : "Rome", "color" : "red", "url" : "images/dukes/26a0c921-74b3-4433-8c76-12d677742031.JPG" },
   { "lat": 41.8719, "lng": 12.5674, "label" : "Italy", "color" : "red", "url" : "images/dukes/IMG_4349.jpg" },
-  // { "lat": 20.7909697, "lng": -156.3269338, "label" : "Kula Volcano Maui", "color" : "red", "url" : "images/dukes/2013-07-22_00-35-56_198.jpeg" },
-  // { "lat": 49.4099, "lng": -1.3182, "label" : "Sainte-Mere-Ellies", "color" : "red", "url" : "images/dukes/IMG_2426.JPG" },
-  // { "lat": 26.264442, "lng": -80.223888, "label" : "Colon Wedding (Carolina golf club)", "color" : "red", "url" : "images/dukes/IMG_1285.JPG" },
-  // { "lat": 48.8584, "lng": 2.2945, "label" : "Eiffel Tower Paris", "color" : "red", "url" : "images/dukes/IMG_2540.JPG" },
-  // { "lat": 55.9533, "lng": -3.1883, "label" : "Edinburgh", "color" : "red", "url" : "images/dukes/IMG_1548.JPG" },
-  // { "lat": 53.3498, "lng": -6.2603, "label" : "Dublin", "color" : "red", "url" : "images/dukes/IMG_1469.JPG" },
-  // { "lat": 52.4862, "lng": -1.8904, "label" : "Birmingham", "color" : "red", "url" : "images/dukes/IMG_1483.JPG" },
-  // { "lat": 43.6532, "lng": -79.3832, "label" : "Toronto 2012", "color" : "red", "url" : "images/dukes/IMG_0399.JPG" },
+  { "lat": 48.8584, "lng": 2.2945, "label" : "Paris", "color" : "red", "url" : "galleries/jeff-and-beth/Paris/index.html" },
+  { "lat": 55.9533, "lng": -3.1883, "label" : "Edinburgh", "color" : "red", "url" : "galleries/jeff-and-beth/Edinburgh/index.html" },
   { "lat": 22.8905, "lng": -109.9167, "label" : "Cabo Mexico", "color" : "red", "url" : "images/dukes/IMG_4104.webp" },
   { "lat": 20.2114, "lng": -87.4654, "label" : "Tulum Mexico", "color" : "red", "url" : "images/dukes/IMG_2691.webp" },
   { "lat": 10.8231, "lng": 106.6297, "label" : "Ho Chi Minh", "color" : "red", "url" : "images/dukes/Hi_chi_minh.webp" },
-  // { "lat": 12.5657, "lng": 104.991, "label" : "Cambodia", "color" : "red", "url" : "images/dukes/IMG_1115.JPG" },
-  // { "lat": 59.91, "lng": 10.6802, "label" : "Bygdoy Norway", "color" : "red", "url" : "images/dukes/IMG_0348.JPG" },
-  // { "lat": 43.7711, "lng": 11.2486, "label" : "Tuscany", "color" : "red", "url" : "images/dukes/IMG_7149.JPG" },
+  { "lat": 12.5657, "lng": 104.991, "label" : "Cambodia", "color" : "red", "url" : "galleries/jeff-and-beth/Cambodia/index.html" },
   { "lat": 45.5017, "lng": -73.5673, "label" : "Montreal", "color" : "red", "url" : "images/dukes/IMG_1434.webp" },
   { "lat": 28.4097, "lng": -81.4597, "label" : "Dukes Bday (Sea World Orlando)", "color" : "red", "url" : "images/dukes/da2e2103-ce6b-4273-8fd6-ac9d0d33d068.webp" },
   { "lat": 36.8508, "lng": -76.2859, "label" : "Norfolk", "color" : "red", "url" : "images/dukes/IMG_5802.png" },
   { "lat": 32.6082, "lng": -80.0848, "label" : "Kiswahili island", "color" : "red", "url" : "images/dukes/d81e01f7-16c4-4634-a1d1-dffe99f5c36d.webp" },
-  // { "lat": 41.9484, "lng": -87.6553, "label" : "Wrigley Field", "color" : "red", "url" : "images/dukes/IMG_5151.JPG" },
-  // { "lat": 28.3597, "lng": -81.5913, "label" : "Addison Gender Reveal (Animal Kingdom)", "color" : "red", "url" : "images/dukes/IMG_3442.jpg" },
-  // { "lat": 44.9778, "lng": -93.265, "label" : "Minneapolis", "color" : "red", "url" : "images/dukes/IMG_3225.JPG" },
   { "lat": 39.0968, "lng": -120.0324, "label" : "Lake Tahoe", "color" : "red", "url" : "images/dukes/Lake Tahoe.webp" },
-  // { "lat": 37.2116, "lng": -76.7752, "label" : "Jamestown VA", "color" : "red", "url" : "images/dukes/IMG_2193.jpg" },
   { "lat": 42.0, "lng": -88.0, "label" : "Zacks Bootcamp Graduation (Great Lakes IL)", "color" : "red", "url" : "images/dukes/zack_bc.jpeg" },
-  // { "lat": 47.6062, "lng": -122.3321, "label" : "Seattle", "color" : "red", "url" : "images/dukes/IMG_3426.JPG" },
-  // { "lat": 34.1613, "lng": -118.1676, "label" : "Rose bowl", "color" : "red", "url" : "images/dukes/IMG_0323.JPG" },
-  // { "lat": 35.5951, "lng": -82.5515, "label" : "Asheville", "color" : "red", "url" : "images/dukes/IMG_2892.JPG" },
-  // { "lat": 42.0987, "lng": -75.918, "label" : "Binghamton", "color" : "red", "url" : "images/dukes/IMG_2889.JPG" },
+  { "lat": 47.6062, "lng": -122.3321, "label" : "Seattle", "color" : "red", "url" : "galleries/jeff-and-beth/Seattle/index.html" },
   { "lat": 53.5511, "lng": 9.9937, "label" : "Hamburg", "color" : "red", "url" : "galleries/jeff-and-beth/Hamburg/index.html" },
   { "lat": 25.7907, "lng": -80.13, "label" : "Miami Beach", "color" : "red", "url" : "images/dukes/IMG_2737.webp" },
   { "lat": 53.1424, "lng": -7.6921, "label" : "Ireland", "color" : "red", "url" : "images/dukes/IMG_1471.webp" },
@@ -634,6 +599,55 @@ const markers = [
   { "lat": 34.2856, "lng": -118.8820, "label" : "Moorpark, CA", "color" : "red", "url" : "images/dukes/Moorpark CA.webp" },
   { "lat": 40.4387, "lng": -79.9972, "label" : "Pittsburgh", "color" : "red", "url" : "images/dukes/Pittsburgh.webp" },
   { "lat": 10.8992, "lng": -80.3467, "label" : "Captain Kate", "color" : "red", "url" : "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
+  // { "lat": 21.3996, "lng": -157.7974, "label" : "Kaneohe", "color" : "red", "url" : "images/dukes/DB9A6455.JPG" },
+  // { "lat": 21.4, "lng": -157.8, "label" : "Haleiwa Joes", "color" : "red", "url" : "images/dukes/DB9A6467.JPG" },
+  { lat: 21.6396, lng: -158.6246, label:"Jeff & Beth - Hawaii", color:"red", url:"galleries/jeff-and-beth/oahu/index.html" },
+  // -------------------- MISSING IMAGES FOR DUKES --------------------
+  { "lat": 20.7909697, "lng": -156.3269338, "label" : "Kula Volcano Maui", "color" : "red", 
+    // "url" : "images/dukes/2013-07-22_00-35-56_198.jpeg" 
+  },
+  { "lat": 49.4099, "lng": -1.3182, "label" : "Sainte-Mere-Ellis", "color" : "red", 
+    // "url" : "images/dukes/IMG_2426.JPG" 
+  },
+  { "lat": 26.264442, "lng": -80.223888, "label" : "Colon Wedding (Carolina golf club)", "color" : "red", 
+    // "url" : "images/dukes/IMG_1285.JPG" 
+  },
+  { "lat": 34.1613, "lng": -118.1676, "label" : "Rose bowl", "color" : "red", 
+    // "url" : "images/dukes/IMG_0323.JPG" 
+  },
+  { "lat": 35.5951, "lng": -82.5515, "label" : "Asheville", "color" : "red", 
+    // "url" : "images/dukes/IMG_2892.JPG" 
+  },
+  { "lat": 42.0987, "lng": -75.918, "label" : "Binghamton", "color" : "red", 
+    // "url" : "images/dukes/IMG_2889.JPG" 
+  },
+  { "lat": 41.9484, "lng": -87.6553, "label" : "Wrigley Field", "color" : "red", 
+    // "url" : "images/dukes/IMG_5151.JPG" 
+  },
+  { "lat": 59.91, "lng": 10.6802, "label" : "Bygdoy Norway", "color" : "red", 
+    // "url" : "images/dukes/IMG_0348.JPG" 
+  },
+  { "lat": 43.7711, "lng": 11.2486, "label" : "Tuscany", "color" : "red", 
+    // "url" : "images/dukes/IMG_7149.JPG" 
+  },
+  { "lat": 28.3597, "lng": -81.5913, "label" : "Addison Gender Reveal (Animal Kingdom)", "color" : "red", 
+    // "url" : "images/dukes/IMG_3442.jpg" 
+  },
+  { "lat": 44.9778, "lng": -93.265, "label" : "Minneapolis", "color" : "red", 
+    // "url" : "images/dukes/IMG_3225.JPG" 
+  },
+  { "lat": 37.2116, "lng": -76.7752, "label" : "Jamestown VA", "color" : "red", 
+    // "url" : "images/dukes/IMG_2193.jpg" 
+  },
+  { "lat": 53.3498, "lng": -6.2603, "label" : "Dublin", "color" : "red", 
+    // "url" : "images/dukes/IMG_1469.JPG" 
+  },
+  { "lat": 52.4862, "lng": -1.8904, "label" : "Birmingham", "color" : "red", 
+    // "url" : "images/dukes/IMG_1483.JPG" 
+  },
+  { "lat": 43.6532, "lng": -79.3832, "label" : "Toronto 2012", "color" : "red", 
+    // "url" : "images/dukes/IMG_0399.JPG" 
+  },
 ];
 
 const popup = document.getElementById('image-popup');
