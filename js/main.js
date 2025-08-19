@@ -529,7 +529,6 @@ const markers = [
   { lat: 10.8231, lng: 106.6297, label: "Ho Chi Minh", color: "red", url: "images/dukes/Hi_chi_minh.webp" },
   { lat: 12.5657, lng: 104.991, label: "Cambodia", color: "red", url: "galleries/jeff-and-beth/Cambodia/index.html" },
   { lat: 45.5017, lng: -73.5673, label: "Montreal", color: "red", url: "galleries/jeff-and-beth/Montreal/index.html" },
-  { lat: 28.4097, lng: -81.4597, label: "Dukes Bday (Sea World Orlando)", color: "red", url: "images/dukes/da2e2103-ce6b-4273-8fd6-ac9d0d33d068.webp" },
   { lat: 36.8508, lng: -76.2859, label: "Norfolk", color: "red", url: "images/dukes/IMG_5802.png" },
   { lat: 32.6082, lng: -80.0848, label: "Kiswahili island", color: "red", url: "images/dukes/d81e01f7-16c4-4634-a1d1-dffe99f5c36d.webp" },
   { lat: 39.0968, lng: -120.0324, label: "Lake Tahoe", color: "red", url: "images/dukes/Lake Tahoe.webp" },
@@ -555,6 +554,9 @@ const markers = [
   { lat: 49.2764, lng: -0.7031, label: "Normandy", color: "red", url: "galleries/jeff-and-beth/Normandy/index.html" },
   { lat: 55.3422, lng: -131.6461, label: "Ketchikan", color: "red", url: "galleries/jeff-and-beth/Ketchikan/index.html" },
   { lat: 53.3498, lng: -6.2603, label: "Dublin", color: "red", url: "images/dukes/Dublin_Ireland.webp" },
+  { lat: 28.8, lng: -81.0, label: "Universal Studios", color: "red", url: "images/dukes/universal_studios.webp" },
+  { lat: 28.4097, lng: -81.4597, label: "Dukes Bday (Sea World Orlando)", color: "red", url: "images/dukes/da2e2103-ce6b-4273-8fd6-ac9d0d33d068.webp" },
+  { lat: 38.1944, lng: -119.4383, label: "Red Rocks Nevada", color: "red", url: "images/dukes/red_rocks_nevada.webp" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
     // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 
@@ -583,9 +585,9 @@ const markers = [
   { lat: 43.7711, lng: 11.2486, label: "Tuscany", color: "red", 
     // url: "images/dukes/IMG_7149.JPG" 
   },
-  { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "red", 
-    // url: "images/dukes/IMG_3442.jpg" 
-  },
+  // { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "red", 
+  //   // url: "images/dukes/IMG_3442.jpg" 
+  // },
   { lat: 44.9778, lng: -93.265, label: "Minneapolis", color: "red", 
     // url: "images/dukes/IMG_3225.JPG" 
   },
