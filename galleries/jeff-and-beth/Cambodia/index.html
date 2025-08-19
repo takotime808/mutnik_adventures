@@ -2,33 +2,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambodia</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/gallery.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cambodia</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/gallery.css" />
+  <link rel="stylesheet" href="../../../css/honeycomb-pro.css" />
+  <style>
+    /* floating back button */
+    #back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
+      color: #333;
+      text-decoration: none;
+      border: 1px solid #ccc;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+  </style>
 </head>
 <body>
-<a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Globe</a>
-<h1>Cambodia</h1>
-<div class="selected-container">
-    <img id="selected-image" src="../../../images/dukes/Cambodia/Cambodia1.webp" alt="Cambodia photo 1">
-</div>
-<div class="carousel">
-    <button class="prev" aria-label="Previous image">&#10094;</button>
-    <div class="thumbnails">
-        <img src="../../../images/dukes/Cambodia/Cambodia1.webp" alt="Cambodia photo 1" class="active">
-        <img src="../../../images/dukes/Cambodia/Cambodia2.webp" alt="Cambodia photo 2">
-        <img src="../../../images/dukes/Cambodia/Cambodia3.webp" alt="Cambodia photo 3">
-        <img src="../../../images/dukes/Cambodia/Cambodia4.webp" alt="Cambodia photo 4">
-        <img src="../../../images/dukes/Cambodia/Cambodia5.webp" alt="Cambodia photo 5">
-        <img src="../../../images/dukes/Cambodia/Cambodia6.webp" alt="Cambodia photo 6">
-        <img src="../../../images/dukes/Cambodia/Cambodia7.webp" alt="Cambodia photo 7">
-        <img src="../../../images/dukes/Cambodia/Cambodia8.webp" alt="Cambodia photo 8">
+  <a id="back-button" href="../../../index.html">Back to Globe</a>
+
+  <h1 style="margin-top:60px">Cambodia</h1>
+
+  <!-- Honeycomb gallery -->
+  <section class="hc-pro-wrap">
+    <div class="gallery gallery--honeycomb hc-pro">
+      <img src="../../../images/dukes/Cambodia/Cambodia1.webp" alt="Cambodia photo 1" loading="lazy" decoding="async">
+      <img src="../../../images/dukes/Cambodia/Cambodia3.webp" alt="Cambodia photo 3" loading="lazy" decoding="async">
+      <img src="../../../images/dukes/Cambodia/Cambodia2.webp" alt="Cambodia photo 2" loading="lazy" decoding="async">
+      <img src="../../../images/dukes/Cambodia/Cambodia4.webp" alt="Cambodia photo 4" loading="lazy" decoding="async">
+      <img src="../../../images/dukes/Cambodia/Cambodia5.webp" alt="Cambodia photo 5" loading="lazy" decoding="async">
+      <img src="../../../images/dukes/Cambodia/Cambodia6.webp" alt="Cambodia photo 6" loading="lazy" decoding="async">
+      <img src="../../../images/dukes/Cambodia/Cambodia7.webp" alt="Cambodia photo 7" loading="lazy" decoding="async">
     </div>
-    <button class="next" aria-label="Next image">&#10095;</button>
-</div>
-<p><a href="../../../index.html">Back to Globe</a></p>
-<script src="../../../js/gallery.js"></script>
+  </section>
+
+  <p class="backlink" style="text-align:center; margin:12px 0 48px;">
+    <a href="../../../index.html">Back to Globe</a>
+  </p>
 </body>
 </html>
