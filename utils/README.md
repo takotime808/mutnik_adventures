@@ -11,6 +11,16 @@ python manipulate_images_for_web.py --generate_readme > README.md
 
 ## 🚀 Quick Start
 
+### Check Coordinates
+To get coordinates from an image (jpg, jpeg, png, webp).
+```
+python check_metadata.py direct_image_name.jpg
+
+python extract_photo_gps.py                # scan "."
+python extract_photo_gps.py /path/to/images
+python extract_photo_gps.py --csv out.csv --json out.json
+```
+
 ### 1. Resize & Convert to WebP
 ```bash
 python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -sf 0.5 -oe webp

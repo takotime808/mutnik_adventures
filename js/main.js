@@ -564,6 +564,7 @@ const markers = [
   { lat: 47.9129, lng: -122.0982, label: "Snohomish", color: "red", url: "images/dukes/Snohomish.webp" },
   { lat: 43.5444, lng: 11.7146, label: "Borro Vineyard, Tuscany", color: "red", url: "images/dukes/Borro_Vineyard_in_Tuscany_Italy.webp" },
   { lat: 47.7237, lng: -122.4713, label: "Puget Sound", color: "red", url: "images/dukes/Puget_Sound.webp" },
+  { lat: 38.7328, lng: -109.5746, label: "Arches", color: "red", url: "galleries/jeff-and-beth/Arches/index.html" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
     // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 
