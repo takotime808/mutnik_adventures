@@ -2,33 +2,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ketchikan</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/gallery.css">
+  <meta charset="UTF-8" />
+  <title>Ketchikan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../../../css/gallery.css">
+
+  <style>
+    /* Masonry columns */
+    .masonry {
+      column-count: 3;
+      column-gap: 1em;
+      max-width: 1200px;
+      margin: 60px auto 12px; /* leaves room for floating back button */
+      padding: 0 10px;
+    }
+    .masonry img {
+      width: 100%;
+      display: block;
+      margin-bottom: 1em;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    @media (max-width: 900px) { .masonry { column-count: 2; } }
+    @media (max-width: 600px) { .masonry { column-count: 1; } }
+
+    /* Simple lightbox (works even if gallery.css lacks it) */
+    #image-popup.hidden { display: none; }
+    #image-popup {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.7);
+      display: grid; place-items: center;
+      z-index: 1001;
+      padding: 20px;
+    }
+    #image-popup .popup-content {
+      max-width: 95vw; max-height: 90vh;
+    }
+    #popup-image {
+      max-width: 100%; max-height: 90vh; display: block; border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.45);
+    }
+
+    /* Floating back button */
+    #back-button {
+      position: absolute; top: 10px; left: 10px; z-index: 1002;
+      background: #fff; padding: 6px 12px; border-radius: 4px;
+      text-decoration: none; color: #000; box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      border: 1px solid #ccc;
+    }
+
+    h1 { text-align: center; margin: 60px 0 0; }
+  </style>
 </head>
 <body>
-<a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Globe</a>
-<h1>Ketchikan</h1>
-<div class="selected-container">
-    <img id="selected-image" src="../../../images/dukes/Ketchikan/Ketchikan1.webp" alt="Ketchikan photo 1">
-</div>
-<div class="carousel">
-    <button class="prev" aria-label="Previous image">&#10094;</button>
-    <div class="thumbnails">
-        <img src="../../../images/dukes/Ketchikan/Ketchikan1.webp" alt="Ketchikan photo 1" class="active">
-        <img src="../../../images/dukes/Ketchikan/Ketchikan2.webp" alt="Ketchikan photo 2">
-        <img src="../../../images/dukes/Ketchikan/Ketchikan3.webp" alt="Ketchikan photo 3">
-        <img src="../../../images/dukes/Ketchikan/Ketchikan4.webp" alt="Ketchikan photo 4">
-        <img src="../../../images/dukes/Ketchikan/Ketchikan5.webp" alt="Ketchikan photo 5">
-        <img src="../../../images/dukes/Ketchikan/Ketchikan6.webp" alt="Ketchikan photo 6">
-        <img src="../../../images/dukes/Ketchikan/Ketchikan7.webp" alt="Ketchikan photo 7">
-        <img src="../../../images/dukes/Ketchikan/IMG_3470.webp" alt="Ketchikan photo 8">
+  <a id="back-button" href="../../../index.html">Back to Globe</a>
+
+  <h1>Ketchikan</h1>
+
+  <div class="masonry" aria-label="Ketchikan masonry gallery">
+    <img src='../../../images/dukes/Ketchikan/Ketchikan1.webp' alt='Ketchikan photo 1' loading="lazy" decoding="async">
+    <img src='../../../images/dukes/Ketchikan/Ketchikan2.webp' alt='Ketchikan photo 2' loading="lazy" decoding="async">
+    <img src='../../../images/dukes/Ketchikan/Ketchikan3.webp' alt='Ketchikan photo 3' loading="lazy" decoding="async">
+    <img src='../../../images/dukes/Ketchikan/Ketchikan4.webp' alt='Ketchikan photo 4' loading="lazy" decoding="async">
+    <img src='../../../images/dukes/Ketchikan/Ketchikan5.webp' alt='Ketchikan photo 5' loading="lazy" decoding="async">
+    <img src='../../../images/dukes/Ketchikan/Ketchikan6.webp' alt='Ketchikan photo 6' loading="lazy" decoding="async">
+    <img src='../../../images/dukes/Ketchikan/Ketchikan7.webp' alt='Ketchikan photo 7' loading="lazy" decoding="async">
+    <img src='../../../images/dukes/Ketchikan/IMG_3470.webp' alt='Ketchikan photo 8' loading="lazy" decoding="async">
+  </div>
+
+  <!-- Lightbox -->
+  <div id="image-popup" class="hidden" role="dialog" aria-modal="true" aria-label="Expanded image viewer">
+    <div class="popup-content">
+      <img id="popup-image" src="" alt="Expanded image">
     </div>
-    <button class="next" aria-label="Next image">&#10095;</button>
-</div>
-<p><a href="../../../index.html">Back to Globe</a></p>
-<script src="../../../js/gallery.js"></script>
+  </div>
+
+  <p style="text-align:center; margin: 12px 0 48px;">
+    <a href='../../../index.html'>Back to Globe</a>
+  </p>
+
+  <script>
+    (function () {
+      const popup = document.getElementById('image-popup');
+      const popupImage = document.getElementById('popup-image');
+
+      // Open on click
+      document.querySelectorAll('.masonry img').forEach(img => {
+        img.addEventListener('click', () => {
+          popupImage.src = img.src;
+          popup.classList.remove('hidden');
+        });
+        // keyboard accessibility
+        img.setAttribute('tabindex', '0');
+        img.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            popupImage.src = img.src;
+            popup.classList.remove('hidden');
+          }
+        });
+      });
+
+      // Close on click anywhere, or Esc
+      popup.addEventListener('click', () => {
+        popup.classList.add('hidden');
+        popupImage.src = '';
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !popup.classList.contains('hidden')) {
+          popup.classList.add('hidden');
+          popupImage.src = '';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
