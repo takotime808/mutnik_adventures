@@ -523,6 +523,7 @@ const markers = [
   { lat: 41.8719, lng: 12.5674, label: "Italy", color: "red", url: "images/dukes/IMG_4349.jpg" },
   { lat: 48.8584, lng: 2.2945, label: "Paris", color: "red", url: "galleries/jeff-and-beth/Paris/index.html" },
   { lat: 55.9533, lng: -3.1883, label: "Edinburgh", color: "red", url: "galleries/jeff-and-beth/Edinburgh/index.html" },
+  { lat: 56.3000, lng: -2.7000, label: "World of Scotch", color: "red", url: "images/dukes/Edinburgh_World_of_Scotch5.webp" },
   { lat: 22.8905, lng: -109.9167, label: "Cabo Mexico", color: "red", url: "images/dukes/IMG_4104.webp" },
   { lat: 20.2114, lng: -87.4654, label: "Tulum Mexico", color: "red", url: "images/dukes/IMG_2691.webp" },
   { lat: 10.8231, lng: 106.6297, label: "Ho Chi Minh", color: "red", url: "images/dukes/Hi_chi_minh.webp" },

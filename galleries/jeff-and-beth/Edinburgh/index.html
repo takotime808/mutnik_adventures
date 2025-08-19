@@ -2,31 +2,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edinburgh</title>
-    <link rel="stylesheet" href="../../../css/style.css">
-    <link rel="stylesheet" href="../../../css/gallery.css">
+  <meta charset="UTF-8" />
+  <title>Edinburgh</title>
+
+  <!-- Only the rotating gallery CSS -->
+  <link rel="stylesheet" href="../../../css/rotating-gallery-style.css" />
+
+  <!-- Center the title to match Juneau -->
+  <style>
+    h1 { text-align: center; margin: 20px 0 0; }
+  </style>
 </head>
 <body>
-<a href="../../../index.html" style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">Back to Globe</a>
-<h1>Edinburgh</h1>
-<div class="selected-container">
-    <img id="selected-image" src="../../../images/dukes/Edinburgh/signal-2025-08-18-151932.webp" alt="Edinburgh photo 1">
-</div>
-<div class="carousel">
-    <button class="prev" aria-label="Previous image">&#10094;</button>
-    <div class="thumbnails">
-        <img src="../../../images/dukes/Edinburgh/signal-2025-08-18-151932.webp" alt="Edinburgh photo 1" class="active">
-        <img src="../../../images/dukes/Edinburgh/signal-2025-08-18-151932_002.webp" alt="Edinburgh photo 2">
-        <img src="../../../images/dukes/Edinburgh/signal-2025-08-18-151932_003.webp" alt="Edinburgh photo 3">
-        <img src="../../../images/dukes/Edinburgh/signal-2025-08-18-151932_004.webp" alt="Edinburgh photo 4">
-        <img src="../../../images/dukes/Edinburgh/signal-2025-08-18-151932_005.webp" alt="Edinburgh photo 5">
-        <img src="../../../images/dukes/Edinburgh/signal-2025-08-18-151932_006.webp" alt="Edinburgh photo 6">
+  <!-- Back button -->
+  <a href="../../../index.html"
+     style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">
+     Back to Globe
+  </a>
+
+  <h1>Edinburgh</h1>
+
+  <div class="container">
+    <div class="rotator">
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh2.webp" alt="Edinburgh 2" loading="lazy" decoding="async" /></div>
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh1.webp" alt="Edinburgh 1" loading="lazy" decoding="async" /></div>
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh3.webp" alt="Edinburgh 3" loading="lazy" decoding="async" /></div>
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh_World_of_Scotch8.webp" alt="Edinburgh World of Scotch 8" loading="lazy" decoding="async" /></div>
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh4.webp" alt="Edinburgh 4" loading="lazy" decoding="async" /></div>
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh_World_of_Scotch11.webp" alt="Edinburgh World of Scotch 11" loading="lazy" decoding="async" /></div>
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh5.webp" alt="Edinburgh 5" loading="lazy" decoding="async" /></div>
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh6.webp" alt="Edinburgh 6" loading="lazy" decoding="async" /></div>
+      <div class="items"><img src="../../../images/dukes/Edinburgh/Edinburgh_World_of_Scotch4.webp" alt="Edinburgh World of Scotch 4" loading="lazy" decoding="async" /></div>
     </div>
-    <button class="next" aria-label="Next image">&#10095;</button>
-</div>
-<p><a href="../../../index.html">Back to Globe</a></p>
-<script src="../../../js/gallery.js"></script>
+  </div>
+
+  <!-- Optional footer link (kept hidden like Juneau) -->
+  <!-- <p class="backlink"><a href="../../../index.html">Back to Globe</a></p> -->
 </body>
 </html>
