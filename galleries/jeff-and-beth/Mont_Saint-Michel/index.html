@@ -1,0 +1,258 @@
+<!-- Copyright (c) 2025 takotime808 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mont Saint-Michel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/gallery.css" />
+
+  <style>
+    /* Back button */
+    #back-button {
+      position: absolute; top: 10px; left: 10px; z-index: 1000;
+      background: #fff; padding: 6px 12px; border-radius: 4px;
+      text-decoration: none; color: #000; box-shadow: 0 1px 3px rgba(0,0,0,.3);
+      border: 1px solid #ccc;
+    }
+    h1 { text-align: center; margin: 60px 0 12px; }
+
+    /* Grid */
+    .media-gallery {
+      --gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--gap);
+      padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .media-card {
+      position: relative;
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      background: #fafafa;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .media-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,.18);
+    }
+    .media-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .media-card figcaption {
+      font-size: .9rem;
+      padding: 8px 10px 10px;
+      color: #333;
+    }
+
+    /* Play badge ONLY on video tile (kept for parity with template) */
+    .media-card[data-type="video"]::after {
+      content: "▶";
+      position: absolute;
+      right: 10px; bottom: 10px;
+      font-size: 24px; line-height: 1;
+      background: rgba(0,0,0,.55);
+      color: #fff;
+      width: 40px; height: 40px;
+      display: grid; place-items: center;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* Modals */
+    dialog.modal {
+      border: none;
+      padding: 0;
+      width: min(92vw, 1000px);
+      background: transparent;
+    }
+    dialog::backdrop { background: rgba(0,0,0,.6); }
+
+    .frame {
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    }
+    .header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 12px; color: #fff; background: #111;
+    }
+    .title { margin: 0; font-size: 1rem; }
+    .close {
+      appearance: none; border: 0; background: #222; color: #fff;
+      border-radius: 6px; padding: 6px 10px; cursor: pointer;
+    }
+    .close:hover { background: #333; }
+
+    .body { background: #000; }
+    .body video, .body img {
+      display: block; width: 100%; height: auto; max-height: 78vh;
+      background: #000; margin: 0 auto;
+    }
+
+    .backlink { text-align: center; margin: 16px 0 48px; }
+  </style>
+</head>
+<body>
+  <a id="back-button" href="../../../index.html">Back to Globe</a>
+
+  <h1>Mont Saint-Michel</h1>
+
+  <!-- Thumbnail gallery -->
+  <section class="media-gallery" aria-label="Mont Saint-Michel gallery">
+    <!-- IMAGE TILES -->
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Mont Saint-Michel 1"
+            data-full="../../../images/dukes/Mont_Saint-Michel/Mont_Saint-Michel1.webp">
+      <img src="../../../images/dukes/Mont_Saint-Michel/Mont_Saint-Michel1.webp" alt="Mont Saint-Michel photo 1" loading="lazy" decoding="async">
+      <figcaption>Mont Saint-Michel 1</figcaption>
+    </figure>
+
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Mont Saint-Michel 2"
+            data-full="../../../images/dukes/Mont_Saint-Michel/Mont_Saint-Michel2.webp">
+      <img src="../../../images/dukes/Mont_Saint-Michel/Mont_Saint-Michel2.webp" alt="Mont Saint-Michel photo 2" loading="lazy" decoding="async">
+      <figcaption>Mont Saint-Michel 2</figcaption>
+    </figure>
+
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Mont Saint-Michel 3"
+            data-full="../../../images/dukes/Mont_Saint-Michel/Mont_Saint-Michel3.webp">
+      <img src="../../../images/dukes/Mont_Saint-Michel/Mont_Saint-Michel3.webp" alt="Mont Saint-Michel photo 3" loading="lazy" decoding="async">
+      <figcaption>Mont Saint-Michel 3</figcaption>
+    </figure>
+  </section>
+
+  <!-- IMAGE MODAL -->
+  <dialog class="modal" id="imageModal" aria-label="Image viewer">
+    <div class="frame">
+      <div class="header">
+        <h2 class="title" id="imageTitle">View</h2>
+        <button class="close" id="imgClose" aria-label="Close image">Close ✕</button>
+      </div>
+      <div class="body">
+        <img id="imageEl" alt="">
+      </div>
+    </div>
+  </dialog>
+
+  <!-- VIDEO MODAL (not used here, kept for consistency with template) -->
+  <dialog class="modal" id="videoModal" aria-label="Video player">
+    <div class="frame">
+      <div class="header">
+        <h2 class="title" id="videoTitle">Playing</h2>
+        <button class="close" id="vidClose" aria-label="Close video">Close ✕</button>
+      </div>
+      <div class="body">
+        <video id="videoEl" controls playsinline>
+          Sorry, your browser doesn’t support embedded videos.
+        </video>
+      </div>
+    </div>
+  </dialog>
+
+  <p class="backlink"><a href="../../../index.html">Back to Globe</a></p>
+
+  <script>
+    (function () {
+      // Elements
+      const imgModal = document.getElementById('imageModal');
+      const imgEl    = document.getElementById('imageEl');
+      const imgTitle = document.getElementById('imageTitle');
+      const imgClose = document.getElementById('imgClose');
+
+      const vidModal = document.getElementById('videoModal');
+      const video    = document.getElementById('videoEl');
+      const vidTitle = document.getElementById('videoTitle');
+      const vidClose = document.getElementById('vidClose');
+
+      // Helpers
+      function showDialog(dlg) { typeof dlg.showModal === 'function' ? dlg.showModal() : dlg.setAttribute('open',''); }
+      function closeDialog(dlg) { dlg.open ? dlg.close() : dlg.removeAttribute('open'); }
+
+      // IMAGE open/close
+      function openImage(src, label) {
+        imgEl.src = '';
+        imgEl.alt = label || '';
+        imgTitle.textContent = label || 'View';
+        showDialog(imgModal);
+        // force reload to avoid stale image when quickly switching
+        imgEl.src = src;
+      }
+      function closeImage() {
+        imgEl.src = '';
+        closeDialog(imgModal);
+      }
+
+      // VIDEO open/close (unused unless a video tile is added)
+      function openVideo(src, label) {
+        video.pause();
+        video.removeAttribute('src');
+        while (video.firstChild) video.removeChild(video.firstChild);
+
+        const source = document.createElement('source');
+        source.src = src;
+        source.type = 'video/mp4';
+        video.appendChild(source);
+
+        vidTitle.textContent = label || 'Playing';
+        showDialog(vidModal);
+        video.load();
+        video.play().catch(()=>{});
+      }
+      function closeVideo() {
+        video.pause();
+        video.currentTime = 0;
+        closeDialog(vidModal);
+      }
+
+      // Wire up tiles
+      document.querySelectorAll('.media-card').forEach(card => {
+        const type  = card.getAttribute('data-type');
+        const title = card.getAttribute('data-title') || '';
+
+        if (type === 'image') {
+          const full = card.getAttribute('data-full');
+          const handler = () => openImage(full, title);
+          card.addEventListener('click', handler);
+          card.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+          });
+        }
+
+        if (type === 'video') {
+          const src = card.getAttribute('data-video');
+          const handler = () => openVideo(src, title);
+          card.addEventListener('click', handler);
+          card.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+          });
+        }
+      });
+
+      // Close buttons & ESC
+      imgClose.addEventListener('click', closeImage);
+      vidClose.addEventListener('click', closeVideo);
+      imgModal.addEventListener('cancel', (e) => { e.preventDefault(); closeImage(); });
+      vidModal.addEventListener('cancel', (e) => { e.preventDefault(); closeVideo(); });
+
+      // Click outside to close
+      imgModal.addEventListener('click', (e) => {
+        const r = imgModal.getBoundingClientRect();
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeImage();
+      });
+      vidModal.addEventListener('click', (e) => {
+        const r = vidModal.getBoundingClientRect();
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeVideo();
+      });
+    })();
+  </script>
+</body>
+</html>
