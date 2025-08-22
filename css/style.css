@@ -147,6 +147,14 @@ h1 {
     background: lightpink;
 }
 
+.legend-item.silver {
+    color: silver;
+}
+
+.legend-item.silver .legend-color {
+    background: #c0c0c0; /* silver */
+}
+
 .hidden {
     display: none;
 }

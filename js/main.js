@@ -1,6 +1,6 @@
 // Copyright (c) 2025 takotime808
 const markers = [
-  // Fam
+  // ------------------------- Fam -------------------------
   {
     lat: 42.6507,
     lng: 18.0944,
@@ -74,7 +74,12 @@ const markers = [
     color: "lightpink",
     url: "galleries/og-mutniks/juneau/index.html"
   },
-  // Zack and Brit
+  // ------------------------- Nenee and Joe -------------------------
+  { lat: 8.997, lng: -79.5917, label: "Panama Canal", color: "silver", url: "images/dukes/IMG_2904_Panama_Canal.png" },
+  { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "silver", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
+  { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "silver", url: "galleries/jeff-and-beth/Tulum/index.html" },
+  { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation", color: "silver", url: "images/dukes/zack_bc.jpeg" },
+  // ------------------------- Zack and Brit -------------------------
   {
     lat: 36.8508,
     lng: -76.2859,
@@ -89,7 +94,7 @@ const markers = [
     color: "orange",
     url: "images/zack-and-brit/IMG_1099.webp"
   },
-  // Mel and Carl
+  // ------------------------- Mel and Carl -------------------------
   {
     lat: 30.4463,
     lng: -140.9758,
@@ -177,7 +182,7 @@ const markers = [
   {
     lat: 21.4389,
     lng: -157.9633,
-    label: "Mel & Carl - Oʻahu",
+    label: "Mel & Carl - O'ahu",
     color: "purple",
     url: "galleries/mel-and-carl/oahu/index.html",
   },
@@ -188,11 +193,11 @@ const markers = [
     color: "purple",
     url: "galleries/mel-and-carl/ny-tyler-sr-bobs/index.html",
   },
-  // Tako
+  // ------------------------- Tako -------------------------
   {
     lat: 21.4389,
     lng: -157.9633,
-    label: "Oʻahu - Tako Gallery",
+    label: "O'ahu - Tako Gallery",
     color: "gold",
     url: "galleries/tako/hawaii/index.html"
   },
@@ -461,7 +466,7 @@ const markers = [
   { lat: 31.5590, lng: 35.4732, label: "Israel", color: "gold", url: "images/tako/DB9A7362.webp" },
   { lat: 29.0384, lng: -81.3789, label: "Orlando", color: "gold", url: "images/tako/DB9A8933.webp" },
   { lat: 43.2136, lng: -123.3413, label: "Oregon", color: "gold", url: "images/tako/oregon.jpeg" },
-  // Jeff and Beth
+  // ------------------------- Jeff and Beth -------------------------
   // { lat: 40.015, lng: -105.2705, label: "Boulder", color: "red", url: "images/dukes/IMG_2956.JPG" },
   // { lat: 21.3996, lng: -157.7974, label: "Kaneohe", color: "red", url: "images/dukes/DB9A6455.JPG" },
   // { lat: 21.4, lng: -157.8, label: "Haleiwa Joes", color: "red", url: "images/dukes/DB9A6467.JPG" },
@@ -524,7 +529,6 @@ const markers = [
   { lat: 48.8584, lng: 2.2945, label: "Paris", color: "red", url: "galleries/jeff-and-beth/Paris/index.html" },
   { lat: 55.9533, lng: -3.1883, label: "Edinburgh", color: "red", url: "galleries/jeff-and-beth/Edinburgh/index.html" },
   { lat: 56.3000, lng: -2.7000, label: "World of Scotch", color: "red", url: "images/dukes/Edinburgh_World_of_Scotch5.webp" },
-  { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "red", url: "galleries/jeff-and-beth/Tulum/index.html" },
   { lat: 10.8231, lng: 106.6297, label: "Ho Chi Minh", color: "red", url: "images/dukes/Hi_chi_minh.webp" },
   { lat: 14.0583, lng: 108.2772, label: "Vietnam", color: "red", url: "galleries/jeff-and-beth/Vietnam/index.html" },
   { lat: 12.5657, lng: 104.991, label: "Cambodia", color: "red", url: "galleries/jeff-and-beth/Cambodia/index.html" },
@@ -532,7 +536,6 @@ const markers = [
   { lat: 36.8508, lng: -76.2859, label: "Norfolk", color: "red", url: "images/dukes/IMG_5802.png" },
   { lat: 32.6082, lng: -80.0848, label: "Kiswahili island", color: "red", url: "images/dukes/d81e01f7-16c4-4634-a1d1-dffe99f5c36d.webp" },
   { lat: 39.0968, lng: -120.0324, label: "Lake Tahoe", color: "red", url: "images/dukes/Lake Tahoe.webp" },
-  { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation (Great Lakes IL)", color: "red", url: "images/dukes/zack_bc.jpeg" },
   { lat: 47.6062, lng: -122.3321, label: "Seattle", color: "red", url: "galleries/jeff-and-beth/Seattle/index.html" },
   { lat: 53.5511, lng: 9.9937, label: "Hamburg", color: "red", url: "galleries/jeff-and-beth/Hamburg/index.html" },
   { lat: 48.6360, lng: -1.5115, label: "Mont Saint-Michel", color: "red", url: "galleries/jeff-and-beth/Mont_Saint-Michel/index.html" },
@@ -546,14 +549,12 @@ const markers = [
   { lat: -17.7134, lng: 178.0650, label: "Fiji", color: "red", url: "images/dukes/fiji.webp" },
   { lat: 44.0682, lng: -114.7420, label: "Idaho", color: "red", url: "images/dukes/Idaho.webp" },
   { lat: 60.4720, lng: 8.4689, label: "Norway", color: "red", url: "images/dukes/IMG_0361.png" },
-  { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
   { lat: 40.7038, lng: -74.0070, label: "NYC", color: "red", url: "galleries/jeff-and-beth/NYC/index.html" },
   { lat: 32.6107, lng: -80.0511, label: "Kiawah Island, SC", color: "red", url: "images/dukes/Kiawah Island SC.webp" },
   { lat: 45.4685, lng: 9.1824, label: "Milan", color: "red", url: "images/dukes/Milan.webp" },
   { lat: 46.8797, lng: -110.3626, label: "Montana", color: "red", url: "images/dukes/Montana.webp" },
   { lat: 34.2856, lng: -118.8820, label: "Moorpark, CA", color: "red", url: "images/dukes/Moorpark CA.webp" },
   { lat: 40.4387, lng: -79.9972, label: "Pittsburgh", color: "red", url: "images/dukes/Pittsburgh.webp" },
-  { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
   { lat: 49.2764, lng: -0.7031, label: "Normandy", color: "red", url: "galleries/jeff-and-beth/Normandy/index.html" },
   { lat: 55.3422, lng: -131.6461, label: "Ketchikan", color: "red", url: "galleries/jeff-and-beth/Ketchikan/index.html" },
   { lat: 53.3498, lng: -6.2603, label: "Dublin", color: "red", url: "images/dukes/Dublin_Ireland.webp" },
@@ -565,6 +566,12 @@ const markers = [
   { lat: 43.5444, lng: 11.7146, label: "Borro Vineyard, Tuscany", color: "red", url: "images/dukes/Borro_Vineyard_in_Tuscany_Italy.webp" },
   { lat: 47.7237, lng: -122.4713, label: "Puget Sound", color: "red", url: "images/dukes/Puget_Sound.webp" },
   { lat: 38.7328, lng: -109.5746, label: "Arches", color: "red", url: "galleries/jeff-and-beth/Arches/index.html" },
+  // Captain Kate and Panama Canal were moved to Nenee and Joe pins
+  // { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
+  // { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
+  // These were duplicated for nenee and joe
+  { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation (Great Lakes IL)", color: "red", url: "images/dukes/zack_bc.jpeg" },
+  { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "red", url: "galleries/jeff-and-beth/Tulum/index.html" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
     // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 
@@ -605,11 +612,11 @@ const markers = [
   { lat: 43.6532, lng: -79.3832, label: "Toronto 2012", color: "red", 
     // url: "images/dukes/IMG_0399.JPG" 
   },
-  // Tako and Dani
+  // ------------------------- Tako and Dani -------------------------
   {
     lat: 21.4389,
     lng: -158.9633,
-    label: "Tako & Dani - Oʻahu",
+    label: "Tako & Dani - O'ahu",
     color: "teal",
     url: "galleries/tako-and-dani/hawaii-dani2025/index.html"
   },
