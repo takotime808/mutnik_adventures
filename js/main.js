@@ -79,6 +79,7 @@ const markers = [
   { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "silver", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
   { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "silver", url: "galleries/jeff-and-beth/Tulum/index.html" },
   { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation", color: "silver", url: "images/dukes/zack_bc.jpeg" },
+  { lat: 12.5211, lng: -69.9683, label: "Aruba", color: "silver", url: "images/dukes/Aruba.webp" },
   // ------------------------- Zack and Brit -------------------------
   {
     lat: 36.8508,
@@ -97,6 +98,7 @@ const markers = [
   // Duplicated from dukes
   { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "orange", url: "images/dukes/Punta_Gorda.webp" },
   // ------------------------- Mel and Carl -------------------------
+  { lat: 27.9517, lng: -82.4588, label: "Tampa Bay", color: "purple", url: "images/dukes/Tampa Bay.webp" },
   {
     lat: 30.4463,
     lng: -140.9758,
@@ -582,6 +584,8 @@ const markers = [
   { lat: 14.8482, lng: -68.2146, label: "Curaçao --> FLL", color: "red", url: "images/dukes/Curaçao/IMG_4608.webp" },
   { lat: 37.2309, lng: -108.4618, label: "Mesa Verde National Park", color: "red", url: "galleries/jeff-and-beth/Mesa_Verde_National_Park_Colorado/index.html" },
   { lat: -60.0, lng: -62.3839, label: "Southern Ocean", color: "red", url: "galleries/jeff-and-beth/Southern_Ocean/index.html" },
+  { lat: -66.6259, lng: -62.2594, label: "Antarctica", color: "red", url: "galleries/jeff-and-beth/Antarctica/index.html" },
+  { lat: -51.3074, lng: -70.4721, label: "Argentina", color: "red", url: "galleries/jeff-and-beth/Argentina/index.html" },
   { lat: 51.2715, lng: -0.3410, label: "Surrey, England", color: "red", url: "galleries/jeff-and-beth/Surrey_England/index.html" },
   { lat: 9.3592, lng: -79.9014, label: "Colón, Panama", color: "red", url: "images/dukes/Colon Panama.webp" },
   { lat: 55.6761, lng: 12.5683, label: "Copenhagen", color: "red", url: "images/dukes/Copenhagen.webp" },
@@ -594,10 +598,16 @@ const markers = [
   { lat: 34.1477, lng: -118.1443, label: "Pasadena", color: "red", url: "images/dukes/Pasadena_CA.webp" },
   { lat: 43.6532, lng: -79.3832, label: "Toronto 2012", color: "red", url: "galleries/jeff-and-beth/Toronto/index.html" },
   { lat: 41.1148, lng: -74.1496, label: "Suffern NY", color: "red", url: "images/dukes/Suffern NY.webp" },
+  { lat: 48.2766, lng: -116.5535, label: "Sandpoint Idaho", color: "red", url: "images/dukes/Sandpoint Idaho.webp" },
+  { lat: 25.0821, lng: -77.3134, label: "Paradise Island Bahamas", color: "red", url: "images/dukes/Paradise Island Bahamas.webp" },
+  { lat: 35.0844, lng: -106.6504, label: "Albuquerque, NM", color: "red", url: "images/dukes/Albuquerque NM.webp" },
+  // This is duplicated for mel and carl
+  { lat: 27.9517, lng: -82.4588, label: "Tampa Bay", color: "red", url: "images/dukes/Tampa Bay.webp" },
   // Captain Kate and Panama Canal were moved to Nenee and Joe pins
   // { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
   // { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
   // These were duplicated for nenee and joe
+  { lat: 12.5211, lng: -69.9683, label: "Aruba", color: "red", url: "images/dukes/Aruba.webp" },
   { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation (Great Lakes IL)", color: "red", url: "images/dukes/zack_bc.jpeg" },
   { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "red", url: "galleries/jeff-and-beth/Tulum/index.html" },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
