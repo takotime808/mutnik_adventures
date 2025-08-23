@@ -577,6 +577,19 @@ const markers = [
   { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "red", url: "images/dukes/Punta_Gorda.webp" },
   { lat: 47.3769, lng: 8.5417, label: "Zurich, Switzerland", color: "red", url: "images/dukes/Zurich_Switzerland.webp" },
   { lat: 42.0987, lng: -75.918, label: "Binghamton", color: "red", url: "images/dukes/Binghamton.webp" },
+  { lat: 36.1351, lng: -81.6779, label: "Blowing Rock, NC", color: "red", url: "galleries/jeff-and-beth/Blowing_Rock_NC/index.html" },
+  { lat: 12.1696, lng: -68.99, label: "Curaçao", color: "red", url: "galleries/jeff-and-beth/Curacao/index.html" },
+  { lat: 37.2309, lng: -108.4618, label: "Mesa Verde National Park", color: "red", url: "galleries/jeff-and-beth/Mesa_Verde_National_Park_Colorado/index.html" },
+  { lat: -60.0, lng: -62.3839, label: "Southern Ocean", color: "red", url: "galleries/jeff-and-beth/Southern_Ocean/index.html" },
+  { lat: 51.2715, lng: -0.3410, label: "Surrey, England", color: "red", url: "galleries/jeff-and-beth/Surrey_England/index.html" },
+  { lat: 9.3592, lng: -79.9014, label: "Colón, Panama", color: "red", url: "images/dukes/Colon Panama.webp" },
+  { lat: 55.6761, lng: 12.5683, label: "Copenhagen", color: "red", url: "images/dukes/Copenhagen.webp" },
+  { lat: 38.9072, lng: -77.0369, label: "Washington, DC", color: "red", url: "images/dukes/DC.webp" },
+  { lat: 43.77, lng: 11.2577, label: "Florence", color: "red", url: "images/dukes/Florence.webp" },
+  { lat: 48.0677, lng: -116.0223, label: "Heron, Montana", color: "red", url: "images/dukes/Heron Montana.webp" },
+  { lat: 44.9778, lng: -93.2650, label: "Minneapolis", color: "red", url: "images/dukes/Minneapolis.webp" },
+  { lat: 35.4676, lng: -97.5164, label: "Oklahoma City", color: "red", url: "images/dukes/Oklahoma City.webp" },
+  { lat: 37.2707, lng: -76.7075, label: "Williamsburg, VA", color: "red", url: "images/dukes/Williamsburg VA.webp" },
   // Captain Kate and Panama Canal were moved to Nenee and Joe pins
   // { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
   // { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
@@ -602,9 +615,9 @@ const markers = [
   { lat: 41.9484, lng: -87.6553, label: "Wrigley Field", color: "red", 
     // url: "images/dukes/IMG_5151.JPG" 
   },
-  { lat: 59.91, lng: 10.6802, label: "Bygdoy Norway", color: "red", 
-    // url: "images/dukes/IMG_0348.JPG" 
-  },
+  // { lat: 59.91, lng: 10.6802, label: "Bygdoy Norway", color: "red", 
+  //   // url: "images/dukes/IMG_0348.JPG" 
+  // },
   // { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "red", 
   //   // url: "images/dukes/IMG_3442.jpg" 
   // },

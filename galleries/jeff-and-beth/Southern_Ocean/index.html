@@ -1,0 +1,194 @@
+<!-- Copyright (c) 2025 takotime808 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Southern Ocean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../../../css/style.css" />
+  <link rel="stylesheet" href="../../../css/gallery.css" />
+
+  <style>
+    /* Back button */
+    #back-button {
+      position: absolute; top: 10px; left: 10px; z-index: 1000;
+      background: #fff; padding: 6px 12px; border-radius: 4px;
+      text-decoration: none; color: #000; box-shadow: 0 1px 3px rgba(0,0,0,.3);
+      border: 1px solid #ccc;
+    }
+    h1 { text-align: center; margin: 60px 0 12px; }
+
+    /* Grid */
+    .media-gallery {
+      --gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--gap);
+      padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .media-card {
+      position: relative;
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      background: #fafafa;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .media-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,.18);
+    }
+    .media-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .media-card figcaption {
+      font-size: .9rem;
+      padding: 8px 10px 10px;
+      color: #333;
+    }
+
+    /* Modals */
+    dialog.modal {
+      border: none;
+      padding: 0;
+      width: min(92vw, 1000px);
+      background: transparent;
+    }
+    dialog::backdrop { background: rgba(0,0,0,.6); }
+
+    .frame {
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    }
+    .header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 12px; color: #fff; background: #111;
+    }
+    .title { margin: 0; font-size: 1rem; }
+    .close {
+      appearance: none; border: 0; background: #222; color: #fff;
+      border-radius: 6px; padding: 6px 10px; cursor: pointer;
+    }
+    .close:hover { background: #333; }
+
+    .body { background: #000; }
+    .body img {
+      display: block; width: 100%; height: auto; max-height: 78vh;
+      background: #000; margin: 0 auto;
+    }
+
+    .backlink { text-align: center; margin: 16px 0 48px; }
+  </style>
+</head>
+<body>
+  <a id="back-button" href="../../../index.html">Back to Globe</a>
+
+  <h1>Southern Ocean</h1>
+
+  <!-- Thumbnail gallery -->
+  <section class="media-gallery" aria-label="Southern Ocean gallery">
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Southern Ocean 1"
+            data-full="../../../images/dukes/Southern Ocean/Southern Ocean1.webp">
+      <img src="../../../images/dukes/Southern Ocean/Southern Ocean1.webp" alt="Southern Ocean photo 1" loading="lazy" decoding="async">
+      <figcaption>Photo 1</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Southern Ocean 2"
+            data-full="../../../images/dukes/Southern Ocean/Southern Ocean2.webp">
+      <img src="../../../images/dukes/Southern Ocean/Southern Ocean2.webp" alt="Southern Ocean photo 2" loading="lazy" decoding="async">
+      <figcaption>Photo 2</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Southern Ocean 3"
+            data-full="../../../images/dukes/Southern Ocean/Southern Ocean3.webp">
+      <img src="../../../images/dukes/Southern Ocean/Southern Ocean3.webp" alt="Southern Ocean photo 3" loading="lazy" decoding="async">
+      <figcaption>Photo 3</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Southern Ocean 4"
+            data-full="../../../images/dukes/Southern Ocean/Southern Ocean4.webp">
+      <img src="../../../images/dukes/Southern Ocean/Southern Ocean4.webp" alt="Southern Ocean photo 4" loading="lazy" decoding="async">
+      <figcaption>Photo 4</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Southern Ocean 5"
+            data-full="../../../images/dukes/Southern Ocean/Southern Ocean5.webp">
+      <img src="../../../images/dukes/Southern Ocean/Southern Ocean5.webp" alt="Southern Ocean photo 5" loading="lazy" decoding="async">
+      <figcaption>Photo 5</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="Southern Ocean 6"
+            data-full="../../../images/dukes/Southern Ocean/Southern Ocean6.webp">
+      <img src="../../../images/dukes/Southern Ocean/Southern Ocean6.webp" alt="Southern Ocean photo 6" loading="lazy" decoding="async">
+      <figcaption>Photo 6</figcaption>
+    </figure>
+  </section>
+
+  <!-- IMAGE MODAL -->
+  <dialog class="modal" id="imageModal" aria-label="Image viewer">
+    <div class="frame">
+      <div class="header">
+        <h2 class="title" id="imageTitle">View</h2>
+        <button class="close" id="imgClose" aria-label="Close image">Close ✕</button>
+      </div>
+      <div class="body">
+        <img id="imageEl" alt="">
+      </div>
+    </div>
+  </dialog>
+
+  <p class="backlink"><a href="../../../index.html">Back to Globe</a></p>
+
+  <script>
+    (function () {
+      // Elements
+      const imgModal = document.getElementById('imageModal');
+      const imgEl    = document.getElementById('imageEl');
+      const imgTitle = document.getElementById('imageTitle');
+      const imgClose = document.getElementById('imgClose');
+
+      // Helpers
+      function showDialog(dlg) { typeof dlg.showModal === 'function' ? dlg.showModal() : dlg.setAttribute('open',''); }
+      function closeDialog(dlg) { dlg.open ? dlg.close() : dlg.removeAttribute('open'); }
+
+      // IMAGE open/close
+      function openImage(src, label) {
+        imgEl.src = '';
+        imgEl.alt = label || '';
+        imgTitle.textContent = label || 'View';
+        showDialog(imgModal);
+        imgEl.src = src;
+      }
+      function closeImage() {
+        imgEl.src = '';
+        closeDialog(imgModal);
+      }
+
+      // Wire up tiles
+      document.querySelectorAll('.media-card').forEach(card => {
+        const full  = card.getAttribute('data-full');
+        const title = card.getAttribute('data-title') || '';
+        const handler = () => openImage(full, title);
+        card.addEventListener('click', handler);
+        card.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+        });
+      });
+
+      // Close buttons & ESC
+      imgClose.addEventListener('click', closeImage);
+      imgModal.addEventListener('cancel', (e) => { e.preventDefault(); closeImage(); });
+
+      // Click outside to close
+      imgModal.addEventListener('click', (e) => {
+        const r = imgModal.getBoundingClientRect();
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeImage();
+      });
+    })();
+  </script>
+</body>
+</html>
