@@ -94,6 +94,8 @@ const markers = [
     color: "orange",
     url: "images/zack-and-brit/IMG_1099.webp"
   },
+  // Duplicated from dukes
+  { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "orange", url: "images/dukes/Punta_Gorda.webp" },
   // ------------------------- Mel and Carl -------------------------
   {
     lat: 30.4463,
@@ -566,6 +568,14 @@ const markers = [
   { lat: 43.5444, lng: 11.7146, label: "Borro Vineyard, Tuscany", color: "red", url: "images/dukes/Borro_Vineyard_in_Tuscany_Italy.webp" },
   { lat: 47.7237, lng: -122.4713, label: "Puget Sound", color: "red", url: "images/dukes/Puget_Sound.webp" },
   { lat: 38.7328, lng: -109.5746, label: "Arches", color: "red", url: "galleries/jeff-and-beth/Arches/index.html" },
+  { lat: 52.4862, lng: -1.8904, label: "Birmingham, England", color: "red", url: "galleries/jeff-and-beth/Birmingham_England/index.html" },
+  { lat: 10.3910, lng: -75.4794, label: "Cartagena, Colombia", color: "red", url: "galleries/jeff-and-beth/Cartagena_Colombia/index.html" },
+  { lat: 36.1540, lng: -109.5525, label: "Chinle, AZ", color: "red", url: "galleries/jeff-and-beth/Chinle_AZ/index.html" },
+  { lat: 35.0659, lng: -109.78, label: "Petrified Forest, AZ", color: "red", url: "galleries/jeff-and-beth/Petrified_Forrest_Arizona/index.html" },
+  { lat: 36.9990, lng: -109.0452, label: "4 Corners", color: "red", url: "galleries/jeff-and-beth/4_Corners/index.html" },
+  { lat: 12.2019, lng: -68.2624, label: "Bonaire", color: "red", url: "images/dukes/Bonaire.webp" },
+  { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "red", url: "images/dukes/Punta_Gorda.webp" },
+  { lat: 47.3769, lng: 8.5417, label: "Zurich, Switzerland", color: "red", url: "images/dukes/Zurich_Switzerland.webp" },
   // Captain Kate and Panama Canal were moved to Nenee and Joe pins
   // { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
   // { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
@@ -605,9 +615,6 @@ const markers = [
   },
   { lat: 37.2116, lng: -76.7752, label: "Jamestown VA", color: "red", 
     // url: "images/dukes/IMG_2193.jpg" 
-  },
-  { lat: 52.4862, lng: -1.8904, label: "Birmingham", color: "red", 
-    // url: "images/dukes/IMG_1483.JPG" 
   },
   { lat: 43.6532, lng: -79.3832, label: "Toronto 2012", color: "red", 
     // url: "images/dukes/IMG_0399.JPG" 
