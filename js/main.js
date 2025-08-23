@@ -576,6 +576,7 @@ const markers = [
   { lat: 12.2019, lng: -68.2624, label: "Bonaire", color: "red", url: "images/dukes/Bonaire.webp" },
   { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "red", url: "images/dukes/Punta_Gorda.webp" },
   { lat: 47.3769, lng: 8.5417, label: "Zurich, Switzerland", color: "red", url: "images/dukes/Zurich_Switzerland.webp" },
+  { lat: 42.0987, lng: -75.918, label: "Binghamton", color: "red", url: "images/dukes/Binghamton.webp" },
   // Captain Kate and Panama Canal were moved to Nenee and Joe pins
   // { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
   // { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
@@ -597,9 +598,6 @@ const markers = [
   },
   { lat: 35.5951, lng: -82.5515, label: "Asheville", color: "red", 
     // url: "images/dukes/IMG_2892.JPG" 
-  },
-  { lat: 42.0987, lng: -75.918, label: "Binghamton", color: "red", 
-    // url: "images/dukes/IMG_2889.JPG" 
   },
   { lat: 41.9484, lng: -87.6553, label: "Wrigley Field", color: "red", 
     // url: "images/dukes/IMG_5151.JPG" 
