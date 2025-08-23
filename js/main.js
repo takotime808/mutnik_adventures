@@ -591,6 +591,7 @@ const markers = [
   { lat: 35.4676, lng: -97.5164, label: "Oklahoma City", color: "red", url: "images/dukes/Oklahoma City.webp" },
   { lat: 37.2707, lng: -76.7075, label: "Williamsburg, VA", color: "red", url: "images/dukes/Williamsburg VA.webp" },
   { lat: 34.1477, lng: -118.1443, label: "Pasadena", color: "red", url: "images/dukes/Pasadena_CA.webp" },
+  { lat: 43.6532, lng: -79.3832, label: "Toronto 2012", color: "red", url: "galleries/jeff-and-beth/Toronto/index.html" },
   // Captain Kate and Panama Canal were moved to Nenee and Joe pins
   // { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
   // { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
@@ -627,9 +628,6 @@ const markers = [
   },
   { lat: 37.2116, lng: -76.7752, label: "Jamestown VA", color: "red", 
     // url: "images/dukes/IMG_2193.jpg" 
-  },
-  { lat: 43.6532, lng: -79.3832, label: "Toronto 2012", color: "red", 
-    // url: "images/dukes/IMG_0399.JPG" 
   },
   // ------------------------- Tako and Dani -------------------------
   {
