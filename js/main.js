@@ -79,7 +79,7 @@ const markers = [
     color: "lightpink",
     url: "galleries/og-mutniks/NC/index.html",
   },
-  // ** NY (sr.bobs) is duplicate from mel and carl **
+  // ** NY (sr.bobs) and gender reveal are duplicate from mel and carl **
   {
     lat: 44.2562,
     lng: -73.7921,
@@ -87,6 +87,7 @@ const markers = [
     color: "lightpink",
     url: "galleries/og-mutniks/ny-tyler-sr-bobs/index.html",
   },
+  { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "lightpink", url: "images/fam/IMG_3442.webp" },
   // ** AK and Ohio are duplicate from jeff and beth (with different image layout) **
   {
     lat: 58.3019,
@@ -120,6 +121,7 @@ const markers = [
   // Duplicated from dukes
   { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "orange", url: "images/dukes/Punta_Gorda.webp" },
   // ------------------------- Mel and Carl -------------------------
+  { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "purple", url: "images/fam/IMG_3442.webp" },
   { lat: 27.9517, lng: -82.4588, label: "Tampa Bay", color: "purple", url: "images/dukes/Tampa Bay.webp" },
   {
     lat: 30.4463,
@@ -663,9 +665,6 @@ const markers = [
   },
   // { lat: 59.91, lng: 10.6802, label: "Bygdoy Norway", color: "red", 
   //   // url: "images/dukes/IMG_0348.JPG" 
-  // },
-  // { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "red", 
-  //   // url: "images/dukes/IMG_3442.jpg" 
   // },
   { lat: 44.9778, lng: -93.265, label: "Minneapolis", color: "red", 
     // url: "images/dukes/IMG_3225.JPG" 
