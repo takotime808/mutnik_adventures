@@ -42,10 +42,31 @@ const markers = [
     color: "lightpink",
     url: "images/fam/44e22af4-5c32-4d96-ba3d-48abf198a002.webp",
   },
+  {
+    lat: 43.0410,
+    lng: -87.9097,
+    label: "Milwaukee",
+    color: "lightpink",
+    url: "images/fam/MilwaukeeWI.webp",
+  },
+  {
+    lat: 41.9484,
+    lng: -87.6553,
+    label: "Wrigley Field",
+    color: "lightpink",
+    url: "images/fam/WrigleyField_ChicagoIL.webp",
+  },
+  {
+    lat: 41.8299,
+    lng: -87.4337,
+    label: "US Cellular Field",
+    color: "lightpink",
+    url: "images/fam/USCellularField_ChicagoIL.webp",
+  },
   // ** Chicago is duplicate from mel and carl (same photos) **
   {
     lat: 41.8781,
-    lng: -87.6298,
+    lng: -87.0,
     label: "Fam - Chicago",
     color: "lightpink",
     url: "galleries/og-mutniks/chicago/index.html",
@@ -199,6 +220,13 @@ const markers = [
     url: "galleries/mel-and-carl/ny-tyler-sr-bobs/index.html",
   },
   // ------------------------- Tako -------------------------
+  {
+    lat: 24.8629,
+    lng: -81.1476,
+    label: "Mahi Abstract",
+    color: "gold",
+    url: "images/tako/IMG_8432.webp"
+  },
   {
     lat: 21.4389,
     lng: -157.9633,
