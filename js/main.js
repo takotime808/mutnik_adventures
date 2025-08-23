@@ -66,7 +66,7 @@ const markers = [
     color: "lightpink",
     url: "galleries/og-mutniks/ny-tyler-sr-bobs/index.html",
   },
-  // ** AK is duplicate from jeff and beth (with different image layout) **
+  // ** AK and Ohio are duplicate from jeff and beth (with different image layout) **
   {
     lat: 58.3019,
     lng: -134.4197,
@@ -74,6 +74,7 @@ const markers = [
     color: "lightpink",
     url: "galleries/og-mutniks/juneau/index.html"
   },
+  { lat: 39.0974, lng: -84.5071, label: "Fam - Ohio", color: "lightpink", url: "images/dukes/Ohio.webp" },
   // ------------------------- Nenee and Joe -------------------------
   { lat: 8.997, lng: -79.5917, label: "Panama Canal", color: "silver", url: "images/dukes/IMG_2904_Panama_Canal.png" },
   { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "silver", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
@@ -601,6 +602,9 @@ const markers = [
   { lat: 48.2766, lng: -116.5535, label: "Sandpoint Idaho", color: "red", url: "images/dukes/Sandpoint Idaho.webp" },
   { lat: 25.0821, lng: -77.3134, label: "Paradise Island Bahamas", color: "red", url: "images/dukes/Paradise Island Bahamas.webp" },
   { lat: 35.0844, lng: -106.6504, label: "Albuquerque, NM", color: "red", url: "images/dukes/Albuquerque NM.webp" },
+  { lat: 33.5974, lng: -117.8369, label: "Newport Coast, CA", color: "red", url: "images/dukes/Newport Coast CA.webp" },
+  // duplicated in fam
+  { lat: 39.0974, lng: -84.5071, label: "Ohio", color: "red", url: "images/dukes/Ohio.webp" },
   // This is duplicated for mel and carl
   { lat: 27.9517, lng: -82.4588, label: "Tampa Bay", color: "red", url: "images/dukes/Tampa Bay.webp" },
   // Captain Kate and Panama Canal were moved to Nenee and Joe pins
