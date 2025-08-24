@@ -634,6 +634,7 @@ const markers = [
   { lat: 25.0821, lng: -77.3134, label: "Paradise Island Bahamas", color: "red", url: "images/dukes/Paradise Island Bahamas.webp" },
   { lat: 35.0844, lng: -106.6504, label: "Albuquerque, NM", color: "red", url: "images/dukes/Albuquerque NM.webp" },
   { lat: 33.5974, lng: -117.8369, label: "Newport Coast, CA", color: "red", url: "images/dukes/Newport Coast CA.webp" },
+  { lat: 42.3297, lng: -83.0425, label: "Detroit", color: "red", url: "images/dukes/DetroitMI.webp" },
   // duplicated in fam
   { lat: 39.0974, lng: -84.5071, label: "Ohio", color: "red", url: "images/dukes/Ohio.webp" },
   // This is duplicated for mel and carl
@@ -682,6 +683,8 @@ const markers = [
     // url: "images/dukes/IMG_2193.jpg" 
   },
   // ------------------------- Tako and Dani -------------------------
+  // Detoit is a duplicate pin from dukes and a joke...
+  { lat: 42.3297, lng: -83.0425, label: "Detroiters", color: "teal", url: "images/tako-and-dani/detroiters.webp" },
   {
     lat: 21.4389,
     lng: -158.9633,
