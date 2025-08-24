@@ -1,72 +1,39 @@
-<!-- Copyright (c) 2025 takotime808 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Juneau</title>
 
-  <link rel="stylesheet" href="../../../css/style.css" />
-  <link rel="stylesheet" href="../../../css/gallery.css" />
+  <!-- Only your gallery styles -->
+  <link rel="stylesheet" href="../../../css/rotating-gallery-style.css" />
+
+  <!-- Tiny override to center the title (your CSS doesn't set it) -->
+  <style>
+    h1 { text-align: center; margin: 20px 0 0; }
+  </style>
 </head>
 <body>
-  <!-- Floating back button (kept) -->
+  <!-- Back button -->
   <a href="../../../index.html"
      style="position:absolute;top:10px;left:10px;z-index:1000;background:white;padding:6px 12px;border-radius:4px;text-decoration:none;color:black;box-shadow:0 1px 3px rgba(0,0,0,0.3);">
      Back to Globe
   </a>
 
-  <h1 style="margin-top:60px">Juneau</h1>
+  <h1>Juneau</h1>
 
-  <!-- Hover-expanding results strip -->
-  <ul class="results">
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3710.JPG" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3710.JPG" width="500" height="500" alt="Juneau photo 5">
-      </a>
-    </li>
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3706.webp" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3706.webp" width="500" height="500" alt="Juneau photo 1">
-      </a>
-    </li>
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3717.webp" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3717.webp" width="500" height="500" alt="Juneau photo 9">
-      </a>
-    </li>
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3707.webp" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3707.webp" width="500" height="500" alt="Juneau photo 2">
-      </a>
-    </li>
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3713.webp" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3713.webp" width="500" height="500" alt="Juneau photo 8">
-      </a>
-    </li>
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3708.JPG" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3708.JPG" width="500" height="500" alt="Juneau photo 3">
-      </a>
-    </li>
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3712.webp" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3712.webp" width="500" height="500" alt="Juneau photo 7">
-      </a>
-    </li>
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3709.JPG" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3709.JPG" width="500" height="500" alt="Juneau photo 4">
-      </a>
-    </li>
-    <li class="result">
-      <a href="../../../images/dukes/Juneau/IMG_3711.webp" target="_blank" rel="noopener">
-        <img src="../../../images/dukes/Juneau/IMG_3711.webp" width="500" height="500" alt="Juneau photo 6">
-      </a>
-    </li>
-  </ul>
-
-  <p class="backlink"><a href="../../../index.html">Back to Globe</a></p>
+  <div class="container">
+    <div class="rotator">
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3717.webp" alt="Juneau 1" /></div>
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3706.webp" alt="Juneau 2" /></div>
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3713.webp" alt="Juneau 3" /></div>
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3707.webp" alt="Juneau 4" /></div>
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3712.webp" alt="Juneau 5" /></div>
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3708.JPG"  alt="Juneau 6" /></div>
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3711.webp" alt="Juneau 7" /></div>
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3709.JPG"  alt="Juneau 8" /></div>
+      <div class="items"><img src="../../../images/dukes/Juneau/IMG_3710.JPG"  alt="Juneau 9" /></div>
+    </div>
+  </div>
+  <!-- <p class="backlink"><a href="../../../index.html">Back to Globe</a></p> -->
 </body>
 </html>

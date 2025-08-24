@@ -98,11 +98,11 @@ const markers = [
   },
   { lat: 39.0974, lng: -84.5071, label: "Fam - Ohio", color: "lightpink", url: "images/dukes/Ohio.webp" },
   // ------------------------- Nenee and Joe -------------------------
-  { lat: 8.997, lng: -79.5917, label: "Panama Canal", color: "orange", url: "images/dukes/IMG_2904_Panama_Canal.png" },
-  { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "orange", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
-  { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "orange", url: "galleries/jeff-and-beth/Tulum/index.html" },
-  { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation", color: "orange", url: "images/dukes/zack_bc.jpeg" },
-  { lat: 12.5211, lng: -69.9683, label: "Aruba", color: "orange", url: "images/dukes/Aruba.webp" },
+  { lat: 8.997, lng: -79.5917, label: "Panama Canal", color: "#2ecc71", url: "images/dukes/IMG_2904_Panama_Canal.png" },
+  { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "#2ecc71", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
+  { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "#2ecc71", url: "galleries/jeff-and-beth/Tulum/index.html" },
+  { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation", color: "#2ecc71", url: "images/dukes/zack_bc.jpeg" },
+  { lat: 12.5211, lng: -69.9683, label: "Aruba", color: "#2ecc71", url: "images/dukes/Aruba.webp" },
   // ------------------------- Zack and Brit -------------------------
   {
     lat: 36.8508,

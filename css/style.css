@@ -15,6 +15,9 @@
     --bodyFontSize: 1rem;
     /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    /* Nenee wants green, but it breaks everything... 
+    --emerald: #2ecc71;
+    */
 }
 
 body {
@@ -123,12 +126,12 @@ h1 {
     background: gold;
 }
 
-.legend-item.orange {
-    color: orange;
+.legend-item.emerald {
+    color: #2ecc71;
 }
 
-.legend-item.orange .legend-color {
-    background: orange;
+.legend-item.emerald .legend-color {
+    background: #2ecc71;
 }
 
 .legend-item.purple {
