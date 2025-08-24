@@ -463,6 +463,7 @@ const markers = [
     color: "gold",
     // url: "galleries/tako/boston/index.html"
   },
+  // duplicated grand cayman in jeff and beth
   {
     lat: 19.3222,
     lng: -81.2409,
@@ -644,6 +645,14 @@ const markers = [
   { lat: 12.5211, lng: -69.9683, label: "Aruba", color: "red", url: "images/dukes/Aruba.webp" },
   { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation (Great Lakes IL)", color: "red", url: "images/dukes/zack_bc.jpeg" },
   { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "red", url: "galleries/jeff-and-beth/Tulum/index.html" },
+  // -------------------- NEEDS BETTER IMAGES FOR DUKES --------------------
+  {
+    lat: 19.3222,
+    lng: -81.2409,
+    label: "Grand Cayman",
+    color: "red",
+    url: "images/tako/cayman-shell.jpeg"
+  },
   // -------------------- MISSING IMAGES FOR DUKES --------------------
   { lat: 20.7909697, lng: -156.3269338, label: "Kula Volcano Maui", color: "red", 
     // url: "images/dukes/2013-07-22_00-35-56_198.jpeg" 
