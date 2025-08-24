@@ -98,28 +98,28 @@ const markers = [
   },
   { lat: 39.0974, lng: -84.5071, label: "Fam - Ohio", color: "lightpink", url: "images/dukes/Ohio.webp" },
   // ------------------------- Nenee and Joe -------------------------
-  { lat: 8.997, lng: -79.5917, label: "Panama Canal", color: "silver", url: "images/dukes/IMG_2904_Panama_Canal.png" },
-  { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "silver", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
-  { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "silver", url: "galleries/jeff-and-beth/Tulum/index.html" },
-  { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation", color: "silver", url: "images/dukes/zack_bc.jpeg" },
-  { lat: 12.5211, lng: -69.9683, label: "Aruba", color: "silver", url: "images/dukes/Aruba.webp" },
+  { lat: 8.997, lng: -79.5917, label: "Panama Canal", color: "orange", url: "images/dukes/IMG_2904_Panama_Canal.png" },
+  { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "orange", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
+  { lat: 20.2114, lng: -87.4654, label: "Tulum", color: "orange", url: "galleries/jeff-and-beth/Tulum/index.html" },
+  { lat: 42.0, lng: -88.0, label: "Zacks Bootcamp Graduation", color: "orange", url: "images/dukes/zack_bc.jpeg" },
+  { lat: 12.5211, lng: -69.9683, label: "Aruba", color: "orange", url: "images/dukes/Aruba.webp" },
   // ------------------------- Zack and Brit -------------------------
   {
     lat: 36.8508,
     lng: -76.2859,
     label: "Norfolk, Virginia",
-    color: "orange",
+    color: "silver",
     // url: "galleries/zack/norfolk/index.html"
   },
   { 
     lat: 42.3124,
     lng: -87.8414,
     label: "Zack's Bootcamp Graduation (Great Lakes IL)",
-    color: "orange",
+    color: "silver",
     url: "images/zack-and-brit/IMG_1099.webp"
   },
   // Duplicated from dukes
-  { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "orange", url: "images/dukes/Punta_Gorda.webp" },
+  { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "silver", url: "images/dukes/Punta_Gorda.webp" },
   // ------------------------- Mel and Carl -------------------------
   { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "purple", url: "images/fam/IMG_3442.webp" },
   { lat: 27.9517, lng: -82.4588, label: "Tampa Bay", color: "purple", url: "images/dukes/Tampa Bay.webp" },
@@ -256,7 +256,7 @@ const markers = [
   {
     lat: 57.6733,
     lng: -136.8209,
-    label: "Orange Baby Orca",
+    label: "silver Baby Orca",
     color: "gold",
     url:  "images/tako/ak-orca.jpeg"
   },
