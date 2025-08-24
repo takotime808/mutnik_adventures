@@ -612,7 +612,7 @@ const markers = [
   { lat: 42.0987, lng: -75.918, label: "Binghamton", color: "red", url: "images/dukes/Binghamton.webp" },
   { lat: 36.1351, lng: -81.6779, label: "Blowing Rock, NC", color: "red", url: "galleries/jeff-and-beth/Blowing_Rock_NC/index.html" },
   { lat: 12.1696, lng: -68.99, label: "Curaçao", color: "red", url: "galleries/jeff-and-beth/Curacao/index.html" },
-  { lat: 14.8482, lng: -68.2146, label: "Curaçao --> FLL", color: "red", url: "images/dukes/Curaçao/IMG_4608.webp" },
+  { lat: 14.8482, lng: -68.2146, label: "Curaçao --> FLL", color: "red", url: "images/dukes/IMG_4608.webp" },
   { lat: 37.2309, lng: -108.4618, label: "Mesa Verde National Park", color: "red", url: "galleries/jeff-and-beth/Mesa_Verde_National_Park_Colorado/index.html" },
   { lat: -60.0, lng: -62.3839, label: "Southern Ocean", color: "red", url: "galleries/jeff-and-beth/Southern_Ocean/index.html" },
   { lat: -66.6259, lng: -62.2594, label: "Antarctica", color: "red", url: "galleries/jeff-and-beth/Antarctica/index.html" },
