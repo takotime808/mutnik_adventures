@@ -1,1 +1,214 @@
 <!-- Copyright (c) 2025 takotime808 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>KwaZulu-Natal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../../../../css/style.css" />
+  <link rel="stylesheet" href="../../../../css/gallery.css" />
+
+  <style>
+    /* Back button */
+    #back-button {
+      position: absolute; top: 10px; left: 10px; z-index: 1000;
+      background: #fff; padding: 6px 12px; border-radius: 4px;
+      text-decoration: none; color: #000; box-shadow: 0 1px 3px rgba(0,0,0,.3);
+      border: 1px solid #ccc;
+    }
+    h1 { text-align: center; margin: 60px 0 12px; }
+
+    /* Grid */
+    .media-gallery {
+      --gap: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--gap);
+      padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .media-card {
+      position: relative;
+      cursor: pointer;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      background: #fafafa;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .media-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,.18);
+    }
+    .media-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .media-card figcaption {
+      font-size: .9rem;
+      padding: 8px 10px 10px;
+      color: #333;
+    }
+
+    /* Modals */
+    dialog.modal {
+      border: none;
+      padding: 0;
+      width: min(92vw, 1000px);
+      background: transparent;
+    }
+    dialog::backdrop { background: rgba(0,0,0,.6); }
+
+    .frame {
+      background: #000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+    }
+    .header {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 10px 12px; color: #fff; background: #111;
+    }
+    .title { margin: 0; font-size: 1rem; }
+    .close {
+      appearance: none; border: 0; background: #222; color: #fff;
+      border-radius: 6px; padding: 6px 10px; cursor: pointer;
+    }
+    .close:hover { background: #333; }
+
+    .body { background: #000; }
+    .body img {
+      display: block; width: 100%; height: auto; max-height: 78vh;
+      background: #000; margin: 0 auto;
+    }
+
+    .backlink { text-align: center; margin: 16px 0 48px; }
+  </style>
+</head>
+<body>
+  <a id="back-button" href="../../../../index.html">Back to Globe</a>
+
+  <h1>KwaZulu-Natal</h1>
+
+  <!-- Thumbnail gallery -->
+  <section class="media-gallery" aria-label="KwaZulu-Natal gallery">
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 1"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal1.webp" alt="KwaZulu-Natal photo 1" loading="lazy" decoding="async">
+      <figcaption>KwaZulu-Natal</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 2"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal2.webp" alt="KwaZulu-Natal photo 2" loading="lazy" decoding="async">
+      <figcaption>Time to Eat</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 9"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal9.webp" alt="KwaZulu-Natal photo 9" loading="lazy" decoding="async">
+      <figcaption>Where's Ace Ventura</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 10"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal0.webp" alt="KwaZulu-Natal photo 10" loading="lazy" decoding="async">
+      <figcaption>Pack Protection</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 5"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal5.webp" alt="KwaZulu-Natal photo 5" loading="lazy" decoding="async">
+      <figcaption>"Think they see us?"</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 8"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal8.webp" alt="KwaZulu-Natal photo 8" loading="lazy" decoding="async">
+      <figcaption>New Hair Do</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 3"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal3.webp" alt="KwaZulu-Natal photo 3" loading="lazy" decoding="async">
+      <figcaption>Ze...</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 4"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal4.webp" alt="KwaZulu-Natal photo 4" loading="lazy" decoding="async">
+      <figcaption>...bra</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 6"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal6.webp" alt="KwaZulu-Natal photo 6" loading="lazy" decoding="async">
+      <figcaption>Lazy Lion</figcaption>
+    </figure>
+    <figure class="media-card" tabindex="0" data-type="image" data-title="KwaZulu-Natal 7"
+            data-full="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal.webp">
+      <img src="../../../../images/dukes/Africa/KwaZulu-Natal/KwaZulu-Natal7.webp" alt="KwaZulu-Natal photo 7" loading="lazy" decoding="async">
+      <figcaption>Li-on Around</figcaption>
+    </figure>
+  </section>
+
+  <!-- IMAGE MODAL -->
+  <dialog class="modal" id="imageModal" aria-label="Image viewer">
+    <div class="frame">
+      <div class="header">
+        <h2 class="title" id="imageTitle">View</h2>
+        <button class="close" id="imgClose" aria-label="Close image">Close ✕</button>
+      </div>
+      <div class="body">
+        <img id="imageEl" alt="">
+      </div>
+    </div>
+  </dialog>
+
+  <p class="backlink"><a href="../../../../index.html">Back to Globe</a></p>
+
+  <script>
+    (function () {
+      // Elements
+      const imgModal = document.getElementById('imageModal');
+      const imgEl    = document.getElementById('imageEl');
+      const imgTitle = document.getElementById('imageTitle');
+      const imgClose = document.getElementById('imgClose');
+
+      // Helpers
+      function showDialog(dlg) { typeof dlg.showModal === 'function' ? dlg.showModal() : dlg.setAttribute('open',''); }
+      function closeDialog(dlg) { dlg.open ? dlg.close() : dlg.removeAttribute('open'); }
+
+      // IMAGE open/close
+      function openImage(src, label) {
+        imgEl.src = '';
+        imgEl.alt = label || '';
+        imgTitle.textContent = label || 'View';
+        showDialog(imgModal);
+        imgEl.src = src;
+      }
+      function closeImage() {
+        imgEl.src = '';
+        closeDialog(imgModal);
+      }
+
+      // Wire up tiles
+      document.querySelectorAll('.media-card').forEach(card => {
+        const full  = card.getAttribute('data-full');
+        const title = card.getAttribute('data-title') || '';
+        const handler = () => openImage(full, title);
+        card.addEventListener('click', handler);
+        card.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handler(); }
+        });
+      });
+
+      // Close buttons & ESC
+      imgClose.addEventListener('click', closeImage);
+      imgModal.addEventListener('cancel', (e) => { e.preventDefault(); closeImage(); });
+
+      // Click outside to close
+      imgModal.addEventListener('click', (e) => {
+        const r = imgModal.getBoundingClientRect();
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeImage();
+      });
+    })();
+  </script>
+</body>
+</html>
