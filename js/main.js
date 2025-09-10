@@ -637,9 +637,7 @@ const markers = [
   { lat: 42.3297, lng: -83.0425, label: "Detroit", color: "red", url: "images/dukes/DetroitMI.webp" },
   // Africa 2025
   { lat: -12.67611, lng: 18.41306, label: "Zambezi River", color: "red", url: "images/dukes/Africa/Zambezi_River_collage.webp" },
-  { lat: -17.9316, lng: 25.8302, label: "Victoria Falls", color: "red", 
-    // url: "images/dukes/Africa/VF.webp" 
-  },
+  { lat: -17.9316, lng: 25.8302, label: "Victoria Falls", color: "red", url: "galleries/jeff-and-beth/Africa/Victoria_Falls/index.html" },
   { lat: -22.4999, lng: 30.633167, label: "The Big Tree", color: "red", url: "images/dukes/Africa/BAOBAB The Big Tree.webp" },
   { lat: -33.9668, lng: 18.4256, label: "Table Mountain", color: "red", url: "images/dukes/Africa/Table_Mountain_South_Africa.webp" },
   { lat: -27.7832, lng: 32.0789, label: "Bayete Zulu", color: "red", url: "galleries/jeff-and-beth/Africa/Bayete_Zulu/index.html" },
