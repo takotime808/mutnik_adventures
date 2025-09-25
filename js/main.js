@@ -119,8 +119,10 @@ const markers = [
     url: "images/zack-and-brit/IMG_1099.webp"
   },
   // Duplicated from dukes
+  { lat: 41.4660, lng: -73.3878, label: "Jason & Jessic's Wedding", color: "silver", url: "images/zack-and-brit/Brookfield_CT.webp" },
   { lat: 26.9298, lng: -82.0454, label: "Punta Gorda", color: "silver", url: "images/dukes/Punta_Gorda.webp" },
   // ------------------------- Mel and Carl -------------------------
+  { lat: 41.4660, lng: -73.3878, label: "Jason & Jessic's Wedding", color: "purple", url: "images/zack-and-brit/Brookfield_CT.webp" },
   { lat: 28.3597, lng: -81.5913, label: "Addison Gender Reveal (Animal Kingdom)", color: "purple", url: "images/fam/IMG_3442.webp" },
   { lat: 27.9517, lng: -82.4588, label: "Tampa Bay", color: "purple", url: "images/dukes/Tampa Bay.webp" },
   {
@@ -646,6 +648,7 @@ const markers = [
   { lat: 39.0974, lng: -84.5071, label: "Ohio", color: "red", url: "images/dukes/Ohio.webp" },
   // This is duplicated for mel and carl
   { lat: 27.9517, lng: -82.4588, label: "Tampa Bay", color: "red", url: "images/dukes/Tampa Bay.webp" },
+  { lat: 41.4660, lng: -73.3878, label: "Jason & Jessic's Wedding", color: "red", url: "images/zack-and-brit/Brookfield_CT.webp" },
   // Captain Kate and Panama Canal were moved to Nenee and Joe pins
   // { lat: 9.11983, lng: -79.738606, label: "Panama Canal", color: "red", url: "images/dukes/IMG_2904_Panama_Canal.png" },
   // { lat: 10.8992, lng: -80.3467, label: "Captain Kate", color: "red", url: "images/dukes/panama_canal/panama_canal_with_captain_kate.jpeg" },
