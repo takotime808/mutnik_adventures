@@ -792,24 +792,37 @@ globe
   });
 
 
-const activeColors = new Set(markers.map(m => m.color));
+const legendItems = Array.from(document.querySelectorAll('.legend-item'));
+const activeColors = new Set(
+  legendItems.slice(0, 2).map(item => item.dataset.color)
+);
 
 function updateMarkers() {
   globe.pointsData(markers.filter(m => activeColors.has(m.color)));
 }
 
-updateMarkers();
+function updateLegendState() {
+  legendItems.forEach(item => {
+    if (activeColors.has(item.dataset.color)) {
+      item.classList.remove('disabled');
+    } else {
+      item.classList.add('disabled');
+    }
+  });
+}
 
-document.querySelectorAll('.legend-item').forEach(item => {
+updateMarkers();
+updateLegendState();
+
+legendItems.forEach(item => {
   const color = item.dataset.color;
   item.addEventListener('click', () => {
     if (activeColors.has(color)) {
       activeColors.delete(color);
-      item.classList.add('disabled');
     } else {
       activeColors.add(color);
-      item.classList.remove('disabled');
     }
     updateMarkers();
+    updateLegendState();
   });
 });
