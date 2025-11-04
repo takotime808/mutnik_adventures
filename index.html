@@ -1,48 +1,15 @@
-<!-- Copyright (c) 2025 takotime808 -->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
-  <title>Mutnik Adventures Globe</title>
-  <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="images/icons/icon-192.png" />
-
-  <!-- Globe.gl dependencies -->
-  <script src="https://unpkg.com/three"></script>
-  <script src="https://unpkg.com/globe.gl"></script>
-
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-  <h1>Mutnik Adventures</h1>
-
-  <!-- Globe container -->
-  <div id="globeViz" style="width:100vw; height:80vh;"></div>
-
-  <!-- Legend mapping pin colors to travelers -->
-  <div id="legend">
-    <h2>Travelers</h2>
-    <ul>
-      <li class="legend-item red" data-color="red"><span class="legend-color"></span> Jeff & Beth</li>
-      <li class="legend-item emerald" data-color="#2ecc71"><span class="legend-color"></span> Nenee & Joe</li>
-      <li class="legend-item silver" data-color="silver"><span class="legend-color"></span> Zack & Brit</li>
-      <li class="legend-item purple" data-color="purple"><span class="legend-color"></span> Mel & Carl</li>
-      <li class="legend-item teal" data-color="teal"><span class="legend-color"></span> Tako & Dani</li>
-      <li class="legend-item gold" data-color="gold"><span class="legend-color"></span> Tako</li>
-      <li class="legend-item lightpink" data-color="lightpink"><span class="legend-color"></span> Fam</li>
-    </ul>
-  </div>
-
-  <!-- Image popup container -->
-  <div id="image-popup" class="hidden">
-    <div class="popup-content">
-      <img id="popup-image" src="" alt="Map pin image" />
-    </div>
-  </div>
-
-  <script src="js/main.js"></script>
-  <script src="js/sw-register.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Mutnik Adventures Globe</title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-192.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

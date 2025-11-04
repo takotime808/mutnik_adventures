@@ -1,42 +1,47 @@
-<!-- Copyright (c) 2025 takotime808 -->
-# Mutnik Adventures #
+# Mutnik Adventures
 
 [![Demo](https://img.shields.io/badge/demo-live-blue)](https://takotime808.github.io/mutnik_adventures/)
 [![Demo](https://img.shields.io/badge/Website-live-green)](https://takotime808.github.io/mutnik_adventures/)
 
-This is a simple website showing a world map with travel pins. Clicking on a pin opens a small gallery for that location.
+Mutnik Adventures is an immersive globe experience that highlights family travels around the world. The application is now built with React, TypeScript, and Vite so it runs consistently across desktop and mobile browsers and can be wrapped with native shells when needed.
 
-<!-- ## Requirements
+Pins are rendered on an interactive 3D globe powered by [`react-globe.gl`](https://github.com/vasturiano/react-globe.gl). Selecting a pin opens the associated gallery page or displays the linked travel photo in a lightweight modal.
 
-```python
-pip install pillow
-``` -->
+## Development
 
-## Development ##
+### Prerequisites
+- Node.js 18+
+- npm 9+
 
-### Deployed to GitHub Pages ###
-
-[https://takotime808.github.io/mutnik_adventures/](https://takotime808.github.io/mutnik_adventures/)
-
-### Local Deployments ###
-Open `index.html` in your browser. The map is powered by [Leaflet](https://leafletjs.com/) and uses local placeholder images so it works offline.
-
-## Install as a Progressive Web App
-
-### Android
-1. Serve the project locally (for example, run `npx serve` and open the provided URL).
-2. Open the site in Chrome and wait for it to finish loading.
-3. Use the browser menu and choose **Add to Home screen**.
-4. Launch the installed app from your home screen.
-
-### iOS
-1. Open the site in Safari.
-2. Tap the **Share** button and select **Add to Home Screen**.
-3. The app icon will appear on your home screen and run full-screen when opened.
-
-### Docker Build PWS
+### Install dependencies
+```bash
+npm install
 ```
-docker build -t npm:npx-serve .
-docker run --rm -p 8080:8080
+
+### Start the development server
+```bash
+npm run dev
 ```
-Then go to [http://localhost:8080/](http://localhost:8080/) and click the button on the right-side of the URL bar.
+This launches Vite on `http://localhost:5173` with hot-module reloading.
+
+### Build for production
+```bash
+npm run build
+```
+The optimized static site is emitted to the `dist/` directory.
+
+### Preview the production build locally
+```bash
+npm run preview
+```
+
+## Progressive Web App
+The project ships with a minimal service worker and `manifest.json` so it can be installed on mobile devices. When serving the production build over HTTPS, modern browsers will offer **Add to Home Screen** or **Install App** options.
+
+## Docker (optional)
+To serve the production build inside Docker:
+```bash
+docker build -t mutnik-adventures .
+docker run --rm -p 8080:8080 mutnik-adventures
+```
+Then browse to [http://localhost:8080/](http://localhost:8080/).

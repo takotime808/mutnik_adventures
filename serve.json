@@ -1,5 +1,5 @@
 {
-  "public": ".",
+  "public": "dist",
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [
