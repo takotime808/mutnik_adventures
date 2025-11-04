@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Mutnik Adventures Web Shell
+    ---------------------------------
+    This is the root Flutter web entrypoint. It wraps the MultiPageWebView
+    (Globe / Gallery / About) and references the custom Mutnik icons + manifest.
+  -->
+
+  <!-- Flutter base path -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mutnik Adventures – explore the world, one trip at a time.">
+  <meta name="theme-color" content="#005bad">
+
+  <!-- iOS / PWA meta -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Mutnik Adventures">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" href="globe/images/icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="globe/images/icons/icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="globe/images/icons/icon-512.png">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Title -->
+  <title>Mutnik Adventures</title>
+
+  <!-- Splash styling -->
+  <link rel="stylesheet" href="splash/style.css">
+</head>
+<body>
+  <!-- Splash screen -->
+  <div id="splash-container">
+    <!-- contents injected from splash.html -->
+  </div>
+
+  <!-- Flutter bootstrap -->
+  <script>
+    // Inject splash markup
+    fetch('splash/splash.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('splash-container').innerHTML = html;
+      });
+
+    // Wait for Flutter bootstrap to start, then fade out splash
+    window.addEventListener('load', () => {
+      const splash = document.getElementById('splash-container');
+      const fadeOut = () => splash.classList.add('fade-out');
+      // Give Flutter a moment to initialize before fade
+      setTimeout(fadeOut, 1500);
+    });
+  </script>
+
+  <!-- Flutter Web App Bootstrap -->
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

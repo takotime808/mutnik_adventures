@@ -1,0 +1,2 @@
+When your app loads, the browser first renders `/web/index.html` before Flutter’s JavaScript initializes.
+We can use that window (usually ~0.5–2 seconds) to display a custom HTML splash with your branding and fade it away once `flutter_bootstrap.js` finishes loading.

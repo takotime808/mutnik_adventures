@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Mutnik Adventures</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: "Inter", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      background: linear-gradient(to bottom right, #eef4fb, #d8ecff);
+      text-align: center;
+    }
+
+    header {
+      background-color: #005bad;
+      color: white;
+      padding: 2rem 1rem;
+    }
+
+    main {
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      color: #003478;
+      margin-top: 2rem;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: #003478;
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mutnik Adventures</h1>
+    <p>Exploring the world, one trip at a time 🌍</p>
+  </header>
+
+  <main>
+    <h2>About the Project</h2>
+    <p>
+      Mutnik Adventures is an interactive travel visualization project built to capture the journeys,
+      memories, and destinations of friends and family across the globe. Each colored pin represents a
+      unique traveler or couple — connecting memories through maps, photos, and shared experiences.
+    </p>
+
+    <h2>Our Travelers</h2>
+    <div class="team">
+      <div class="card">
+        <img src="images/icons/icon-192.png" alt="Tako & Dani" />
+        <h3>Tako & Dani</h3>
+        <p>Globe makers & storytellers</p>
+      </div>
+      <div class="card">
+        <img src="images/icons/icon-192.png" alt="Jeff & Beth" />
+        <h3>Jeff & Beth</h3>
+        <p>Wanderers of the West</p>
+      </div>
+      <div class="card">
+        <img src="images/icons/icon-192.png" alt="Mel & Carl" />
+        <h3>Mel & Carl</h3>
+        <p>Explorers and adventurers</p>
+      </div>
+    </div>
+
+    <h2>Tech Stack</h2>
+    <p>
+      Built with <strong>Flutter</strong> + <strong>Globe.gl</strong> (Three.js), powered by WebView integration.
+      Designed to be lightweight, offline-capable, and easily extensible for new explorers.
+    </p>
+  </main>
+
+  <footer>
+    © 2025 Mutnik Adventures | Built with 💙 by Tako Mutnik
+  </footer>
+</body>
+</html>
