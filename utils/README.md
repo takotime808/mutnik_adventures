@@ -11,6 +11,13 @@ python manipulate_images_for_web.py --generate_readme > README.md
 
 ## 🚀 Quick Start
 
+### Build Gallery Index
+```sh
+scp build_gallery_index.py ../. && \
+    cd ../ && \
+    python build_gallery_index.py
+```
+
 ### Check Coordinates
 To get coordinates from an image (jpg, jpeg, png, webp).
 ```
@@ -115,3 +122,14 @@ python manipulate_images_for_web.py -i "photo.png" -o "outdir" -c --allow_png_qu
 python manipulate_images_for_web.py -i "photo.jpg" -o "outdir" -sf 0.5 -c --admin_mode
 ```
 
+### Most Used
+```bash
+python manipulate_images_for_web.py -m -c -oe webp -s "" -o "outdir" -i "2Q6A4289.jpeg" -sf 0.75
+```
+- `-m`: remove metadata
+- `-c`: add copyright info
+- `-oe`: output extension
+- `-s`: output suffix
+- `-o`: output directory
+- `-i`: input filename
+- `-sf`: scale factor
